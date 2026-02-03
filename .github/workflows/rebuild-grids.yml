@@ -1,0 +1,39 @@
+name: Rebuild grids
+
+on:
+  schedule:
+    - cron: "5 10 * * *"
+    - cron: "5 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+      - name: Install dependencies
+        run: npm ci
+      - name: Build grids dataset
+        run: node scripts/build-grids.mjs --incremental
+      - name: Check for suspicious duplications
+        run: node scripts/check-suspicious-duplications.mjs || true
+      - name: Commit updated dataset
+        run: |
+          if git status --porcelain | grep -q "data/grids.json"; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add data/grids.json
+            git commit -m "Update grids dataset"
+            git push
+          else
+            echo "No changes to commit."
+          fi
