@@ -23826,5 +23826,51 @@
       "Giants",
       "2B"
     ]
+  },
+  {
+    "gridNumber": 1037,
+    "id": "2026-02-02",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1037",
+    "rows": [
+      "NGL",
+      "NGL",
+      "NGL"
+    ],
+    "cols": [
+      "NGL",
+      "NGL",
+      "NGL"
+    ],
+    "all": [
+      "NGL",
+      "NGL",
+      "NGL",
+      "NGL",
+      "NGL",
+      "NGL"
+    ]
+  },
+  {
+    "gridNumber": 1038,
+    "id": "2026-02-03",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1038",
+    "rows": [
+      "Reds",
+      "Pirates",
+      "HOF"
+    ],
+    "cols": [
+      "White Sox",
+      "Tigers",
+      "≤3 ERA Season"
+    ],
+    "all": [
+      "Reds",
+      "Pirates",
+      "HOF",
+      "White Sox",
+      "Tigers",
+      "≤3 ERA Season"
+    ]
   }
 ]

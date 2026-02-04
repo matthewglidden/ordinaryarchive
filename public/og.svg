@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f3f6fb" />
+      <stop offset="100%" stop-color="#e6ebf5" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect x="80" y="90" width="1040" height="450" rx="36" fill="#ffffff" stroke="#d9e1ef" />
+  <text x="140" y="240" font-size="64" font-family="Helvetica, Arial, sans-serif" fill="#0f172a" font-weight="600">
+    Ordinary Archive
+  </text>
+  <text x="140" y="310" font-size="28" font-family="Helvetica, Arial, sans-serif" fill="#475569">
+    Search past Immaculate Grid (Baseball) puzzles
+  </text>
+  <text x="140" y="360" font-size="28" font-family="Helvetica, Arial, sans-serif" fill="#475569">
+    by team, stat, award, birthplace, and more.
+  </text>
+</svg>

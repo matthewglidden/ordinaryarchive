@@ -25,12 +25,33 @@ export default function HomeClient() {
   const [exactOnly, setExactOnly] = useState(false);
   const [scope, setScope] = useState<"all" | "rows" | "cols">("all");
   const [intersectOnly, setIntersectOnly] = useState(false);
+  const [sortOrder, setSortOrder] = useState<"newest" | "oldest">("newest");
+  const [visibleCount, setVisibleCount] = useState(50);
   const [selectedPositions, setSelectedPositions] = useState<string[]>([]);
   const [selectedBorn, setSelectedBorn] = useState<string[]>([]);
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
   const didInitFromUrl = useRef(false);
+  const today = new Date();
+  const monthDay = `${String(today.getMonth() + 1).padStart(2, "0")}-${String(
+    today.getDate()
+  ).padStart(2, "0")}`;
+  const monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const monthLabel = `${monthNames[today.getMonth()]} ${today.getDate()}`;
 
   useEffect(() => {
     if (didInitFromUrl.current) return;
@@ -39,10 +60,10 @@ export default function HomeClient() {
     didInitFromUrl.current = true;
   }, [searchParams]);
 
-  const sortedGrids = useMemo(
-    () => [...grids].sort((a, b) => b.id.localeCompare(a.id)),
-    []
-  );
+  const sortedGrids = useMemo(() => {
+    const next = [...grids].sort((a, b) => b.id.localeCompare(a.id));
+    return sortOrder === "oldest" ? next.reverse() : next;
+  }, [sortOrder]);
 
   const normalizedQuery = query.trim().toLowerCase();
   const baseTokens = useMemo(
@@ -76,6 +97,12 @@ export default function HomeClient() {
       "united states": ["usa", "us", "u.s."],
       ven: ["venezuela"],
       venezuela: ["ven"],
+      ngl: ["negro leagues", "negro league", "nlb"],
+      nlb: ["negro leagues", "negro league", "ngl"],
+      "played ngl": ["ngl"],
+      negro: ["negro leagues", "negro league"],
+      "negro league": ["negro leagues", "ngl"],
+      "negro leagues": ["negro league", "ngl"],
       "outside usa": ["non-us", "foreign", "international", "intl"],
       "non-us": ["outside usa", "foreign", "international", "intl"],
       foreign: ["outside usa", "international", "intl"],
@@ -99,8 +126,12 @@ export default function HomeClient() {
       fl: ["marlins"],
       wi: ["brewers"],
       pa: ["phillies", "pirates"],
+      poop: ["phillies", "pirates"],
+      p00p: ["phillies", "pirates"],
       sox: ["red sox", "white sox"],
+      barves: ["braves"],
       yanks: ["yankees"],
+      jankees: ["yankees"],
       mets: ["mets"],
       cards: ["cardinals"],
       jays: ["blue jays"],
@@ -125,12 +156,14 @@ export default function HomeClient() {
       hr: ["home runs", "homers"],
       "stolen bases": ["sb", "steals"],
       steals: ["sb", "stolen bases"],
+      stolen: ["30+ sb"],
       sb: ["stolen bases", "steals"],
       strikeouts: ["k", "so"],
       so: ["k", "strikeouts"],
       k: ["so", "strikeouts"],
       saves: ["sv"],
       sv: ["saves"],
+      save: ["30+ sv"],
       doubles: ["2b"],
       "batting avg": [".300", "avg", "batting average"],
       "batting average": [".300", "avg", "batting avg"],
@@ -169,6 +202,10 @@ export default function HomeClient() {
       "all star": ["all-star", "asg", "as"],
       "all-star": ["all star", "asg", "as"],
       asg: ["all star", "all-star", "as"],
+      major: ["mlb", "major league", "major leagues"],
+      "major league": ["mlb", "major leagues"],
+      "major leagues": ["mlb", "major league"],
+      "played mlb": ["mlb"],
       wins: ["w"],
       strikeout: ["k", "so", "strikeouts"],
       ks: ["k", "so"],
@@ -184,9 +221,33 @@ export default function HomeClient() {
       "world series": ["ws", "world", "champ"],
       world: ["world series", "ws", "champ"],
       champ: ["world series", "ws", "world"],
+      "<": ["≤3 era season", "≤3 era career"],
+      "<=": ["≤3 era season", "≤3 era career"],
+      "<=3": ["≤3 era season", "≤3 era career"],
+      "<3": ["≤3 era season", "≤3 era career"],
     };
 
+    const skipTokens = new Set<string>();
+    if (normalizedQuery.includes("poop") || normalizedQuery.includes("p00p")) {
+      groups.push(["phillies"]);
+      groups.push(["pirates"]);
+      skipTokens.add("poop");
+      skipTokens.add("p00p");
+    }
+
+    if (normalizedQuery.includes("played mlb")) {
+      groups.push(["mlb"]);
+      skipTokens.add("played");
+      skipTokens.add("mlb");
+    }
+    if (normalizedQuery.includes("played ngl")) {
+      groups.push(["ngl"]);
+      skipTokens.add("played");
+      skipTokens.add("ngl");
+    }
+
     for (const token of baseTokens) {
+      if (skipTokens.has(token)) continue;
       const expanded = new Set<string>();
       const lowered = token.toLowerCase();
       const teamAliasesFor = teamAliasMap[lowered];
@@ -265,6 +326,7 @@ export default function HomeClient() {
     if (!allTokenGroups.length) return sortedGrids;
     const scored = sortedGrids
       .map((grid) => {
+        const isDateToken = (value: string) => value.startsWith("date:");
         const rowTexts = grid.rows.map((label) => label.toLowerCase());
         const colTexts = grid.cols.map((label) => label.toLowerCase());
         const labelTexts =
@@ -279,6 +341,12 @@ export default function HomeClient() {
         const aliasLabelsFor = (needle: string) => teamAliasMap[needle];
         const matchesToken = (needle: string, labels: string[]) => {
           if (!needle) return false;
+          if (isDateToken(needle)) {
+            return grid.id.slice(5) === needle.slice(5);
+          }
+          if (needle === "sux" || needle === "suck" || needle === "sucks") {
+            return false;
+          }
           const aliasLabels = aliasLabelsFor(needle);
           if (aliasLabels) {
             return labels.some((label) =>
@@ -314,6 +382,12 @@ export default function HomeClient() {
             return labels.some((label) => {
               const normalizedLabel = label.replace(/[^a-z0-9]/g, "");
               const normalizedLabelNoSpace = normalizedLabel.replace(/\s+/g, "");
+              if (normalizedNeedle === "ngl") {
+                return (
+                  label.trim() === "ngl" ||
+                  label.includes("negro league")
+                );
+              }
               if (
                 normalizedNeedle === "as" &&
                 (label.includes("all-star") || label.includes("all star"))
@@ -368,6 +442,13 @@ export default function HomeClient() {
         };
         const matchTerm = (needle: string) => {
           if (!needle) return { matched: false, score: 0 };
+          if (isDateToken(needle)) {
+            const hit = grid.id.slice(5) === needle.slice(5);
+            return hit ? { matched: true, score: 3 } : { matched: false, score: 0 };
+          }
+          if (needle === "sux" || needle === "suck" || needle === "sucks") {
+            return { matched: false, score: 0 };
+          }
           const aliasLabels = aliasLabelsFor(needle);
           if (aliasLabels) {
             const hit = labelTexts.some((label) =>
@@ -415,6 +496,12 @@ export default function HomeClient() {
             const labelHit = labelTexts.some((label) => {
               const normalizedLabel = label.replace(/[^a-z0-9]/g, "");
               const normalizedLabelNoSpace = normalizedLabel.replace(/\s+/g, "");
+              if (normalizedNeedle === "ngl") {
+                return (
+                  label.trim() === "ngl" ||
+                  label.includes("negro league")
+                );
+              }
               if (
                 normalizedNeedle === "as" &&
                 (label.includes("all-star") || label.includes("all star"))
@@ -540,15 +627,20 @@ export default function HomeClient() {
           }
           score += bestScore;
         }
-        if (matchedAll && intersectOnly && allTokenGroups.length >= 2) {
-          matchedRow = allTokenGroups.some((group) =>
-            group.some((token) => matchesToken(token.toLowerCase(), rowTexts))
+        if (matchedAll && intersectOnly) {
+          const intersectGroups = allTokenGroups.filter(
+            (group) => !group.some((token) => isDateToken(token.toLowerCase()))
           );
-          matchedCol = allTokenGroups.some((group) =>
-            group.some((token) => matchesToken(token.toLowerCase(), colTexts))
-          );
-          if (!matchedRow || !matchedCol) {
-            return null;
+          if (intersectGroups.length >= 2) {
+            matchedRow = intersectGroups.some((group) =>
+              group.some((token) => matchesToken(token.toLowerCase(), rowTexts))
+            );
+            matchedCol = intersectGroups.some((group) =>
+              group.some((token) => matchesToken(token.toLowerCase(), colTexts))
+            );
+            if (!matchedRow || !matchedCol) {
+              return null;
+            }
           }
         }
         if (
@@ -563,15 +655,17 @@ export default function HomeClient() {
       .filter((value): value is { grid: Grid; score: number } => value !== null)
       .sort((a, b) => {
         if (b.score !== a.score) return b.score - a.score;
-        return b.grid.id.localeCompare(a.grid.id);
+        return sortOrder === "oldest"
+          ? a.grid.id.localeCompare(b.grid.id)
+          : b.grid.id.localeCompare(a.grid.id);
       });
 
     return scored.map(({ grid }) => grid);
   }, [sortedGrids, allTokenGroups, exactOnly, scope, intersectOnly, prefersYankees]);
 
   const visibleGrids = useMemo(
-    () => (allTokenGroups.length ? filteredGrids : filteredGrids.slice(0, 50)),
-    [filteredGrids, allTokenGroups]
+    () => filteredGrids.slice(0, visibleCount),
+    [filteredGrids, visibleCount]
   );
 
   useEffect(() => {
@@ -591,6 +685,18 @@ export default function HomeClient() {
 
     return () => clearTimeout(handle);
   }, [query, pathname, router]);
+
+  useEffect(() => {
+    setVisibleCount(50);
+  }, [
+    query,
+    intersectOnly,
+    selectedPositions,
+    selectedBorn,
+    sortOrder,
+    scope,
+    exactOnly,
+  ]);
 
   const handleRandomPick = () => {
     if (!filteredGrids.length) return;
@@ -656,6 +762,7 @@ export default function HomeClient() {
       for (const token of group) {
         const needle = token.toLowerCase();
         if (!needle) continue;
+        if (needle.startsWith("date:")) continue;
         const aliasLabels = teamAliasMap[needle];
         if (aliasLabels) {
           for (let i = 0; i < labelTexts.length; i += 1) {
@@ -713,154 +820,252 @@ export default function HomeClient() {
     <div className="min-h-screen bg-[#f3f6fb] text-slate-900">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-12 px-6 py-16">
         <header className="relative flex flex-col items-center gap-5 text-center">
-          <a
-            href="/about"
-            className="absolute left-0 top-0 rounded-full border border-slate-300 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-600 transition hover:border-slate-400 hover:text-slate-900"
-          >
-            About
-          </a>
-          <div className="absolute right-0 top-0 hidden flex-col items-end gap-2 sm:flex">
-            <a
-              href="https://www.sports-reference.com/immaculate-grid/grid-730"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:bg-white hover:text-slate-900"
-            >
-              'Any MLB' Grid
-            </a>
-            <a
-              href="https://www.sports-reference.com/immaculate-grid/grid-1037"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:bg-white hover:text-slate-900"
-            >
-              'Any NGL' Grid
-            </a>
-            <button
-              type="button"
-              onClick={handleRandomPick}
-              className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.18em] text-blue-700 transition hover:border-blue-300 hover:bg-blue-100"
-            >
-              Random Grid
-            </button>
-          </div>
-          <details className="absolute right-0 top-0 sm:hidden">
-            <summary className="cursor-pointer list-none rounded-full border border-slate-300 bg-white px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-600 transition hover:border-slate-400 hover:text-slate-900">
-              Quick Links
-            </summary>
-            <div className="mt-2 flex flex-col items-end gap-2">
-              <a
-                href="https://www.sports-reference.com/immaculate-grid/grid-730"
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:bg-white hover:text-slate-900"
-              >
-                Any MLB
-              </a>
-              <a
-                href="https://www.sports-reference.com/immaculate-grid/grid-1037"
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:bg-white hover:text-slate-900"
-              >
-                Any NGL
-              </a>
-              <button
-                type="button"
-                onClick={handleRandomPick}
-                className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.18em] text-blue-700 transition hover:border-blue-300 hover:bg-blue-100"
-              >
-                Random
-              </button>
-            </div>
-          </details>
+          <div className="absolute left-0 top-0 hidden sm:block" />
+          <div className="absolute right-0 top-0 hidden flex-col items-end gap-2 sm:flex" />
+          <div className="absolute right-0 top-0 hidden sm:block" />
           <h1 className="text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
             Ordinary Archive
           </h1>
           <p className="max-w-xl text-base leading-relaxed text-slate-600">
-            Find grids of the past with ordinary effort.
+            Find past grids with ordinary effort.
           </p>
         </header>
 
         <section className="flex flex-col items-center gap-6">
           <div className="w-full max-w-3xl">
             <div className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-              <input
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder="Search grid categories"
-                className="w-full flex-1 rounded-full border border-slate-200 bg-white px-6 py-4 text-lg font-medium text-slate-900 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-blue-100"
-              />
-              <select
-                value={intersectOnly ? "intersect" : "any"}
-                onChange={(event) => {
-                  const value = event.target.value;
-                  if (value === "intersect") {
-                    setIntersectOnly(true);
-                  } else {
-                    setIntersectOnly(false);
-                  }
-                  setExactOnly(false);
-                }}
-                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-700"
-              >
-                <option value="any">Any label</option>
-                <option value="intersect">Must intersect</option>
-              </select>
+              <div className="relative w-full flex-1">
+                <input
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  placeholder="Search labels (Ex: Pirates WAR)"
+                  className="w-full rounded-full border border-slate-200 bg-white px-6 py-4 pr-12 text-lg font-medium text-slate-900 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-blue-100 sm:pr-6"
+                />
+                {!!query && (
+                  <button
+                    type="button"
+                    onClick={handleReset}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-slate-200 bg-white px-2 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500 transition hover:border-slate-300 hover:text-slate-900 sm:hidden"
+                    aria-label="Clear search"
+                  >
+                    ×
+                  </button>
+                )}
+              </div>
+              <div className="relative inline-flex min-w-[200px] items-center">
+                <select
+                  value={intersectOnly ? "intersect" : "any"}
+                  onChange={(event) => {
+                    const value = event.target.value;
+                    if (value === "intersect") {
+                      setIntersectOnly(true);
+                    } else {
+                      setIntersectOnly(false);
+                    }
+                    setExactOnly(false);
+                  }}
+                  className="w-full appearance-none rounded-full border border-slate-200 bg-white px-4 py-2 pr-7 text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-700"
+                >
+                  <option value="any">Any label</option>
+                  <option value="intersect">Must intersect</option>
+                </select>
+                <span className="pointer-events-none absolute right-3 text-[10px] text-slate-400">
+                  ▾
+                </span>
+              </div>
               <button
                 type="button"
                 onClick={handleReset}
-                className="rounded-full border border-slate-300 bg-white px-5 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600 transition hover:border-slate-400 hover:text-slate-900"
+                className="hidden rounded-full border border-slate-300 bg-white px-5 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600 transition hover:border-slate-400 hover:text-slate-900 sm:inline-flex"
               >
                 Reset
               </button>
             </div>
+            <details className="mt-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 sm:hidden">
+              <summary className="relative cursor-pointer list-none text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-600">
+                Filters &amp; shortcuts
+                <span className="pointer-events-none absolute right-1 text-[10px] text-slate-400">
+                  ▾
+                </span>
+              </summary>
+              <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-slate-400">
+                  Played 1+ Game at
+                </span>
+                {positions.map((pos) => (
+                  <button
+                    key={pos}
+                    type="button"
+                    onClick={() => togglePosition(pos)}
+                    className={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] transition ${
+                      selectedPositions.includes(pos)
+                        ? "border-blue-300 bg-blue-100 text-blue-800"
+                        : "border-slate-200 bg-slate-50 text-slate-600 hover:border-slate-300 hover:bg-white hover:text-slate-900"
+                    }`}
+                  >
+                    {pos}
+                  </button>
+                ))}
+              </div>
+              <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-slate-400">
+                  Born in
+                </span>
+                {bornLocations.map((born) => (
+                  <button
+                    key={born.token}
+                    type="button"
+                    onClick={() => toggleBorn(born.token)}
+                    className={`whitespace-nowrap rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] transition ${
+                      selectedBorn.includes(born.token)
+                        ? "border-blue-300 bg-blue-100 text-blue-800"
+                        : "border-slate-200 bg-slate-50 text-slate-600 hover:border-slate-300 hover:bg-white hover:text-slate-900"
+                    }`}
+                  >
+                    {born.label}
+                  </button>
+                ))}
+              </div>
             <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
               <span className="text-[11px] uppercase tracking-[0.2em] text-slate-400">
-                Played 1+ Game at
+                Short cuts
               </span>
-              {positions.map((pos) => (
-                <button
-                  key={pos}
-                  type="button"
-                  onClick={() => togglePosition(pos)}
-                  className={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] transition ${
-                    selectedPositions.includes(pos)
-                      ? "border-blue-300 bg-blue-100 text-blue-800"
-                      : "border-slate-200 bg-slate-50 text-slate-600 hover:border-slate-300 hover:bg-white hover:text-slate-900"
-                  }`}
+              <button
+                type="button"
+                onClick={() => setQuery(`date:${monthDay}`)}
+                className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+              >
+                All {monthLabel} grids
+              </button>
+              <a
+                href="https://www.sports-reference.com/immaculate-grid/grid-730"
+                target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
                 >
-                  {pos}
-                </button>
-              ))}
-            </div>
-            <div className="mt-3 flex flex-nowrap items-center gap-2 overflow-x-auto text-xs text-slate-500">
-              <span className="text-[11px] uppercase tracking-[0.2em] text-slate-400">
-                Born in
-              </span>
-              {bornLocations.map((born) => (
-                <button
-                  key={born.token}
-                  type="button"
-                  onClick={() => toggleBorn(born.token)}
-                  className={`whitespace-nowrap rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] transition ${
-                    selectedBorn.includes(born.token)
-                      ? "border-blue-300 bg-blue-100 text-blue-800"
-                      : "border-slate-200 bg-slate-50 text-slate-600 hover:border-slate-300 hover:bg-white hover:text-slate-900"
-                  }`}
+                  Any MLB (2025-4-1)
+                </a>
+                <a
+                  href="https://www.sports-reference.com/immaculate-grid/grid-1037"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
                 >
-                  {born.label}
+                  Any NGL (2026-2-2)
+                </a>
+                <button
+                  type="button"
+                  onClick={handleRandomPick}
+                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+                >
+                  Random Grid
                 </button>
-              ))}
+                <a
+                  href="/about"
+                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+                >
+                  About
+                </a>
+              </div>
+            </details>
+            <div className="mt-3 hidden rounded-2xl border border-slate-200 bg-white px-4 py-3 sm:block">
+              <div className="flex flex-wrap items-center gap-2 text-xs text-slate-500 sm:flex-nowrap sm:overflow-x-auto">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-slate-400">
+                  Played 1+ Game at
+                </span>
+                {positions.map((pos) => (
+                  <button
+                    key={pos}
+                    type="button"
+                    onClick={() => togglePosition(pos)}
+                    className={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] transition ${
+                      selectedPositions.includes(pos)
+                        ? "border-blue-300 bg-blue-100 text-blue-800"
+                        : "border-slate-200 bg-slate-50 text-slate-600 hover:border-slate-300 hover:bg-white hover:text-slate-900"
+                    }`}
+                  >
+                    {pos}
+                  </button>
+                ))}
+              </div>
+              <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-500 sm:flex-nowrap sm:overflow-x-auto">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-slate-400">
+                  Born in
+                </span>
+                {bornLocations.map((born) => (
+                  <button
+                    key={born.token}
+                    type="button"
+                    onClick={() => toggleBorn(born.token)}
+                    className={`whitespace-nowrap rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] transition ${
+                      selectedBorn.includes(born.token)
+                        ? "border-blue-300 bg-blue-100 text-blue-800"
+                        : "border-slate-200 bg-slate-50 text-slate-600 hover:border-slate-300 hover:bg-white hover:text-slate-900"
+                    }`}
+                  >
+                    {born.label}
+                  </button>
+                ))}
+              </div>
+              <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-slate-400">
+                  Short cuts
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setQuery(`date:${monthDay}`)}
+                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+                >
+                  All {monthLabel} grids
+                </button>
+                <a
+                  href="https://www.sports-reference.com/immaculate-grid/grid-730"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+                >
+                  Any MLB (2025-4-1)
+                </a>
+                <a
+                  href="https://www.sports-reference.com/immaculate-grid/grid-1037"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+                >
+                  Any NGL (2026-2-2)
+                </a>
+                <button
+                  type="button"
+                  onClick={handleRandomPick}
+                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+                >
+                  Random Grid
+                </button>
+                <a
+                  href="/about"
+                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+                >
+                  About
+                </a>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="flex flex-col gap-4">
-          <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
-            {allTokenGroups.length
-              ? `Matching grids (${filteredGrids.length})`
-              : `Recent grids (${visibleGrids.length})`}
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+              Matching grids
+            </div>
+            <button
+              type="button"
+              onClick={() =>
+                setSortOrder((prev) => (prev === "newest" ? "oldest" : "newest"))
+              }
+              className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500 transition hover:text-slate-900"
+            >
+              {sortOrder === "newest" ? "Recent ↓" : "Early ↑"}
+            </button>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {visibleGrids.length ? (
@@ -922,6 +1127,21 @@ export default function HomeClient() {
               </div>
             )}
           </div>
+          {visibleGrids.length < filteredGrids.length && (
+            <div className="flex justify-center">
+              <button
+                type="button"
+                onClick={() =>
+                  setVisibleCount((count) =>
+                    Math.min(count + 50, filteredGrids.length)
+                  )
+                }
+                className="rounded-full border border-slate-300 bg-white px-6 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600 transition hover:border-slate-400 hover:text-slate-900"
+              >
+                Load more
+              </button>
+            </div>
+          )}
         </section>
       </div>
     </div>

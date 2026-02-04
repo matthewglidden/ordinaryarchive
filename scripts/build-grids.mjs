@@ -924,8 +924,8 @@ const main = async () => {
     const summaryCols = cols.length ? cols.join(", ") : "none";
     console.log(`Grid ${id}: rows [${summaryRows}] | cols [${summaryCols}]`);
 
-
-    if (rows.length !== 3 || cols.length !== 3) {
+    const hasValidLabels = rows.length === 3 && cols.length === 3;
+    if (!hasValidLabels) {
       const scriptCount = $("script").length;
       const dataAttrCount = $(
         "[data-grid],[data-grid-json],[data-ig],[data-immaculate-grid],[data-grid-config]"
@@ -933,6 +933,10 @@ const main = async () => {
       console.warn(
         `Label extraction mismatch for ${gridUrl} (rows=${rows.length}, cols=${cols.length}, scripts=${scriptCount}, dataAttrs=${dataAttrCount})`
       );
+      misses += 1;
+      index += 1;
+      await sleep(350);
+      continue;
     }
 
     const normalizedRows = rows.map(normalizeLabel);
@@ -954,6 +958,11 @@ const main = async () => {
       cols: normalizedCols,
       all: [...normalizedRows, ...normalizedCols],
     });
+
+    if (id === today) {
+      console.log(`Captured today's grid (${today}); stopping.`);
+      break;
+    }
 
     index += 1;
     await sleep(350);
