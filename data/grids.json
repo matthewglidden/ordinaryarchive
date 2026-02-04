@@ -23872,5 +23872,28 @@
       "Tigers",
       "≤3 ERA Season"
     ]
+  },
+  {
+    "gridNumber": 1039,
+    "id": "2026-02-04",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1039",
+    "rows": [
+      "Athletics",
+      "Padres",
+      "200+ H"
+    ],
+    "cols": [
+      "Cubs",
+      "Braves",
+      "SS"
+    ],
+    "all": [
+      "Athletics",
+      "Padres",
+      "200+ H",
+      "Cubs",
+      "Braves",
+      "SS"
+    ]
   }
 ]
