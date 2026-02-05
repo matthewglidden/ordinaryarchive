@@ -23895,5 +23895,28 @@
       "Braves",
       "SS"
     ]
+  },
+  {
+    "gridNumber": 1040,
+    "id": "2026-02-05",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1040",
+    "rows": [
+      "Dodgers",
+      "Yankees",
+      "Gold Glove"
+    ],
+    "cols": [
+      "Orioles",
+      "Marlins",
+      "1st round"
+    ],
+    "all": [
+      "Dodgers",
+      "Yankees",
+      "Gold Glove",
+      "Orioles",
+      "Marlins",
+      "1st round"
+    ]
   }
 ]
