@@ -930,6 +930,9 @@ const main = async () => {
     const id = date || extractDateId($, `grid-${index}`);
     const hints = [];
     const searchTerms = [];
+    if (/^\d{4}-02-06$/.test(id)) {
+      hints.push("Babe Ruth's birthday - he fits at least once");
+    }
     if (/^\d{4}-02-14$/.test(id)) {
       hints.push("Try Ellis Valentine");
     }
