@@ -936,6 +936,9 @@ const main = async () => {
     if (id === "2023-12-31") {
       hints.push("Salute to Clemente (🇵🇷)");
     }
+    if (id === "2024-07-04") {
+      hints.push("Red White and Blue (🇺🇸)");
+    }
     if (/^\d{4}-02-14$/.test(id)) {
       hints.push("Try Ellis Valentine");
     }
