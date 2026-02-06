@@ -2,7 +2,6 @@ name: Rebuild grids
 
 on:
   schedule:
-    - cron: "5 10 * * *"
     - cron: "5 11 * * *"
   workflow_dispatch:
 
