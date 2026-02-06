@@ -23918,5 +23918,28 @@
       "Marlins",
       "1st round"
     ]
+  },
+  {
+    "gridNumber": 1041,
+    "id": "2026-02-06",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1041",
+    "rows": [
+      "Astros",
+      "Blue Jays",
+      "100+ R"
+    ],
+    "cols": [
+      "Red Sox",
+      "Brewers",
+      "10+ W"
+    ],
+    "all": [
+      "Astros",
+      "Blue Jays",
+      "100+ R",
+      "Red Sox",
+      "Brewers",
+      "10+ W"
+    ]
   }
 ]
