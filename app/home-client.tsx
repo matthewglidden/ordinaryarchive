@@ -12,6 +12,8 @@ type Grid = {
   rows: string[];
   cols: string[];
   all: string[];
+  hints?: string[];
+  searchTerms?: string[];
 };
 
 const grids = gridsData as Grid[];
@@ -70,6 +72,27 @@ export default function HomeClient() {
     () => (normalizedQuery ? normalizedQuery.split(/\s+/).filter(Boolean) : []),
     [normalizedQuery]
   );
+  const isTodayFilterActive = useMemo(
+    () => baseTokens.includes(`date:${monthDay}`),
+    [baseTokens, monthDay]
+  );
+  const isSpecialFilterActive = useMemo(
+    () => baseTokens.includes("has:hint"),
+    [baseTokens]
+  );
+  const toggleFilterToken = (token: string) => {
+    if (!baseTokens.length) {
+      setQuery(token);
+      return;
+    }
+    const tokens = normalizedQuery.split(/\s+/).filter(Boolean);
+    if (tokens.includes(token)) {
+      const next = tokens.filter((value) => value !== token).join(" ");
+      setQuery(next);
+      return;
+    }
+    setQuery([...tokens, token].join(" "));
+  };
   const tokenGroups = useMemo(() => {
     if (!normalizedQuery) return [];
     const groups: string[][] = [];
@@ -100,7 +123,7 @@ export default function HomeClient() {
       ngl: ["negro leagues", "negro league", "nlb"],
       nlb: ["negro leagues", "negro league", "ngl"],
       "played ngl": ["ngl"],
-      negro: ["negro leagues", "negro league"],
+      negro: ["negro leagues", "negro league", "ngl"],
       "negro league": ["negro leagues", "ngl"],
       "negro leagues": ["negro league", "ngl"],
       "outside usa": ["non-us", "foreign", "international", "intl"],
@@ -139,7 +162,6 @@ export default function HomeClient() {
       "a's": ["athletics", "as"],
       athletics: ["athletics", "as"],
       nats: ["nationals"],
-      expos: ["nationals"],
       giants: ["giants"],
       bucs: ["pirates"],
       halo: ["angels"],
@@ -173,6 +195,8 @@ export default function HomeClient() {
       "no-hitter": ["no hitter", "nohit", "no hit"],
       "no hit": ["no hitter", "no-hitter", "nohit"],
       nohit: ["no hitter", "no-hitter", "no hit"],
+      christmas: ["date:12-25"],
+      xmas: ["date:12-25"],
       catcher: ["c"],
       backstop: ["c"],
       shortstop: ["ss"],
@@ -212,6 +236,7 @@ export default function HomeClient() {
       "k's": ["k", "so"],
       "k’s": ["k", "so"],
       homer: ["hr", "home runs"],
+      only: ["one team"],
       hits: ["h"],
       runs: ["r"],
       rbis: ["rbi"],
@@ -228,6 +253,16 @@ export default function HomeClient() {
     };
 
     const skipTokens = new Set<string>();
+    const phraseAliases = Object.entries(teamAliasMap).filter(([key]) =>
+      key.includes(" ")
+    );
+    for (const [phrase, aliases] of phraseAliases) {
+      if (!normalizedQuery.includes(phrase)) continue;
+      groups.push([...aliases]);
+      for (const token of phrase.split(/\s+/)) {
+        if (token) skipTokens.add(token);
+      }
+    }
     if (normalizedQuery.includes("poop") || normalizedQuery.includes("p00p")) {
       groups.push(["phillies"]);
       groups.push(["pirates"]);
@@ -244,6 +279,16 @@ export default function HomeClient() {
       groups.push(["ngl"]);
       skipTokens.add("played");
       skipTokens.add("ngl");
+    }
+    if (normalizedQuery.includes("april fools day")) {
+      groups.push(["date:04-01"]);
+      skipTokens.add("april");
+      skipTokens.add("fools");
+      skipTokens.add("day");
+    } else if (normalizedQuery.includes("april fools")) {
+      groups.push(["date:04-01"]);
+      skipTokens.add("april");
+      skipTokens.add("fools");
     }
 
     for (const token of baseTokens) {
@@ -262,6 +307,9 @@ export default function HomeClient() {
       const noCommas = lowered.replace(/,/g, "");
       if (noCommas !== lowered) {
         expanded.add(noCommas);
+      }
+      if (lowered === "april") {
+        expanded.add("date:04-01");
       }
       if (lowered.includes("2000")) expanded.add(lowered.replace(/2000/g, "2k"));
       if (lowered.includes("3000")) expanded.add(lowered.replace(/3000/g, "3k"));
@@ -322,350 +370,446 @@ export default function HomeClient() {
     return n === needle.length;
   };
 
+  const isExactOnlyTerm = (needle: string) =>
+    [
+      "ellis",
+      "valentine",
+      "xmas",
+      "turkey",
+      "thanks",
+      "christmas",
+      "thanksgiving",
+    ].includes(needle);
+
   const filteredGrids = useMemo(() => {
-    if (!allTokenGroups.length) return sortedGrids;
-    const scored = sortedGrids
-      .map((grid) => {
+    const buildMatches = (forceExact: boolean) => {
+      if (!allTokenGroups.length) return sortedGrids;
+      const effectiveExactOnly = exactOnly || forceExact;
+      const scored = sortedGrids
+        .map((grid) => {
         const isDateToken = (value: string) => value.startsWith("date:");
-        const rowTexts = grid.rows.map((label) => label.toLowerCase());
-        const colTexts = grid.cols.map((label) => label.toLowerCase());
-        const labelTexts =
-          scope === "rows"
-            ? rowTexts
-            : scope === "cols"
-            ? colTexts
-            : grid.all.map((label) => label.toLowerCase());
-        const allText = labelTexts.join(" ");
-        const isWinLabel = (label: string) =>
-          /\b\d+\+\s*w\b/.test(label.trim());
-        const aliasLabelsFor = (needle: string) => teamAliasMap[needle];
-        const matchesToken = (needle: string, labels: string[]) => {
-          if (!needle) return false;
+        const isMetaToken = (value: string) =>
+          value.startsWith("date:") || value === "has:hint";
+          const rowTexts = grid.rows.map((label) => label.toLowerCase());
+          const colTexts = grid.cols.map((label) => label.toLowerCase());
+          const hintTexts = (grid.hints ?? []).map((hint) => hint.toLowerCase());
+          const searchTexts = (grid.searchTerms ?? []).map((term) =>
+            term.toLowerCase()
+          );
+          const labelTexts =
+            scope === "rows"
+              ? rowTexts
+              : scope === "cols"
+              ? colTexts
+              : [
+                  ...grid.all.map((label) => label.toLowerCase()),
+                  ...searchTexts,
+                ];
+          const exactTexts = [...labelTexts, ...hintTexts];
+          const allText = [...labelTexts, ...hintTexts].join(" ");
+          const hintText = hintTexts.join(" ");
+          const exactText = exactTexts.join(" ");
+          const isWinLabel = (label: string) =>
+            /\b\d+\+\s*w\b/.test(label.trim());
+          const aliasLabelsFor = (needle: string) => teamAliasMap[needle];
+          const matchesToken = (needle: string, labels: string[]) => {
+            if (!needle) return false;
           if (isDateToken(needle)) {
             return grid.id.slice(5) === needle.slice(5);
           }
-          if (needle === "sux" || needle === "suck" || needle === "sucks") {
-            return false;
+          if (needle === "has:hint") {
+            return (grid.hints?.length ?? 0) > 0;
           }
-          const aliasLabels = aliasLabelsFor(needle);
-          if (aliasLabels) {
-            return labels.some((label) =>
-              aliasLabels.some((alias) => label.trim() === alias)
-            );
-          }
-          if (TEAM_ALIAS_LABELS.has(needle)) {
-            return labels.some((label) => label.trim() === needle);
-          }
-          const exactOverride = [
-            "p",
-            "c",
-            "ss",
-            "1b",
-            "2b",
-            "3b",
-            "lf",
-            "cf",
-            "rf",
-            "of",
-            "dh",
-          ].includes(needle);
-          if (exactOnly || exactOverride) {
-            return labels.some((label) => label.trim() === needle);
-          }
-          if (needle === "win" || needle === "wins" || needle === "w") {
-            return labels.some((label) => isWinLabel(label));
-          }
-          const isShortToken =
-            /^[a-z]{2,3}$/.test(needle) || /^[0-9]$/.test(needle);
-          if (isShortToken) {
-            const normalizedNeedle = needle.replace(/[^a-z0-9]/g, "");
-            return labels.some((label) => {
-              const normalizedLabel = label.replace(/[^a-z0-9]/g, "");
-              const normalizedLabelNoSpace = normalizedLabel.replace(/\s+/g, "");
-              if (normalizedNeedle === "ngl") {
-                return (
-                  label.trim() === "ngl" ||
-                  label.includes("negro league")
-                );
-              }
-              if (
-                normalizedNeedle === "as" &&
-                (label.includes("all-star") || label.includes("all star"))
-              ) {
-                return true;
-              }
-              if (
-                normalizedNeedle === "ss" &&
-                (label.includes("silver slugger") || label === "ss")
-              ) {
-                return true;
-              }
-              if (
-                normalizedNeedle === "gg" &&
-                (label.includes("gold glove") || label === "gg")
-              ) {
-                return true;
-              }
-              if (normalizedNeedle === "gg") {
-                return false;
-              }
-              if (
-                (normalizedNeedle === "one" || needle === "1") &&
-                label.includes("one team")
-              ) {
-                return true;
-              }
-              if (normalizedNeedle === "w") {
-                return isWinLabel(label);
-              }
-              if (normalizedNeedle === "2b") {
-                if (label === "2b" || label.includes("second base")) {
-                  return true;
+            if (needle === "sux" || needle === "suck" || needle === "sucks") {
+              return false;
+            }
+            const aliasLabels = aliasLabelsFor(needle);
+            if (aliasLabels) {
+              return labels.some((label) =>
+                aliasLabels.some((alias) => label.trim() === alias)
+              );
+            }
+            if (TEAM_ALIAS_LABELS.has(needle)) {
+              return labels.some((label) => label.trim() === needle);
+            }
+            const exactOverride = [
+              "p",
+              "c",
+              "ss",
+              "1b",
+              "2b",
+              "3b",
+              "lf",
+              "cf",
+              "rf",
+              "of",
+              "dh",
+            ].includes(needle);
+            const exactOnlyTerm = isExactOnlyTerm(needle);
+            if (effectiveExactOnly || exactOverride) {
+              return labels.some((label) => label.trim() === needle);
+            }
+            if (needle === "win" || needle === "wins" || needle === "w") {
+              return labels.some((label) => isWinLabel(label));
+            }
+            const isShortToken =
+              /^[a-z]{2,3}$/.test(needle) || /^[0-9]$/.test(needle);
+            if (isShortToken) {
+              const normalizedNeedle = needle.replace(/[^a-z0-9]/g, "");
+              return labels.some((label) => {
+                const normalizedLabel = label.replace(/[^a-z0-9]/g, "");
+                const normalizedLabelNoSpace = normalizedLabel.replace(/\s+/g, "");
+                if (normalizedNeedle === "ngl") {
+                  return (
+                    label.trim() === "ngl" ||
+                    label.includes("negro league")
+                  );
                 }
                 if (
-                  label.includes("doubles") ||
-                  normalizedLabelNoSpace.includes("40+2b")
+                  normalizedNeedle === "as" &&
+                  (label.includes("all-star") || label.includes("all star"))
                 ) {
                   return true;
                 }
-              }
-              return (
-                normalizedLabel.includes(normalizedNeedle) ||
-                fuzzyMatch(normalizedLabel, normalizedNeedle)
-              );
-            });
-          }
-          return (
-            labels.join(" ").includes(needle) ||
-            fuzzyMatch(labels.join(" "), needle)
-          );
-        };
-        const matchTerm = (needle: string) => {
-          if (!needle) return { matched: false, score: 0 };
+                if (
+                  normalizedNeedle === "ss" &&
+                  (label.includes("silver slugger") || label === "ss")
+                ) {
+                  return true;
+                }
+                if (
+                  normalizedNeedle === "gg" &&
+                  (label.includes("gold glove") || label === "gg")
+                ) {
+                  return true;
+                }
+                if (normalizedNeedle === "gg") {
+                  return false;
+                }
+                if (
+                  (normalizedNeedle === "one" || needle === "1") &&
+                  label.includes("one team")
+                ) {
+                  return true;
+                }
+                if (normalizedNeedle === "w") {
+                  return isWinLabel(label);
+                }
+                if (normalizedNeedle === "2b") {
+                  if (label === "2b" || label.includes("second base")) {
+                    return true;
+                  }
+                  if (
+                    label.includes("doubles") ||
+                    normalizedLabelNoSpace.includes("40+2b")
+                  ) {
+                    return true;
+                  }
+                }
+                return exactOnlyTerm
+                  ? normalizedLabel.includes(normalizedNeedle)
+                  : normalizedLabel.includes(normalizedNeedle) ||
+                      fuzzyMatch(normalizedLabel, normalizedNeedle);
+              });
+            }
+            return (
+              labels.join(" ").includes(needle) ||
+              (!exactOnlyTerm && fuzzyMatch(labels.join(" "), needle))
+            );
+          };
+          const matchTerm = (needle: string) => {
+            if (!needle) return { matched: false, score: 0 };
           if (isDateToken(needle)) {
             const hit = grid.id.slice(5) === needle.slice(5);
-            return hit ? { matched: true, score: 3 } : { matched: false, score: 0 };
-          }
-          if (needle === "sux" || needle === "suck" || needle === "sucks") {
-            return { matched: false, score: 0 };
-          }
-          const aliasLabels = aliasLabelsFor(needle);
-          if (aliasLabels) {
-            const hit = labelTexts.some((label) =>
-              aliasLabels.some((alias) => label.trim() === alias)
-            );
             return hit
               ? { matched: true, score: 3 }
               : { matched: false, score: 0 };
           }
-          if (TEAM_ALIAS_LABELS.has(needle)) {
-            const hit = labelTexts.some((label) => label.trim() === needle);
+          if (needle === "has:hint") {
+            const hit = (grid.hints?.length ?? 0) > 0;
             return hit ? { matched: true, score: 3 } : { matched: false, score: 0 };
           }
-          const exactOverride = [
-            "p",
-            "c",
-            "ss",
-            "1b",
-            "2b",
-            "3b",
-            "lf",
-            "cf",
-            "rf",
-            "of",
-            "dh",
-          ].includes(needle);
-          if (exactOnly || exactOverride) {
-            const exactHit = labelTexts.some(
-              (label) => label.trim() === needle
-            );
-            return exactHit
-              ? { matched: true, score: 3 }
-              : { matched: false, score: 0 };
-          }
-          if (needle === "win" || needle === "wins" || needle === "w") {
-            const winLabel = labelTexts.some((label) => isWinLabel(label));
-            return winLabel
-              ? { matched: true, score: 3 }
-              : { matched: false, score: 0 };
-          }
-          const isShortToken =
-            /^[a-z]{2,3}$/.test(needle) || /^[0-9]$/.test(needle);
-          if (isShortToken) {
-            const normalizedNeedle = needle.replace(/[^a-z0-9]/g, "");
-            const labelHit = labelTexts.some((label) => {
-              const normalizedLabel = label.replace(/[^a-z0-9]/g, "");
-              const normalizedLabelNoSpace = normalizedLabel.replace(/\s+/g, "");
-              if (normalizedNeedle === "ngl") {
-                return (
-                  label.trim() === "ngl" ||
-                  label.includes("negro league")
-                );
+            if (needle === "sux" || needle === "suck" || needle === "sucks") {
+              return { matched: false, score: 0 };
+            }
+            const aliasLabels = aliasLabelsFor(needle);
+            if (aliasLabels) {
+              const hit = labelTexts.some((label) =>
+                aliasLabels.some((alias) => label.trim() === alias)
+              );
+              return hit
+                ? { matched: true, score: 3 }
+                : { matched: false, score: 0 };
+            }
+            if (TEAM_ALIAS_LABELS.has(needle)) {
+              const hit = labelTexts.some((label) => label.trim() === needle);
+              return hit
+                ? { matched: true, score: 3 }
+                : { matched: false, score: 0 };
+            }
+            const exactOverride = [
+              "p",
+              "c",
+              "ss",
+              "1b",
+              "2b",
+              "3b",
+              "lf",
+              "cf",
+              "rf",
+              "of",
+              "dh",
+            ].includes(needle);
+            const exactOnlyTerm = isExactOnlyTerm(needle);
+            if (effectiveExactOnly || exactOverride) {
+              if (hintText && hintText.includes(needle)) {
+                return { matched: true, score: 3 };
               }
-              if (
-                normalizedNeedle === "as" &&
-                (label.includes("all-star") || label.includes("all star"))
-              ) {
-                return true;
-              }
-              if (
-                normalizedNeedle === "ss" &&
-                (label.includes("silver slugger") || label === "ss")
-              ) {
-                return true;
-              }
-              if (
-                normalizedNeedle === "gg" &&
-                (label.includes("gold glove") || label === "gg")
-              ) {
-                return true;
-              }
-              if (normalizedNeedle === "gg") {
-                return false;
-              }
-              if (
-                (normalizedNeedle === "one" || needle === "1") &&
-                label.includes("one team")
-              ) {
-                return true;
-              }
-              if (normalizedNeedle === "w") {
-                return isWinLabel(label);
-              }
-              if (normalizedNeedle === "2b") {
-                if (label === "2b" || label.includes("second base")) {
-                  return true;
+              const exactHit = labelTexts.some(
+                (label) => label.trim() === needle
+              );
+              return exactHit
+                ? { matched: true, score: 3 }
+                : { matched: false, score: 0 };
+            }
+            if (needle === "win" || needle === "wins" || needle === "w") {
+              const winLabel = labelTexts.some((label) => isWinLabel(label));
+              return winLabel
+                ? { matched: true, score: 3 }
+                : { matched: false, score: 0 };
+            }
+            const isShortToken =
+              /^[a-z]{2,3}$/.test(needle) || /^[0-9]$/.test(needle);
+            if (isShortToken) {
+              const normalizedNeedle = needle.replace(/[^a-z0-9]/g, "");
+              const labelHit = labelTexts.some((label) => {
+                const normalizedLabel = label.replace(/[^a-z0-9]/g, "");
+                const normalizedLabelNoSpace = normalizedLabel.replace(/\s+/g, "");
+                if (normalizedNeedle === "ngl") {
+                  return (
+                    label.trim() === "ngl" ||
+                    label.includes("negro league")
+                  );
                 }
                 if (
-                  label.includes("doubles") ||
-                  normalizedLabelNoSpace.includes("40+2b")
+                  normalizedNeedle === "as" &&
+                  (label.includes("all-star") || label.includes("all star"))
                 ) {
                   return true;
                 }
-              }
-              return (
-                normalizedLabel.includes(normalizedNeedle) ||
-                fuzzyMatch(normalizedLabel, normalizedNeedle)
-              );
-            });
-            if (!labelHit) return { matched: false, score: 0 };
-            if (
-              normalizedNeedle === "as" &&
-              labelTexts.some(
-                (label) =>
-                  label.includes("all-star") || label.includes("all star")
-              )
-            ) {
-              return { matched: true, score: 3 };
-            }
-            if (
-              normalizedNeedle === "ss" &&
-              labelTexts.some(
-                (label) => label.includes("silver slugger") || label === "ss"
-              )
-            ) {
-              return { matched: true, score: 3 };
-            }
-            if (
-              normalizedNeedle === "gg" &&
-              labelTexts.some(
-                (label) => label.includes("gold glove") || label === "gg"
-              )
-            ) {
-              return { matched: true, score: 3 };
-            }
-            if (
-              (normalizedNeedle === "one" || needle === "1") &&
-              labelTexts.some((label) => label.includes("one team"))
-            ) {
-              return { matched: true, score: 3 };
-            }
-            if (normalizedNeedle === "2b") {
-              const hasSecondBase = labelTexts.some(
-                (label) => label === "2b" || label.includes("second base")
-              );
-              const hasDoubles = labelTexts.some(
-                (label) =>
-                  label.includes("doubles") || label.includes("40+ 2b")
-              );
-              if (hasSecondBase) {
+                if (
+                  normalizedNeedle === "ss" &&
+                  (label.includes("silver slugger") || label === "ss")
+                ) {
+                  return true;
+                }
+                if (
+                  normalizedNeedle === "gg" &&
+                  (label.includes("gold glove") || label === "gg")
+                ) {
+                  return true;
+                }
+                if (normalizedNeedle === "gg") {
+                  return false;
+                }
+                if (
+                  (normalizedNeedle === "one" || needle === "1") &&
+                  label.includes("one team")
+                ) {
+                  return true;
+                }
+                if (normalizedNeedle === "w") {
+                  return isWinLabel(label);
+                }
+                if (normalizedNeedle === "2b") {
+                  if (label === "2b" || label.includes("second base")) {
+                    return true;
+                  }
+                  if (
+                    label.includes("doubles") ||
+                    normalizedLabelNoSpace.includes("40+2b")
+                  ) {
+                    return true;
+                  }
+                }
+                return exactOnlyTerm
+                  ? normalizedLabel.includes(normalizedNeedle)
+                  : normalizedLabel.includes(normalizedNeedle) ||
+                      fuzzyMatch(normalizedLabel, normalizedNeedle);
+              });
+              if (!labelHit) return { matched: false, score: 0 };
+              if (
+                normalizedNeedle === "as" &&
+                labelTexts.some(
+                  (label) =>
+                    label.includes("all-star") || label.includes("all star")
+                )
+              ) {
                 return { matched: true, score: 3 };
               }
-              if (hasDoubles) {
-                return { matched: true, score: 2 };
+              if (
+                normalizedNeedle === "ss" &&
+                labelTexts.some(
+                  (label) => label.includes("silver slugger") || label === "ss"
+                )
+              ) {
+                return { matched: true, score: 3 };
+              }
+              if (
+                normalizedNeedle === "gg" &&
+                labelTexts.some(
+                  (label) => label.includes("gold glove") || label === "gg"
+                )
+              ) {
+                return { matched: true, score: 3 };
+              }
+              if (
+                (normalizedNeedle === "one" || needle === "1") &&
+                labelTexts.some((label) => label.includes("one team"))
+              ) {
+                return { matched: true, score: 3 };
+              }
+              if (normalizedNeedle === "2b") {
+                const hasSecondBase = labelTexts.some(
+                  (label) => label === "2b" || label.includes("second base")
+                );
+                const hasDoubles = labelTexts.some(
+                  (label) =>
+                    label.includes("doubles") || label.includes("40+ 2b")
+                );
+                if (hasSecondBase) {
+                  return { matched: true, score: 3 };
+                }
+                if (hasDoubles) {
+                  return { matched: true, score: 2 };
+                }
+              }
+              return { matched: true, score: 2 };
+            }
+            if (exactText.includes(needle)) {
+              return { matched: true, score: 2 };
+            }
+            if (!exactOnlyTerm && fuzzyMatch(allText, needle)) {
+              return { matched: true, score: 1 };
+            }
+            return { matched: false, score: 0 };
+          };
+          let score = 0;
+          let matchedAll = true;
+          let matchedRow = false;
+          let matchedCol = false;
+          for (const group of allTokenGroups) {
+            let groupMatched = false;
+            let bestScore = 0;
+            for (const token of group) {
+              const needle = token.toLowerCase();
+              if (!needle) continue;
+              const result = matchTerm(needle);
+              if (result.matched) {
+                groupMatched = true;
+                if (result.score > bestScore) bestScore = result.score;
               }
             }
-            return { matched: true, score: 2 };
-          }
-          if (allText.includes(needle)) {
-            return { matched: true, score: 2 };
-          }
-          if (fuzzyMatch(allText, needle)) {
-            return { matched: true, score: 1 };
-          }
-          return { matched: false, score: 0 };
-        };
-        let score = 0;
-        let matchedAll = true;
-        let matchedRow = false;
-        let matchedCol = false;
-        for (const group of allTokenGroups) {
-          let groupMatched = false;
-          let bestScore = 0;
-          for (const token of group) {
-            const needle = token.toLowerCase();
-            if (!needle) continue;
-            const result = matchTerm(needle);
-            if (result.matched) {
-              groupMatched = true;
-              if (result.score > bestScore) bestScore = result.score;
+            if (!groupMatched) {
+              matchedAll = false;
+              break;
             }
+            score += bestScore;
           }
-          if (!groupMatched) {
-            matchedAll = false;
-            break;
-          }
-          score += bestScore;
-        }
-        if (matchedAll && intersectOnly) {
+          if (matchedAll && intersectOnly) {
           const intersectGroups = allTokenGroups.filter(
-            (group) => !group.some((token) => isDateToken(token.toLowerCase()))
+            (group) => !group.some((token) => isMetaToken(token.toLowerCase()))
           );
-          if (intersectGroups.length >= 2) {
-            matchedRow = intersectGroups.some((group) =>
-              group.some((token) => matchesToken(token.toLowerCase(), rowTexts))
-            );
-            matchedCol = intersectGroups.some((group) =>
-              group.some((token) => matchesToken(token.toLowerCase(), colTexts))
-            );
-            if (!matchedRow || !matchedCol) {
-              return null;
+            if (intersectGroups.length >= 2) {
+              matchedRow = intersectGroups.some((group) =>
+                group.some((token) =>
+                  matchesToken(token.toLowerCase(), rowTexts)
+                )
+              );
+              matchedCol = intersectGroups.some((group) =>
+                group.some((token) =>
+                  matchesToken(token.toLowerCase(), colTexts)
+                )
+              );
+              if (!matchedRow || !matchedCol) {
+                return null;
+              }
             }
           }
-        }
-        if (
-          matchedAll &&
-          prefersYankees &&
-          labelTexts.some((label) => label.includes("yankees"))
-        ) {
-          score += 1;
-        }
-        return matchedAll ? { grid, score } : null;
-      })
-      .filter((value): value is { grid: Grid; score: number } => value !== null)
-      .sort((a, b) => {
-        if (b.score !== a.score) return b.score - a.score;
-        return sortOrder === "oldest"
-          ? a.grid.id.localeCompare(b.grid.id)
-          : b.grid.id.localeCompare(a.grid.id);
-      });
+          if (
+            matchedAll &&
+            prefersYankees &&
+            labelTexts.some((label) => label.includes("yankees"))
+          ) {
+            score += 1;
+          }
+          return matchedAll ? { grid, score } : null;
+        })
+        .filter(
+          (value): value is { grid: Grid; score: number } => value !== null
+        )
+        .sort((a, b) => {
+          if (b.score !== a.score) return b.score - a.score;
+          return sortOrder === "oldest"
+            ? a.grid.id.localeCompare(b.grid.id)
+            : b.grid.id.localeCompare(a.grid.id);
+        });
 
-    return scored.map(({ grid }) => grid);
-  }, [sortedGrids, allTokenGroups, exactOnly, scope, intersectOnly, prefersYankees]);
+      return scored.map(({ grid }) => grid);
+    };
+
+    const matches = buildMatches(false);
+    const exactMatches = buildMatches(true);
+    if (!allTokenGroups.length || exactOnly) {
+      return { exactMatches: matches, possibleMatches: [] };
+    }
+    const exactKeys = new Set(
+      exactMatches.map((grid) => grid.gridNumber ?? grid.id)
+    );
+    return {
+      exactMatches,
+      possibleMatches: matches.filter(
+        (grid) => !exactKeys.has(grid.gridNumber ?? grid.id)
+      ),
+    };
+  }, [
+    sortedGrids,
+    allTokenGroups,
+    exactOnly,
+    scope,
+    intersectOnly,
+    prefersYankees,
+  ]);
+
+  const hasQuery = allTokenGroups.length > 0;
+  const combinedGrids = useMemo(
+    () =>
+      hasQuery
+        ? [...filteredGrids.exactMatches, ...filteredGrids.possibleMatches]
+        : sortedGrids,
+    [filteredGrids, hasQuery, sortedGrids]
+  );
 
   const visibleGrids = useMemo(
-    () => filteredGrids.slice(0, visibleCount),
-    [filteredGrids, visibleCount]
+    () => combinedGrids.slice(0, visibleCount),
+    [combinedGrids, visibleCount]
+  );
+
+  const exactKeys = useMemo(() => {
+    if (!hasQuery) return new Set();
+    return new Set(
+      filteredGrids.exactMatches.map((grid) => grid.gridNumber ?? grid.id)
+    );
+  }, [filteredGrids, hasQuery]);
+
+  const visibleExactGrids = useMemo(
+    () => (hasQuery ? visibleGrids.filter((grid) => exactKeys.has(grid.gridNumber ?? grid.id)) : visibleGrids),
+    [exactKeys, hasQuery, visibleGrids]
+  );
+
+  const visiblePossibleGrids = useMemo(
+    () => (hasQuery ? visibleGrids.filter((grid) => !exactKeys.has(grid.gridNumber ?? grid.id)) : []),
+    [exactKeys, hasQuery, visibleGrids]
   );
 
   useEffect(() => {
@@ -698,12 +842,6 @@ export default function HomeClient() {
     exactOnly,
   ]);
 
-  const handleRandomPick = () => {
-    if (!filteredGrids.length) return;
-    const pick =
-      filteredGrids[Math.floor(Math.random() * filteredGrids.length)];
-    window.open(pick.url, "_blank", "noopener,noreferrer");
-  };
 
   const positions = [
     "P",
@@ -816,6 +954,67 @@ export default function HomeClient() {
     return matched;
   };
 
+  const renderGridCards = (list: Grid[]) =>
+    list.map((grid) => {
+      const matched = getMatchSet(grid);
+      return (
+        <article
+          key={grid.gridNumber ? `grid-${grid.gridNumber}` : grid.id}
+          className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+        >
+          <a
+            href={grid.url}
+            target="_blank"
+            rel="noreferrer"
+            className="block text-center text-xs uppercase tracking-[0.22em] text-blue-700 underline-offset-4 transition hover:text-blue-900 hover:underline"
+          >
+            #{grid.gridNumber ?? "—"} ({grid.id})
+          </a>
+          {grid.hints?.length ? (
+            <p className="mt-2 text-center text-[11px] font-medium text-slate-500">
+              {grid.hints.join(" · ")}
+            </p>
+          ) : null}
+          <div className="mt-3 grid grid-cols-4 gap-2 text-[11px] font-semibold text-slate-700">
+            <div className="rounded-md bg-slate-50 px-2 py-1" />
+            {grid.cols.map((col, index) => (
+              <div
+                key={`${grid.gridNumber ?? grid.id}-col-${index}-${col}`}
+                className={`rounded-md px-2 py-1 text-center ${
+                  matched.has(col)
+                    ? "bg-blue-100 text-blue-800"
+                    : "bg-slate-100"
+                }`}
+              >
+                {col}
+              </div>
+            ))}
+            {grid.rows.map((row, index) => (
+              <Fragment
+                key={`${grid.gridNumber ?? grid.id}-row-${index}-${row}`}
+              >
+                <div
+                  className={`rounded-md px-2 py-1 text-center ${
+                    matched.has(row)
+                      ? "bg-blue-100 text-blue-800"
+                      : "bg-slate-100"
+                  }`}
+                >
+                  {row}
+                </div>
+                {[0, 1, 2].map((cell) => (
+                  <div
+                    key={`${grid.gridNumber ?? grid.id}-cell-${index}-${cell}`}
+                    className="rounded-md bg-slate-50 px-2 py-1"
+                  />
+                ))}
+              </Fragment>
+            ))}
+          </div>
+        </article>
+      );
+    });
+
   return (
     <div className="min-h-screen bg-[#f3f6fb] text-slate-900">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-12 px-6 py-16">
@@ -832,13 +1031,14 @@ export default function HomeClient() {
         </header>
 
         <section className="flex flex-col items-center gap-6">
-          <div className="w-full max-w-3xl">
+          <div className="w-full max-w-4xl">
             <div className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center">
               <div className="relative w-full flex-1">
                 <input
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
                   placeholder="Search labels (Ex: Pirates WAR)"
+                  autoFocus
                   className="w-full rounded-full border border-slate-200 bg-white px-6 py-4 pr-12 text-lg font-medium text-slate-900 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-blue-100 sm:pr-6"
                 />
                 {!!query && (
@@ -907,8 +1107,8 @@ export default function HomeClient() {
                   </button>
                 ))}
               </div>
-              <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
-                <span className="text-[11px] uppercase tracking-[0.2em] text-slate-400">
+              <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-500 sm:flex-nowrap sm:gap-1 sm:overflow-x-hidden">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-slate-400 sm:text-[10px] sm:tracking-[0.18em]">
                   Born in
                 </span>
                 {bornLocations.map((born) => (
@@ -916,7 +1116,7 @@ export default function HomeClient() {
                     key={born.token}
                     type="button"
                     onClick={() => toggleBorn(born.token)}
-                    className={`whitespace-nowrap rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] transition ${
+                    className={`whitespace-nowrap rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] transition sm:px-1.5 sm:text-[8px] sm:tracking-[0.12em] ${
                       selectedBorn.includes(born.token)
                         ? "border-blue-300 bg-blue-100 text-blue-800"
                         : "border-slate-200 bg-slate-50 text-slate-600 hover:border-slate-300 hover:bg-white hover:text-slate-900"
@@ -932,34 +1132,26 @@ export default function HomeClient() {
               </span>
               <button
                 type="button"
-                onClick={() => setQuery(`date:${monthDay}`)}
-                className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+                onClick={() => toggleFilterToken(`date:${monthDay}`)}
+                className={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] transition ${
+                  isTodayFilterActive
+                    ? "border-blue-300 bg-blue-100 text-blue-800"
+                    : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900"
+                }`}
               >
                 All {monthLabel} grids
               </button>
-              <a
-                href="https://www.sports-reference.com/immaculate-grid/grid-730"
-                target="_blank"
-                  rel="noreferrer"
-                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
-                >
-                  Any MLB (2025-4-1)
-                </a>
-                <a
-                  href="https://www.sports-reference.com/immaculate-grid/grid-1037"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
-                >
-                  Any NGL (2026-2-2)
-                </a>
-                <button
-                  type="button"
-                  onClick={handleRandomPick}
-                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
-                >
-                  Random Grid
-                </button>
+              <button
+                type="button"
+                onClick={() => toggleFilterToken("has:hint")}
+                className={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] transition ${
+                  isSpecialFilterActive
+                    ? "border-blue-300 bg-blue-100 text-blue-800"
+                    : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900"
+                }`}
+              >
+                Special day grids
+              </button>
                 <a
                   href="/about"
                   className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
@@ -988,7 +1180,7 @@ export default function HomeClient() {
                   </button>
                 ))}
               </div>
-              <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-500 sm:flex-nowrap sm:overflow-x-auto">
+              <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
                 <span className="text-[11px] uppercase tracking-[0.2em] text-slate-400">
                   Born in
                 </span>
@@ -1013,33 +1205,25 @@ export default function HomeClient() {
                 </span>
                 <button
                   type="button"
-                  onClick={() => setQuery(`date:${monthDay}`)}
-                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+                  onClick={() => toggleFilterToken(`date:${monthDay}`)}
+                  className={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] transition ${
+                    isTodayFilterActive
+                      ? "border-blue-300 bg-blue-100 text-blue-800"
+                      : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900"
+                  }`}
                 >
                   All {monthLabel} grids
                 </button>
-                <a
-                  href="https://www.sports-reference.com/immaculate-grid/grid-730"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
-                >
-                  Any MLB (2025-4-1)
-                </a>
-                <a
-                  href="https://www.sports-reference.com/immaculate-grid/grid-1037"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
-                >
-                  Any NGL (2026-2-2)
-                </a>
                 <button
                   type="button"
-                  onClick={handleRandomPick}
-                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+                  onClick={() => toggleFilterToken("has:hint")}
+                  className={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] transition ${
+                    isSpecialFilterActive
+                      ? "border-blue-300 bg-blue-100 text-blue-800"
+                      : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900"
+                  }`}
                 >
-                  Random Grid
+                  Special day grids
                 </button>
                 <a
                   href="/about"
@@ -1055,7 +1239,11 @@ export default function HomeClient() {
         <section className="flex flex-col gap-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
-              Matching grids
+              {hasQuery
+                ? visibleExactGrids.length
+                  ? "Matching Grids (Exact)"
+                  : "Matching Grids (Possible)"
+                : "Matching Grids"}
             </div>
             <button
               type="button"
@@ -1067,73 +1255,46 @@ export default function HomeClient() {
               {sortOrder === "newest" ? "Recent ↓" : "Early ↑"}
             </button>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {visibleGrids.length ? (
-              visibleGrids.map((grid) => {
-                const matched = getMatchSet(grid);
-                return (
-                  <article
-                    key={grid.gridNumber ? `grid-${grid.gridNumber}` : grid.id}
-                    className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
-                  >
-                    <a
-                      href={grid.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="block text-center text-xs uppercase tracking-[0.22em] text-blue-700 underline-offset-4 transition hover:text-blue-900 hover:underline"
-                    >
-                      #{grid.gridNumber ?? "—"} ({grid.id})
-                    </a>
-                    <div className="mt-3 grid grid-cols-4 gap-2 text-[11px] font-semibold text-slate-700">
-                      <div className="rounded-md bg-slate-50 px-2 py-1" />
-                      {grid.cols.map((col, index) => (
-                        <div
-                          key={`${grid.gridNumber ?? grid.id}-col-${index}-${col}`}
-                          className={`rounded-md px-2 py-1 text-center ${
-                            matched.has(col)
-                              ? "bg-blue-100 text-blue-800"
-                              : "bg-slate-100"
-                          }`}
-                        >
-                          {col}
-                        </div>
-                      ))}
-                    {grid.rows.map((row, index) => (
-                      <Fragment key={`${grid.gridNumber ?? grid.id}-row-${index}-${row}`}>
-                        <div
-                          className={`rounded-md px-2 py-1 text-center ${
-                            matched.has(row)
-                              ? "bg-blue-100 text-blue-800"
-                              : "bg-slate-100"
-                          }`}
-                        >
-                          {row}
-                        </div>
-                        {[0, 1, 2].map((cell) => (
-                          <div
-                            key={`${grid.gridNumber ?? grid.id}-cell-${index}-${cell}`}
-                            className="rounded-md bg-slate-50 px-2 py-1"
-                          />
-                        ))}
-                      </Fragment>
-                    ))}
+          {visibleGrids.length ? (
+            hasQuery ? (
+              <div className="flex flex-col gap-6">
+                {visibleExactGrids.length ? (
+                  <div className="flex flex-col gap-4">
+                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                      {renderGridCards(visibleExactGrids)}
+                    </div>
                   </div>
-                </article>
-              );
-              })
+                ) : null}
+                {visiblePossibleGrids.length ? (
+                  <div className="flex flex-col gap-4">
+                    {visibleExactGrids.length ? (
+                      <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+                        Matching Grids (Possible)
+                      </div>
+                    ) : null}
+                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                      {renderGridCards(visiblePossibleGrids)}
+                    </div>
+                  </div>
+                ) : null}
+              </div>
             ) : (
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {renderGridCards(visibleGrids)}
+              </div>
+            )
+          ) : (
               <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-6 text-center text-sm text-slate-500">
                 No grids found for that search.
               </div>
             )}
-          </div>
-          {visibleGrids.length < filteredGrids.length && (
+          {visibleGrids.length < combinedGrids.length && (
             <div className="flex justify-center">
               <button
                 type="button"
                 onClick={() =>
                   setVisibleCount((count) =>
-                    Math.min(count + 50, filteredGrids.length)
+                    Math.min(count + 50, combinedGrids.length)
                   )
                 }
                 className="rounded-full border border-slate-300 bg-white px-6 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600 transition hover:border-slate-400 hover:text-slate-900"

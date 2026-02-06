@@ -541,5 +541,113 @@
   ],
   "wsn": [
     "nationals"
+  ],
+  "atlanta": [
+    "braves"
+  ],
+  "baltimore": [
+    "orioles"
+  ],
+  "chicago": [
+    "cubs",
+    "white sox",
+    "sox"
+  ],
+  "cincinnati": [
+    "reds"
+  ],
+  "cleveland": [
+    "guardians"
+  ],
+  "colorado": [
+    "rockies"
+  ],
+  "detroit": [
+    "tigers"
+  ],
+  "houston": [
+    "astros"
+  ],
+  "kansas city": [
+    "royals"
+  ],
+  "la": [
+    "dodgers",
+    "angels"
+  ],
+  "los angeles": [
+    "dodgers",
+    "angels"
+  ],
+  "miami": [
+    "marlins"
+  ],
+  "milwaukee": [
+    "brewers"
+  ],
+  "minnesota": [
+    "twins"
+  ],
+  "montreal": [
+    "nationals",
+    "expos"
+  ],
+  "expos": [
+    "nationals"
+  ],
+  "new york": [
+    "yankees",
+    "mets"
+  ],
+  "oakland": [
+    "athletics"
+  ],
+  "philadelphia": [
+    "phillies"
+  ],
+  "pittsburgh": [
+    "pirates"
+  ],
+  "san diego": [
+    "padres"
+  ],
+  "san francisco": [
+    "giants"
+  ],
+  "seattle": [
+    "mariners"
+  ],
+  "st. louis": [
+    "cardinals",
+    "cards"
+  ],
+  "saint louis": [
+    "cardinals",
+    "cards"
+  ],
+  "tampa": [
+    "rays"
+  ],
+  "tampa bay": [
+    "rays"
+  ],
+  "devil rays": [
+    "rays"
+  ],
+  "devil": [
+    "rays"
+  ],
+  "texas": [
+    "rangers"
+  ],
+  "toronto": [
+    "blue jays"
+  ],
+  "washington": [
+    "nationals",
+    "nats"
+  ],
+  "angels": [
+    "angels"
   ]
 }

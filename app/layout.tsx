@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Ordinary Archive",
     images: [
       {
-        url: "/og.png",
+        url: "/og",
         width: 1200,
         height: 630,
         alt: "Ordinary Archive",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "Ordinary Archive — Immaculate Grid (Baseball) Search",
     description:
       "Search past Immaculate Grid (Baseball) puzzles by team, stat, award, birthplace, and more.",
-    images: ["/og.png"],
+    images: ["/og"],
   },
   robots: {
     index: true,

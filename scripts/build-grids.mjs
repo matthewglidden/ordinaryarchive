@@ -832,6 +832,14 @@ const extractDateId = ($, fallback) => {
 
 const buildGridUrl = (base, suffix, index) => `${base}${index}${suffix}`;
 
+const isUsThanksgiving = (id) => {
+  if (!/^\d{4}-11-\d{2}$/.test(id)) return false;
+  const [year, month, day] = id.split("-").map(Number);
+  if (month !== 11) return false;
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.getUTCDay() === 4 && day >= 22 && day <= 28;
+};
+
 const main = async () => {
   const args = parseArgs(process.argv.slice(2));
   const outPath = args.out
@@ -920,11 +928,33 @@ const main = async () => {
     }
 
     const id = date || extractDateId($, `grid-${index}`);
+    const hints = [];
+    const searchTerms = [];
+    if (/^\d{4}-02-14$/.test(id)) {
+      hints.push("Try Ellis Valentine");
+    }
+    if (isUsThanksgiving(id)) {
+      hints.push("\u{1F983} Day - try Turkey Stearnes");
+      searchTerms.push("Thanksgiving");
+    }
     const summaryRows = rows.length ? rows.join(", ") : "none";
     const summaryCols = cols.length ? cols.join(", ") : "none";
     console.log(`Grid ${id}: rows [${summaryRows}] | cols [${summaryCols}]`);
 
     const hasValidLabels = rows.length === 3 && cols.length === 3;
+    const isDateId = /^\d{4}-\d{2}-\d{2}$/.test(id);
+    if (!hasValidLabels && isDateId && id >= today) {
+      console.log(
+        `Grid ${index} (${id}) not available yet; stopping after ${today}.`
+      );
+      break;
+    }
+    if (isDateId && id > today) {
+      console.log(
+        `Grid ${index} (${id}) is after today (${today}); stopping.`
+      );
+      break;
+    }
     if (!hasValidLabels) {
       const scriptCount = $("script").length;
       const dataAttrCount = $(
@@ -957,6 +987,8 @@ const main = async () => {
       rows: normalizedRows,
       cols: normalizedCols,
       all: [...normalizedRows, ...normalizedCols],
+      ...(hints.length ? { hints } : {}),
+      ...(searchTerms.length ? { searchTerms } : {}),
     });
 
     if (id === today) {
