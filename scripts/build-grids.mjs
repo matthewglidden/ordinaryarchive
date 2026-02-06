@@ -934,7 +934,7 @@ const main = async () => {
       hints.push("Babe Ruth's birthday - he fits at least once");
     }
     if (id === "2023-12-31") {
-      hints.push("Salute to Clemente (🇵🇷) - he fits at least once");
+      hints.push("Salute to Clemente (🇵🇷)");
     }
     if (/^\d{4}-02-14$/.test(id)) {
       hints.push("Try Ellis Valentine");
