@@ -24003,5 +24003,28 @@
     "hints": [
       "Babe Ruth's birthday - he fits at least once"
     ]
+  },
+  {
+    "gridNumber": 1042,
+    "id": "2026-02-07",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1042",
+    "rows": [
+      "3K+ H",
+      "300+ HR",
+      ".300+ Career"
+    ],
+    "cols": [
+      "LF",
+      "CF",
+      "RF"
+    ],
+    "all": [
+      "3K+ H",
+      "300+ HR",
+      ".300+ Career",
+      "LF",
+      "CF",
+      "RF"
+    ]
   }
 ]
