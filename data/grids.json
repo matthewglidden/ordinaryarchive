@@ -24029,5 +24029,28 @@
     "hints": [
       "Hank Aaron's birthday - try him anywhere"
     ]
+  },
+  {
+    "gridNumber": 1043,
+    "id": "2026-02-08",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1043",
+    "rows": [
+      "Royals",
+      "Pirates",
+      "Angels"
+    ],
+    "cols": [
+      "Reds",
+      "Phillies",
+      "Rangers"
+    ],
+    "all": [
+      "Royals",
+      "Pirates",
+      "Angels",
+      "Reds",
+      "Phillies",
+      "Rangers"
+    ]
   }
 ]
