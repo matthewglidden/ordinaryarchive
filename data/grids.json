@@ -24052,5 +24052,28 @@
       "Phillies",
       "Rangers"
     ]
+  },
+  {
+    "gridNumber": 1044,
+    "id": "2026-02-09",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1044",
+    "rows": [
+      "NGL",
+      "Dodgers",
+      "Guardians"
+    ],
+    "cols": [
+      "P",
+      "C",
+      "HOF"
+    ],
+    "all": [
+      "NGL",
+      "Dodgers",
+      "Guardians",
+      "P",
+      "C",
+      "HOF"
+    ]
   }
 ]
