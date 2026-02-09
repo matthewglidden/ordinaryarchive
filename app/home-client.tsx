@@ -890,6 +890,16 @@ export default function HomeClient() {
     setIntersectOnly(false);
   };
 
+  const handleRandomPick = () => {
+    if (!combinedGrids.length) return;
+    const index = Math.floor(Math.random() * combinedGrids.length);
+    const selected = combinedGrids[index];
+    if (!selected) return;
+    if (typeof window !== "undefined") {
+      window.location.href = selected.url;
+    }
+  };
+
   const getMatchSet = (grid: Grid) => {
     if (!allTokenGroups.length) return new Set<string>();
     const baseLabels =
@@ -1152,6 +1162,13 @@ export default function HomeClient() {
               >
                 Special day grids
               </button>
+              <button
+                type="button"
+                onClick={handleRandomPick}
+                className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+              >
+                Random grid
+              </button>
                 <a
                   href="/about"
                   className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
@@ -1224,6 +1241,13 @@ export default function HomeClient() {
                   }`}
                 >
                   Special day grids
+                </button>
+                <button
+                  type="button"
+                  onClick={handleRandomPick}
+                  className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
+                >
+                  Random grid
                 </button>
                 <a
                   href="/about"
