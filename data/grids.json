@@ -24075,5 +24075,28 @@
       "C",
       "HOF"
     ]
+  },
+  {
+    "gridNumber": 1045,
+    "id": "2026-02-10",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1045",
+    "rows": [
+      "Cardinals",
+      "Mariners",
+      "200+ W"
+    ],
+    "cols": [
+      "Mets",
+      "Twins",
+      "One Team"
+    ],
+    "all": [
+      "Cardinals",
+      "Mariners",
+      "200+ W",
+      "Mets",
+      "Twins",
+      "One Team"
+    ]
   }
 ]
