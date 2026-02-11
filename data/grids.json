@@ -24098,5 +24098,28 @@
       "Twins",
       "One Team"
     ]
+  },
+  {
+    "gridNumber": 1046,
+    "id": "2026-02-11",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1046",
+    "rows": [
+      "White Sox",
+      "Padres",
+      "All-Star"
+    ],
+    "cols": [
+      "Giants",
+      "Rays",
+      "3B"
+    ],
+    "all": [
+      "White Sox",
+      "Padres",
+      "All-Star",
+      "Giants",
+      "Rays",
+      "3B"
+    ]
   }
 ]
