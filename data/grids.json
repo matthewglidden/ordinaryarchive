@@ -24121,5 +24121,28 @@
       "Rays",
       "3B"
     ]
+  },
+  {
+    "gridNumber": 1047,
+    "id": "2026-02-12",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1047",
+    "rows": [
+      "Tigers",
+      "Athletics",
+      "Braves"
+    ],
+    "cols": [
+      "Blue Jays",
+      "D'backs",
+      "40+ WAR"
+    ],
+    "all": [
+      "Tigers",
+      "Athletics",
+      "Braves",
+      "Blue Jays",
+      "D'backs",
+      "40+ WAR"
+    ]
   }
 ]
