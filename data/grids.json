@@ -24144,5 +24144,28 @@
       "D'backs",
       "40+ WAR"
     ]
+  },
+  {
+    "gridNumber": 1048,
+    "id": "2026-02-13",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1048",
+    "rows": [
+      "Cubs",
+      "Yankees",
+      "100+ RBI"
+    ],
+    "cols": [
+      "Phillies",
+      "Pirates",
+      "30+ SB"
+    ],
+    "all": [
+      "Cubs",
+      "Yankees",
+      "100+ RBI",
+      "Phillies",
+      "Pirates",
+      "30+ SB"
+    ]
   }
 ]
