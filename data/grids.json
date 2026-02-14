@@ -24167,5 +24167,31 @@
       "Pirates",
       "30+ SB"
     ]
+  },
+  {
+    "gridNumber": 1049,
+    "id": "2026-02-14",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1049",
+    "rows": [
+      "30+ HR",
+      "OF",
+      "2B"
+    ],
+    "cols": [
+      "2K+ H",
+      "MVP",
+      "SS"
+    ],
+    "all": [
+      "30+ HR",
+      "OF",
+      "2B",
+      "2K+ H",
+      "MVP",
+      "SS"
+    ],
+    "hints": [
+      "Try Ellis Valentine"
+    ]
   }
 ]
