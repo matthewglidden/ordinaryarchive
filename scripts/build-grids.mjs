@@ -943,7 +943,7 @@ const main = async () => {
       hints.push("Hank Aaron's birthday - try him anywhere");
     }
     if (/^\d{4}-02-14$/.test(id)) {
-      hints.push("Try Ellis Valentine");
+      hints.push("Try heart/hart/valentine names today (💘)");
     }
     if (isUsThanksgiving(id)) {
       hints.push("\u{1F983} Day - try Turkey Stearnes");
