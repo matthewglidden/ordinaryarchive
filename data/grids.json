@@ -24193,5 +24193,28 @@
     "hints": [
       "Try Ellis Valentine"
     ]
+  },
+  {
+    "gridNumber": 1050,
+    "id": "2026-02-15",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1050",
+    "rows": [
+      "Nationals",
+      "Dodgers",
+      "Mets"
+    ],
+    "cols": [
+      "Guardians",
+      "Rockies",
+      "Rangers"
+    ],
+    "all": [
+      "Nationals",
+      "Dodgers",
+      "Mets",
+      "Guardians",
+      "Rockies",
+      "Rangers"
+    ]
   }
 ]
