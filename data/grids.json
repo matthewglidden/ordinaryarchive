@@ -24216,5 +24216,28 @@
       "Rockies",
       "Rangers"
     ]
+  },
+  {
+    "gridNumber": 1051,
+    "id": "2026-02-16",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1051",
+    "rows": [
+      ".300+ Season",
+      "Born 🌍 (Non-USA)",
+      "MLB"
+    ],
+    "cols": [
+      "P",
+      ".300+ Career",
+      "NGL"
+    ],
+    "all": [
+      ".300+ Season",
+      "Born 🌍 (Non-USA)",
+      "MLB",
+      "P",
+      ".300+ Career",
+      "NGL"
+    ]
   }
 ]
