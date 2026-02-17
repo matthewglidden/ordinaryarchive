@@ -24239,5 +24239,28 @@
       ".300+ Career",
       "NGL"
     ]
+  },
+  {
+    "gridNumber": 1052,
+    "id": "2026-02-17",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1052",
+    "rows": [
+      "Red Sox",
+      "Cardinals",
+      "Tigers"
+    ],
+    "cols": [
+      "Cubs",
+      "Orioles",
+      "20+ W"
+    ],
+    "all": [
+      "Red Sox",
+      "Cardinals",
+      "Tigers",
+      "Cubs",
+      "Orioles",
+      "20+ W"
+    ]
   }
 ]
