@@ -24262,5 +24262,28 @@
       "Orioles",
       "20+ W"
     ]
+  },
+  {
+    "gridNumber": 1053,
+    "id": "2026-02-18",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1053",
+    "rows": [
+      "Brewers",
+      "Giants",
+      "6+ WAR"
+    ],
+    "cols": [
+      "Reds",
+      "Athletics",
+      "CF"
+    ],
+    "all": [
+      "Brewers",
+      "Giants",
+      "6+ WAR",
+      "Reds",
+      "Athletics",
+      "CF"
+    ]
   }
 ]
