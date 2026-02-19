@@ -24285,5 +24285,28 @@
       "Athletics",
       "CF"
     ]
+  },
+  {
+    "gridNumber": 1054,
+    "id": "2026-02-19",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1054",
+    "rows": [
+      "Astros",
+      "Pirates",
+      "Yankees"
+    ],
+    "cols": [
+      "Angels",
+      "Gold Glove",
+      "HOF"
+    ],
+    "all": [
+      "Astros",
+      "Pirates",
+      "Yankees",
+      "Angels",
+      "Gold Glove",
+      "HOF"
+    ]
   }
 ]
