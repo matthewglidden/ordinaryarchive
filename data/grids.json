@@ -24308,5 +24308,28 @@
       "Gold Glove",
       "HOF"
     ]
+  },
+  {
+    "gridNumber": 1055,
+    "id": "2026-02-20",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1055",
+    "rows": [
+      "Twins",
+      "Royals",
+      "30+ SB"
+    ],
+    "cols": [
+      "White Sox",
+      "Guardians",
+      "Silver Slugger"
+    ],
+    "all": [
+      "Twins",
+      "Royals",
+      "30+ SB",
+      "White Sox",
+      "Guardians",
+      "Silver Slugger"
+    ]
   }
 ]
