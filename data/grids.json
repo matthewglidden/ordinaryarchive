@@ -24331,5 +24331,28 @@
       "Guardians",
       "Silver Slugger"
     ]
+  },
+  {
+    "gridNumber": 1056,
+    "id": "2026-02-21",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1056",
+    "rows": [
+      "All-Star",
+      "40+ WAR",
+      "DH"
+    ],
+    "cols": [
+      "One Team",
+      "C",
+      "40+ HR"
+    ],
+    "all": [
+      "All-Star",
+      "40+ WAR",
+      "DH",
+      "One Team",
+      "C",
+      "40+ HR"
+    ]
   }
 ]
