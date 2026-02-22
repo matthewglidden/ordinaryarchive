@@ -24354,5 +24354,28 @@
       "C",
       "40+ HR"
     ]
+  },
+  {
+    "gridNumber": 1057,
+    "id": "2026-02-22",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1057",
+    "rows": [
+      "Tigers",
+      "Mariners",
+      "1B"
+    ],
+    "cols": [
+      "Giants",
+      "Padres",
+      "OF"
+    ],
+    "all": [
+      "Tigers",
+      "Mariners",
+      "1B",
+      "Giants",
+      "Padres",
+      "OF"
+    ]
   }
 ]
