@@ -24377,5 +24377,28 @@
       "Padres",
       "OF"
     ]
+  },
+  {
+    "gridNumber": 1058,
+    "id": "2026-02-23",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1058",
+    "rows": [
+      "SS",
+      "10+ HR",
+      "All-Star"
+    ],
+    "cols": [
+      "Dodgers",
+      "Guardians",
+      "NGL"
+    ],
+    "all": [
+      "SS",
+      "10+ HR",
+      "All-Star",
+      "Dodgers",
+      "Guardians",
+      "NGL"
+    ]
   }
 ]
