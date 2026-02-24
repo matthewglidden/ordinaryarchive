@@ -24400,5 +24400,28 @@
       "Guardians",
       "NGL"
     ]
+  },
+  {
+    "gridNumber": 1059,
+    "id": "2026-02-24",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1059",
+    "rows": [
+      "Braves",
+      "Phillies",
+      "Pirates"
+    ],
+    "cols": [
+      "Orioles",
+      "2B",
+      "1st round"
+    ],
+    "all": [
+      "Braves",
+      "Phillies",
+      "Pirates",
+      "Orioles",
+      "2B",
+      "1st round"
+    ]
   }
 ]
