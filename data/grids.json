@@ -24423,5 +24423,28 @@
       "2B",
       "1st round"
     ]
+  },
+  {
+    "gridNumber": 1060,
+    "id": "2026-02-25",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1060",
+    "rows": [
+      "White Sox",
+      "Cardinals",
+      "Mets"
+    ],
+    "cols": [
+      "Blue Jays",
+      "Astros",
+      "Marlins"
+    ],
+    "all": [
+      "White Sox",
+      "Cardinals",
+      "Mets",
+      "Blue Jays",
+      "Astros",
+      "Marlins"
+    ]
   }
 ]
