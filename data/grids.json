@@ -24446,5 +24446,28 @@
       "Astros",
       "Marlins"
     ]
+  },
+  {
+    "gridNumber": 1061,
+    "id": "2026-02-26",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1061",
+    "rows": [
+      "Red Sox",
+      "Giants",
+      ".300+ Season"
+    ],
+    "cols": [
+      "Brewers",
+      "Yankees",
+      "200+ H"
+    ],
+    "all": [
+      "Red Sox",
+      "Giants",
+      ".300+ Season",
+      "Brewers",
+      "Yankees",
+      "200+ H"
+    ]
   }
 ]
