@@ -24469,5 +24469,28 @@
       "Yankees",
       "200+ H"
     ]
+  },
+  {
+    "gridNumber": 1062,
+    "id": "2026-02-27",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1062",
+    "rows": [
+      "Rangers",
+      "Cubs",
+      "Rays"
+    ],
+    "cols": [
+      "Reds",
+      "Twins",
+      "10+ HR"
+    ],
+    "all": [
+      "Rangers",
+      "Cubs",
+      "Rays",
+      "Reds",
+      "Twins",
+      "10+ HR"
+    ]
   }
 ]
