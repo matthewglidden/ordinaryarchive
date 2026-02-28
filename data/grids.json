@@ -24492,5 +24492,28 @@
       "Twins",
       "10+ HR"
     ]
+  },
+  {
+    "gridNumber": 1063,
+    "id": "2026-02-28",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1063",
+    "rows": [
+      ".300+ Career",
+      "≤3 ERA Career",
+      "300+ HR"
+    ],
+    "cols": [
+      "HOF",
+      "6+ WAR",
+      "One Team"
+    ],
+    "all": [
+      ".300+ Career",
+      "≤3 ERA Career",
+      "300+ HR",
+      "HOF",
+      "6+ WAR",
+      "One Team"
+    ]
   }
 ]
