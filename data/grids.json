@@ -24515,5 +24515,28 @@
       "6+ WAR",
       "One Team"
     ]
+  },
+  {
+    "gridNumber": 1064,
+    "id": "2026-03-01",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1064",
+    "rows": [
+      "Athletics",
+      "Nationals",
+      "White Sox"
+    ],
+    "cols": [
+      "Tigers",
+      "Dodgers",
+      "≤3 ERA Season"
+    ],
+    "all": [
+      "Athletics",
+      "Nationals",
+      "White Sox",
+      "Tigers",
+      "Dodgers",
+      "≤3 ERA Season"
+    ]
   }
 ]
