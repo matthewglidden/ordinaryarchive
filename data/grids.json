@@ -24538,5 +24538,28 @@
       "Dodgers",
       "≤3 ERA Season"
     ]
+  },
+  {
+    "gridNumber": 1065,
+    "id": "2026-03-02",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1065",
+    "rows": [
+      "Angels",
+      "Giants",
+      "D'backs"
+    ],
+    "cols": [
+      "Mets",
+      "LF",
+      "RF"
+    ],
+    "all": [
+      "Angels",
+      "Giants",
+      "D'backs",
+      "Mets",
+      "LF",
+      "RF"
+    ]
   }
 ]
