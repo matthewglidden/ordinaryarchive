@@ -24561,5 +24561,28 @@
       "LF",
       "RF"
     ]
+  },
+  {
+    "gridNumber": 1066,
+    "id": "2026-03-03",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1066",
+    "rows": [
+      "Guardians",
+      "Royals",
+      "CF"
+    ],
+    "cols": [
+      "Astros",
+      "Yankees",
+      "30+ HR"
+    ],
+    "all": [
+      "Guardians",
+      "Royals",
+      "CF",
+      "Astros",
+      "Yankees",
+      "30+ HR"
+    ]
   }
 ]
