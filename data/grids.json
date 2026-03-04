@@ -24584,5 +24584,28 @@
       "Yankees",
       "30+ HR"
     ]
+  },
+  {
+    "gridNumber": 1067,
+    "id": "2026-03-04",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1067",
+    "rows": [
+      "Mariners",
+      "Cardinals",
+      "Padres"
+    ],
+    "cols": [
+      "Red Sox",
+      "Rockies",
+      "10+ W"
+    ],
+    "all": [
+      "Mariners",
+      "Cardinals",
+      "Padres",
+      "Red Sox",
+      "Rockies",
+      "10+ W"
+    ]
   }
 ]
