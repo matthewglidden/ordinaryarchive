@@ -24607,5 +24607,28 @@
       "Rockies",
       "10+ W"
     ]
+  },
+  {
+    "gridNumber": 1068,
+    "id": "2026-03-05",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1068",
+    "rows": [
+      "Braves",
+      "Phillies",
+      "2K+ H"
+    ],
+    "cols": [
+      "Dodgers",
+      "White Sox",
+      "All-Star"
+    ],
+    "all": [
+      "Braves",
+      "Phillies",
+      "2K+ H",
+      "Dodgers",
+      "White Sox",
+      "All-Star"
+    ]
   }
 ]
