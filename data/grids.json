@@ -24630,5 +24630,28 @@
       "White Sox",
       "All-Star"
     ]
+  },
+  {
+    "gridNumber": 1069,
+    "id": "2026-03-06",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1069",
+    "rows": [
+      "Gold Glove",
+      "Silver Slugger",
+      ".300+ Season"
+    ],
+    "cols": [
+      "born_USA",
+      "born_PRI",
+      "born_VEN"
+    ],
+    "all": [
+      "Gold Glove",
+      "Silver Slugger",
+      ".300+ Season",
+      "born_USA",
+      "born_PRI",
+      "born_VEN"
+    ]
   }
 ]
