@@ -24653,5 +24653,28 @@
       "born_PRI",
       "born_VEN"
     ]
+  },
+  {
+    "gridNumber": 1070,
+    "id": "2026-03-07",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1070",
+    "rows": [
+      "100+ RBI",
+      "1B",
+      "10+ HR"
+    ],
+    "cols": [
+      "born_CAN",
+      "born_DOM",
+      "born_CUB"
+    ],
+    "all": [
+      "100+ RBI",
+      "1B",
+      "10+ HR",
+      "born_CAN",
+      "born_DOM",
+      "born_CUB"
+    ]
   }
 ]
