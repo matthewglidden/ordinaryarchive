@@ -24676,5 +24676,28 @@
       "born_DOM",
       "born_CUB"
     ]
+  },
+  {
+    "gridNumber": 1071,
+    "id": "2026-03-08",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1071",
+    "rows": [
+      "MLB",
+      "P",
+      "≤3 ERA Season"
+    ],
+    "cols": [
+      "born_JPN",
+      "born_MEX",
+      "Born 🌍 (Non-USA)"
+    ],
+    "all": [
+      "MLB",
+      "P",
+      "≤3 ERA Season",
+      "born_JPN",
+      "born_MEX",
+      "Born 🌍 (Non-USA)"
+    ]
   }
 ]
