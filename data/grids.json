@@ -24699,5 +24699,28 @@
       "Born 🇲🇽 (MEX)",
       "Born 🌍 (Non-USA)"
     ]
+  },
+  {
+    "gridNumber": 1072,
+    "id": "2026-03-09",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1072",
+    "rows": [
+      "Orioles",
+      "Mariners",
+      "Guardians"
+    ],
+    "cols": [
+      "Blue Jays",
+      "Rangers",
+      "Reds"
+    ],
+    "all": [
+      "Orioles",
+      "Mariners",
+      "Guardians",
+      "Blue Jays",
+      "Rangers",
+      "Reds"
+    ]
   }
 ]
