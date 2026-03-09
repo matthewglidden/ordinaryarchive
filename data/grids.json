@@ -24641,17 +24641,17 @@
       ".300+ Season"
     ],
     "cols": [
-      "born_USA",
-      "born_PRI",
-      "born_VEN"
+      "Born 🇺🇸 (USA)",
+      "Born 🇵🇷 (PRI)",
+      "Born 🇻🇪 (VEN)"
     ],
     "all": [
       "Gold Glove",
       "Silver Slugger",
       ".300+ Season",
-      "born_USA",
-      "born_PRI",
-      "born_VEN"
+      "Born 🇺🇸 (USA)",
+      "Born 🇵🇷 (PRI)",
+      "Born 🇻🇪 (VEN)"
     ]
   },
   {
@@ -24664,17 +24664,17 @@
       "10+ HR"
     ],
     "cols": [
-      "born_CAN",
-      "born_DOM",
-      "born_CUB"
+      "Born 🇨🇦 (CAN)",
+      "Born 🇩🇴 (DOM)",
+      "Born 🇨🇺 (CUB)"
     ],
     "all": [
       "100+ RBI",
       "1B",
       "10+ HR",
-      "born_CAN",
-      "born_DOM",
-      "born_CUB"
+      "Born 🇨🇦 (CAN)",
+      "Born 🇩🇴 (DOM)",
+      "Born 🇨🇺 (CUB)"
     ]
   },
   {
@@ -24687,16 +24687,16 @@
       "≤3 ERA Season"
     ],
     "cols": [
-      "born_JPN",
-      "born_MEX",
+      "Born 🇯🇵 (JPN)",
+      "Born 🇲🇽 (MEX)",
       "Born 🌍 (Non-USA)"
     ],
     "all": [
       "MLB",
       "P",
       "≤3 ERA Season",
-      "born_JPN",
-      "born_MEX",
+      "Born 🇯🇵 (JPN)",
+      "Born 🇲🇽 (MEX)",
       "Born 🌍 (Non-USA)"
     ]
   }

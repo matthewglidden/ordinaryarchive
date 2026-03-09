@@ -15,8 +15,25 @@ const repoRoot = path.resolve(__dirname, "..");
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-const normalizeLabel = (value) =>
-  value.replace(/\s+/g, " ").replace(/\u00a0/g, " ").trim();
+const normalizeLabel = (value) => {
+  const cleaned = value.replace(/\s+/g, " ").replace(/\u00a0/g, " ").trim();
+  if (!cleaned) return cleaned;
+
+  const direct = CATEGORY_KEY_MAP[cleaned] || CATEGORY_KEY_MAP[cleaned.toLowerCase()];
+  if (direct) return direct;
+
+  if (/^born_outside_usa$/i.test(cleaned)) {
+    return CATEGORY_KEY_MAP.born_outside_usa;
+  }
+
+  const bornCountry = cleaned.match(/^born_([a-z]{3})$/i);
+  if (bornCountry) {
+    const key = `born_${bornCountry[1].toUpperCase()}`;
+    if (CATEGORY_KEY_MAP[key]) return CATEGORY_KEY_MAP[key];
+  }
+
+  return cleaned;
+};
 
 const shortTeamLabel = (title, subtitle) => {
   const cleanTitle = title?.trim();
