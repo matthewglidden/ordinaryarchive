@@ -24722,5 +24722,28 @@
       "Rangers",
       "Reds"
     ]
+  },
+  {
+    "gridNumber": 1073,
+    "id": "2026-03-10",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1073",
+    "rows": [
+      "Pirates",
+      "Astros",
+      "40+ WAR"
+    ],
+    "cols": [
+      "Padres",
+      "Nationals",
+      "3B"
+    ],
+    "all": [
+      "Pirates",
+      "Astros",
+      "40+ WAR",
+      "Padres",
+      "Nationals",
+      "3B"
+    ]
   }
 ]
