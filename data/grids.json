@@ -24745,5 +24745,28 @@
       "Nationals",
       "3B"
     ]
+  },
+  {
+    "gridNumber": 1074,
+    "id": "2026-03-11",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1074",
+    "rows": [
+      "Cubs",
+      "Twins",
+      "30+ SB"
+    ],
+    "cols": [
+      "Giants",
+      "Braves",
+      "30+ HR"
+    ],
+    "all": [
+      "Cubs",
+      "Twins",
+      "30+ SB",
+      "Giants",
+      "Braves",
+      "30+ HR"
+    ]
   }
 ]
