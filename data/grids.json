@@ -24791,5 +24791,28 @@
       "Athletics",
       "6+ WAR"
     ]
+  },
+  {
+    "gridNumber": 1076,
+    "id": "2026-03-13",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1076",
+    "rows": [
+      "Tigers",
+      "Mets",
+      "HOF"
+    ],
+    "cols": [
+      "Red Sox",
+      "Phillies",
+      "LF"
+    ],
+    "all": [
+      "Tigers",
+      "Mets",
+      "HOF",
+      "Red Sox",
+      "Phillies",
+      "LF"
+    ]
   }
 ]
