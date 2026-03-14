@@ -24814,5 +24814,28 @@
       "Phillies",
       "LF"
     ]
+  },
+  {
+    "gridNumber": 1077,
+    "id": "2026-03-14",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1077",
+    "rows": [
+      "200+ W",
+      "CY",
+      "All-Star"
+    ],
+    "cols": [
+      "10+ W",
+      "No-Hitter",
+      "2K+ K"
+    ],
+    "all": [
+      "200+ W",
+      "CY",
+      "All-Star",
+      "10+ W",
+      "No-Hitter",
+      "2K+ K"
+    ]
   }
 ]
