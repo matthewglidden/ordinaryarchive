@@ -24837,5 +24837,28 @@
       "No-Hitter",
       "2K+ K"
     ]
+  },
+  {
+    "gridNumber": 1078,
+    "id": "2026-03-15",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1078",
+    "rows": [
+      "Cardinals",
+      "White Sox",
+      "One Team"
+    ],
+    "cols": [
+      "Rangers",
+      "Padres",
+      "RF"
+    ],
+    "all": [
+      "Cardinals",
+      "White Sox",
+      "One Team",
+      "Rangers",
+      "Padres",
+      "RF"
+    ]
   }
 ]
