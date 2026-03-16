@@ -24860,5 +24860,28 @@
       "Padres",
       "RF"
     ]
+  },
+  {
+    "gridNumber": 1079,
+    "id": "2026-03-16",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1079",
+    "rows": [
+      "Royals",
+      "Rays",
+      "100+ RBI"
+    ],
+    "cols": [
+      "Dodgers",
+      "Orioles",
+      "C"
+    ],
+    "all": [
+      "Royals",
+      "Rays",
+      "100+ RBI",
+      "Dodgers",
+      "Orioles",
+      "C"
+    ]
   }
 ]
