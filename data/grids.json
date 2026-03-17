@@ -24883,5 +24883,28 @@
       "Orioles",
       "C"
     ]
+  },
+  {
+    "gridNumber": 1080,
+    "id": "2026-03-17",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1080",
+    "rows": [
+      "Guardians",
+      "Nationals",
+      "2K+ H"
+    ],
+    "cols": [
+      "Braves",
+      "Brewers",
+      ".300+ Season"
+    ],
+    "all": [
+      "Guardians",
+      "Nationals",
+      "2K+ H",
+      "Braves",
+      "Brewers",
+      ".300+ Season"
+    ]
   }
 ]
