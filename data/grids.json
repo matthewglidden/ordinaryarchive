@@ -24906,5 +24906,28 @@
       "Brewers",
       ".300+ Season"
     ]
+  },
+  {
+    "gridNumber": 1081,
+    "id": "2026-03-18",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1081",
+    "rows": [
+      "Reds",
+      "Athletics",
+      "Pirates"
+    ],
+    "cols": [
+      "Mets",
+      "OF",
+      "P"
+    ],
+    "all": [
+      "Reds",
+      "Athletics",
+      "Pirates",
+      "Mets",
+      "OF",
+      "P"
+    ]
   }
 ]
