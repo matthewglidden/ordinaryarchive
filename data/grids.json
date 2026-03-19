@@ -24929,5 +24929,28 @@
       "OF",
       "P"
     ]
+  },
+  {
+    "gridNumber": 1082,
+    "id": "2026-03-19",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1082",
+    "rows": [
+      "Yankees",
+      "Marlins",
+      "300+ HR"
+    ],
+    "cols": [
+      "Cubs",
+      "Blue Jays",
+      "40+ WAR"
+    ],
+    "all": [
+      "Yankees",
+      "Marlins",
+      "300+ HR",
+      "Cubs",
+      "Blue Jays",
+      "40+ WAR"
+    ]
   }
 ]
