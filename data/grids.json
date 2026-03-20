@@ -24952,5 +24952,28 @@
       "Blue Jays",
       "40+ WAR"
     ]
+  },
+  {
+    "gridNumber": 1083,
+    "id": "2026-03-20",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1083",
+    "rows": [
+      "Mariners",
+      "White Sox",
+      "1B"
+    ],
+    "cols": [
+      "Orioles",
+      "Angels",
+      "Gold Glove"
+    ],
+    "all": [
+      "Mariners",
+      "White Sox",
+      "1B",
+      "Orioles",
+      "Angels",
+      "Gold Glove"
+    ]
   }
 ]
