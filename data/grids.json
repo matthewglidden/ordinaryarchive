@@ -24975,5 +24975,28 @@
       "Angels",
       "Gold Glove"
     ]
+  },
+  {
+    "gridNumber": 1084,
+    "id": "2026-03-21",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1084",
+    "rows": [
+      "30+ HR",
+      "30+ SB",
+      "40+ 2B"
+    ],
+    "cols": [
+      "Born 🌍 (Non-USA)",
+      "HOF",
+      "All-Star"
+    ],
+    "all": [
+      "30+ HR",
+      "30+ SB",
+      "40+ 2B",
+      "Born 🌍 (Non-USA)",
+      "HOF",
+      "All-Star"
+    ]
   }
 ]
