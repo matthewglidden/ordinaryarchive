@@ -24998,5 +24998,28 @@
       "HOF",
       "All-Star"
     ]
+  },
+  {
+    "gridNumber": 1085,
+    "id": "2026-03-22",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1085",
+    "rows": [
+      "D'backs",
+      "Red Sox",
+      "Giants"
+    ],
+    "cols": [
+      "Guardians",
+      "10+ HR",
+      "10+ W"
+    ],
+    "all": [
+      "D'backs",
+      "Red Sox",
+      "Giants",
+      "Guardians",
+      "10+ HR",
+      "10+ W"
+    ]
   }
 ]
