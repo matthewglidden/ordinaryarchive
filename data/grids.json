@@ -25021,5 +25021,28 @@
       "10+ HR",
       "10+ W"
     ]
+  },
+  {
+    "gridNumber": 1086,
+    "id": "2026-03-23",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1086",
+    "rows": [
+      "Twins",
+      "Rangers",
+      "6+ WAR"
+    ],
+    "cols": [
+      "Astros",
+      "Phillies",
+      "SS"
+    ],
+    "all": [
+      "Twins",
+      "Rangers",
+      "6+ WAR",
+      "Astros",
+      "Phillies",
+      "SS"
+    ]
   }
 ]
