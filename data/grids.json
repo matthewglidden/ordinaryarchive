@@ -25044,5 +25044,28 @@
       "Phillies",
       "SS"
     ]
+  },
+  {
+    "gridNumber": 1087,
+    "id": "2026-03-24",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1087",
+    "rows": [
+      "Tigers",
+      "Padres",
+      "3B"
+    ],
+    "cols": [
+      "Brewers",
+      "Royals",
+      "1st round"
+    ],
+    "all": [
+      "Tigers",
+      "Padres",
+      "3B",
+      "Brewers",
+      "Royals",
+      "1st round"
+    ]
   }
 ]
