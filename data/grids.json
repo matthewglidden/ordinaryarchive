@@ -25067,5 +25067,28 @@
       "Royals",
       "1st round"
     ]
+  },
+  {
+    "gridNumber": 1088,
+    "id": "2026-03-25",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1088",
+    "rows": [
+      "Athletics",
+      "Yankees",
+      "Reds"
+    ],
+    "cols": [
+      "Cardinals",
+      "Braves",
+      "Rockies"
+    ],
+    "all": [
+      "Athletics",
+      "Yankees",
+      "Reds",
+      "Cardinals",
+      "Braves",
+      "Rockies"
+    ]
   }
 ]
