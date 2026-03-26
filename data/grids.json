@@ -25090,5 +25090,28 @@
       "Braves",
       "Rockies"
     ]
+  },
+  {
+    "gridNumber": 1089,
+    "id": "2026-03-26",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1089",
+    "rows": [
+      "Dodgers",
+      "Giants",
+      ".300+ Season"
+    ],
+    "cols": [
+      "Red Sox",
+      "Pirates",
+      "2B"
+    ],
+    "all": [
+      "Dodgers",
+      "Giants",
+      ".300+ Season",
+      "Red Sox",
+      "Pirates",
+      "2B"
+    ]
   }
 ]
