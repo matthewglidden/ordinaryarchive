@@ -25182,5 +25182,28 @@
       "≤3 ERA Season",
       "10+ HR"
     ]
+  },
+  {
+    "gridNumber": 1093,
+    "id": "2026-03-30",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1093",
+    "rows": [
+      "Nationals",
+      "Twins",
+      "Gold Glove"
+    ],
+    "cols": [
+      "Angels",
+      "Cardinals",
+      "CF"
+    ],
+    "all": [
+      "Nationals",
+      "Twins",
+      "Gold Glove",
+      "Angels",
+      "Cardinals",
+      "CF"
+    ]
   }
 ]
