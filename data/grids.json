@@ -25205,5 +25205,28 @@
       "Cardinals",
       "CF"
     ]
+  },
+  {
+    "gridNumber": 1094,
+    "id": "2026-03-31",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1094",
+    "rows": [
+      "Mariners",
+      "Padres",
+      "200+ H"
+    ],
+    "cols": [
+      "Guardians",
+      "Phillies",
+      "100+ RBI"
+    ],
+    "all": [
+      "Mariners",
+      "Padres",
+      "200+ H",
+      "Guardians",
+      "Phillies",
+      "100+ RBI"
+    ]
   }
 ]
