@@ -25228,5 +25228,28 @@
       "Phillies",
       "100+ RBI"
     ]
+  },
+  {
+    "gridNumber": 1095,
+    "id": "2026-04-01",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1095",
+    "rows": [
+      "Astros",
+      "Mets",
+      "Pirates"
+    ],
+    "cols": [
+      "Tigers",
+      "Braves",
+      "300+ HR"
+    ],
+    "all": [
+      "Astros",
+      "Mets",
+      "Pirates",
+      "Tigers",
+      "Braves",
+      "300+ HR"
+    ]
   }
 ]
