@@ -25251,5 +25251,28 @@
       "Braves",
       "300+ HR"
     ]
+  },
+  {
+    "gridNumber": 1096,
+    "id": "2026-04-02",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1096",
+    "rows": [
+      "Athletics",
+      "Dodgers",
+      "All-Star"
+    ],
+    "cols": [
+      "Reds",
+      "Orioles",
+      "100+ R"
+    ],
+    "all": [
+      "Athletics",
+      "Dodgers",
+      "All-Star",
+      "Reds",
+      "Orioles",
+      "100+ R"
+    ]
   }
 ]
