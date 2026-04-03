@@ -25274,5 +25274,28 @@
       "Orioles",
       "100+ R"
     ]
+  },
+  {
+    "gridNumber": 1097,
+    "id": "2026-04-03",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1097",
+    "rows": [
+      "Royals",
+      "Rangers",
+      "6+ WAR"
+    ],
+    "cols": [
+      "Cubs",
+      "Giants",
+      "P"
+    ],
+    "all": [
+      "Royals",
+      "Rangers",
+      "6+ WAR",
+      "Cubs",
+      "Giants",
+      "P"
+    ]
   }
 ]
