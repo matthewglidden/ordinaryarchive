@@ -25297,5 +25297,28 @@
       "Giants",
       "P"
     ]
+  },
+  {
+    "gridNumber": 1098,
+    "id": "2026-04-04",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1098",
+    "rows": [
+      "2K+ H",
+      "30+ SB",
+      ".300+ Season"
+    ],
+    "cols": [
+      "LF",
+      "CF",
+      "RF"
+    ],
+    "all": [
+      "2K+ H",
+      "30+ SB",
+      ".300+ Season",
+      "LF",
+      "CF",
+      "RF"
+    ]
   }
 ]
