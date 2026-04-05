@@ -25320,5 +25320,28 @@
       "CF",
       "RF"
     ]
+  },
+  {
+    "gridNumber": 1099,
+    "id": "2026-04-05",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1099",
+    "rows": [
+      "Brewers",
+      "Red Sox",
+      "Born 🌍 (Non-USA)"
+    ],
+    "cols": [
+      "Phillies",
+      "Twins",
+      "Silver Slugger"
+    ],
+    "all": [
+      "Brewers",
+      "Red Sox",
+      "Born 🌍 (Non-USA)",
+      "Phillies",
+      "Twins",
+      "Silver Slugger"
+    ]
   }
 ]
