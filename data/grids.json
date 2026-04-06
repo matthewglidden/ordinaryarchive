@@ -25343,5 +25343,28 @@
       "Twins",
       "Silver Slugger"
     ]
+  },
+  {
+    "gridNumber": 1100,
+    "id": "2026-04-06",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1100",
+    "rows": [
+      "Tigers",
+      "Rays",
+      "OF"
+    ],
+    "cols": [
+      "Cardinals",
+      "Yankees",
+      "2B"
+    ],
+    "all": [
+      "Tigers",
+      "Rays",
+      "OF",
+      "Cardinals",
+      "Yankees",
+      "2B"
+    ]
   }
 ]
