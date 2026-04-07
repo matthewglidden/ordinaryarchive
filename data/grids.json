@@ -25366,5 +25366,28 @@
       "Yankees",
       "2B"
     ]
+  },
+  {
+    "gridNumber": 1101,
+    "id": "2026-04-07",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1101",
+    "rows": [
+      "White Sox",
+      "Pirates",
+      "10+ HR"
+    ],
+    "cols": [
+      "Mariners",
+      "C",
+      "SS"
+    ],
+    "all": [
+      "White Sox",
+      "Pirates",
+      "10+ HR",
+      "Mariners",
+      "C",
+      "SS"
+    ]
   }
 ]
