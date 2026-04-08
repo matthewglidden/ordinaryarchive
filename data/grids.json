@@ -25389,5 +25389,28 @@
       "C",
       "SS"
     ]
+  },
+  {
+    "gridNumber": 1102,
+    "id": "2026-04-08",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1102",
+    "rows": [
+      "Marlins",
+      "Blue Jays",
+      "Braves"
+    ],
+    "cols": [
+      "Padres",
+      "Giants",
+      "Angels"
+    ],
+    "all": [
+      "Marlins",
+      "Blue Jays",
+      "Braves",
+      "Padres",
+      "Giants",
+      "Angels"
+    ]
   }
 ]
