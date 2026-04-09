@@ -25412,5 +25412,28 @@
       "Giants",
       "Angels"
     ]
+  },
+  {
+    "gridNumber": 1103,
+    "id": "2026-04-09",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1103",
+    "rows": [
+      "Guardians",
+      "Twins",
+      "200+ K"
+    ],
+    "cols": [
+      "Athletics",
+      "Dodgers",
+      "20+ W"
+    ],
+    "all": [
+      "Guardians",
+      "Twins",
+      "200+ K",
+      "Athletics",
+      "Dodgers",
+      "20+ W"
+    ]
   }
 ]
