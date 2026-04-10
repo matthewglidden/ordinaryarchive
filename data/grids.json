@@ -25435,5 +25435,28 @@
       "Dodgers",
       "20+ W"
     ]
+  },
+  {
+    "gridNumber": 1104,
+    "id": "2026-04-10",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1104",
+    "rows": [
+      "Mets",
+      "Cubs",
+      "One Team"
+    ],
+    "cols": [
+      "Nationals",
+      "Brewers",
+      "HOF"
+    ],
+    "all": [
+      "Mets",
+      "Cubs",
+      "One Team",
+      "Nationals",
+      "Brewers",
+      "HOF"
+    ]
   }
 ]
