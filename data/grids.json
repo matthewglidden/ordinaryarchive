@@ -25458,5 +25458,28 @@
       "Brewers",
       "HOF"
     ]
+  },
+  {
+    "gridNumber": 1105,
+    "id": "2026-04-11",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1105",
+    "rows": [
+      "ROY",
+      "6+ WAR",
+      "MVP"
+    ],
+    "cols": [
+      "30+ HR",
+      "≤3 ERA Season",
+      "1st round"
+    ],
+    "all": [
+      "ROY",
+      "6+ WAR",
+      "MVP",
+      "30+ HR",
+      "≤3 ERA Season",
+      "1st round"
+    ]
   }
 ]
