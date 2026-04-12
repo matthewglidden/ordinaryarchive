@@ -25481,5 +25481,28 @@
       "≤3 ERA Season",
       "1st round"
     ]
+  },
+  {
+    "gridNumber": 1106,
+    "id": "2026-04-12",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1106",
+    "rows": [
+      "Orioles",
+      "Phillies",
+      "Yankees"
+    ],
+    "cols": [
+      "Astros",
+      "300+ HR",
+      "2K+ K"
+    ],
+    "all": [
+      "Orioles",
+      "Phillies",
+      "Yankees",
+      "Astros",
+      "300+ HR",
+      "2K+ K"
+    ]
   }
 ]
