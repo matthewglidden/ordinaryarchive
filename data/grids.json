@@ -25504,5 +25504,28 @@
       "300+ HR",
       "2K+ K"
     ]
+  },
+  {
+    "gridNumber": 1107,
+    "id": "2026-04-13",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1107",
+    "rows": [
+      "Red Sox",
+      "Cardinals",
+      "All-Star"
+    ],
+    "cols": [
+      "White Sox",
+      "Royals",
+      "30+ SV"
+    ],
+    "all": [
+      "Red Sox",
+      "Cardinals",
+      "All-Star",
+      "White Sox",
+      "Royals",
+      "30+ SV"
+    ]
   }
 ]
