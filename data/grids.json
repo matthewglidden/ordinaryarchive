@@ -25527,5 +25527,28 @@
       "Royals",
       "30+ SV"
     ]
+  },
+  {
+    "gridNumber": 1108,
+    "id": "2026-04-14",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1108",
+    "rows": [
+      "Reds",
+      "Rangers",
+      "100+ RBI"
+    ],
+    "cols": [
+      "Tigers",
+      "D'backs",
+      "Gold Glove"
+    ],
+    "all": [
+      "Reds",
+      "Rangers",
+      "100+ RBI",
+      "Tigers",
+      "D'backs",
+      "Gold Glove"
+    ]
   }
 ]
