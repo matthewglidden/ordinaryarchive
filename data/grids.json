@@ -25550,5 +25550,28 @@
       "D'backs",
       "Gold Glove"
     ]
+  },
+  {
+    "gridNumber": 1109,
+    "id": "2026-04-15",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1109",
+    "rows": [
+      "Dodgers",
+      "Guardians",
+      "MLB"
+    ],
+    "cols": [
+      "Mets",
+      "NGL",
+      "1B"
+    ],
+    "all": [
+      "Dodgers",
+      "Guardians",
+      "MLB",
+      "Mets",
+      "NGL",
+      "1B"
+    ]
   }
 ]
