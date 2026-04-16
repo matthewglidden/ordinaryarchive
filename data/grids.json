@@ -25573,5 +25573,28 @@
       "NGL",
       "1B"
     ]
+  },
+  {
+    "gridNumber": 1110,
+    "id": "2026-04-16",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1110",
+    "rows": [
+      "Pirates",
+      "Phillies",
+      "Born 🌍 (Non-USA)"
+    ],
+    "cols": [
+      "Blue Jays",
+      "Athletics",
+      "200+ W"
+    ],
+    "all": [
+      "Pirates",
+      "Phillies",
+      "Born 🌍 (Non-USA)",
+      "Blue Jays",
+      "Athletics",
+      "200+ W"
+    ]
   }
 ]
