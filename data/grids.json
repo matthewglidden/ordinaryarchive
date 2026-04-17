@@ -25596,5 +25596,28 @@
       "Athletics",
       "200+ W"
     ]
+  },
+  {
+    "gridNumber": 1111,
+    "id": "2026-04-17",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1111",
+    "rows": [
+      "Astros",
+      "Padres",
+      "Yankees"
+    ],
+    "cols": [
+      "Angels",
+      "Mariners",
+      "Giants"
+    ],
+    "all": [
+      "Astros",
+      "Padres",
+      "Yankees",
+      "Angels",
+      "Mariners",
+      "Giants"
+    ]
   }
 ]
