@@ -25619,5 +25619,28 @@
       "Mariners",
       "Giants"
     ]
+  },
+  {
+    "gridNumber": 1112,
+    "id": "2026-04-18",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1112",
+    "rows": [
+      "10+ W",
+      "CY",
+      "Born 🌍 (Non-USA)"
+    ],
+    "cols": [
+      "200+ K",
+      "40+ WAR",
+      "HOF"
+    ],
+    "all": [
+      "10+ W",
+      "CY",
+      "Born 🌍 (Non-USA)",
+      "200+ K",
+      "40+ WAR",
+      "HOF"
+    ]
   }
 ]
