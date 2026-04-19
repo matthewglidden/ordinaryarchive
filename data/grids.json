@@ -25642,5 +25642,28 @@
       "40+ WAR",
       "HOF"
     ]
+  },
+  {
+    "gridNumber": 1113,
+    "id": "2026-04-19",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1113",
+    "rows": [
+      "Braves",
+      "Dodgers",
+      "Rockies"
+    ],
+    "cols": [
+      "Tigers",
+      "Brewers",
+      "3B"
+    ],
+    "all": [
+      "Braves",
+      "Dodgers",
+      "Rockies",
+      "Tigers",
+      "Brewers",
+      "3B"
+    ]
   }
 ]
