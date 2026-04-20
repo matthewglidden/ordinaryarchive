@@ -25665,5 +25665,28 @@
       "Brewers",
       "3B"
     ]
+  },
+  {
+    "gridNumber": 1114,
+    "id": "2026-04-20",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1114",
+    "rows": [
+      "Cubs",
+      "Twins",
+      "10+ HR"
+    ],
+    "cols": [
+      "Orioles",
+      "2B",
+      "P"
+    ],
+    "all": [
+      "Cubs",
+      "Twins",
+      "10+ HR",
+      "Orioles",
+      "2B",
+      "P"
+    ]
   }
 ]
