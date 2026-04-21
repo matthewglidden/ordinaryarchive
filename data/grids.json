@@ -25688,5 +25688,28 @@
       "2B",
       "P"
     ]
+  },
+  {
+    "gridNumber": 1115,
+    "id": "2026-04-21",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1115",
+    "rows": [
+      "Red Sox",
+      "Yankees",
+      "30+ SB"
+    ],
+    "cols": [
+      "Nationals",
+      "Reds",
+      "MVP"
+    ],
+    "all": [
+      "Red Sox",
+      "Yankees",
+      "30+ SB",
+      "Nationals",
+      "Reds",
+      "MVP"
+    ]
   }
 ]
