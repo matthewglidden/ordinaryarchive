@@ -25711,5 +25711,28 @@
       "Reds",
       "MVP"
     ]
+  },
+  {
+    "gridNumber": 1116,
+    "id": "2026-04-22",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1116",
+    "rows": [
+      "Cardinals",
+      "Giants",
+      "CF"
+    ],
+    "cols": [
+      "Angels",
+      "Phillies",
+      "SS"
+    ],
+    "all": [
+      "Cardinals",
+      "Giants",
+      "CF",
+      "Angels",
+      "Phillies",
+      "SS"
+    ]
   }
 ]
