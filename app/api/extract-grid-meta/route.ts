@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { extractGridMetaFromHtml } from "@/lib/extractGridMeta";
+import { extractGridIngestionFromHtml } from "@/lib/gridIngestion.js";
 
 const USER_AGENT =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36";
@@ -11,7 +11,7 @@ const isValidUrl = (value: string) => {
     if (!url.pathname.includes("/immaculate-grid/")) return null;
     if (!url.pathname.includes("/grid-")) return null;
     return url;
-  } catch (error) {
+  } catch {
     return null;
   }
 };
@@ -56,10 +56,10 @@ export async function POST(request: Request) {
     }
 
     const html = await response.text();
-    const meta = await extractGridMetaFromHtml(html, gridIdHint);
+    const meta = extractGridIngestionFromHtml(html, gridIdHint);
     return NextResponse.json(meta);
-  } catch (error) {
-    const message = error instanceof Error ? error.message : "Unknown error";
+  } catch {
+    const message = "Unknown error";
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }
