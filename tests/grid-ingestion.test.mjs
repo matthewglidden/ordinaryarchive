@@ -50,12 +50,41 @@ test("extracts the 1117 nuxt/pinia payload", () => {
   assert.deepEqual(meta.validationWarnings, []);
 });
 
-test("rejects stale 1117 requests that only contain 1116 payloads", () => {
-  const html = fixture("grid-1117-stale-1116.html");
-  assert.throws(
-    () => extractGridIngestionFromHtml(html, "1117"),
-    /Stale or mismatched grid payload/
-  );
+test("falls through from stale nuxt payload to rendered aside labels", () => {
+  const html = fixture("grid-1119-stale-nuxt-rendered.html");
+  const meta = extractGridIngestionFromHtml(html, "1119");
+
+  assert.equal(meta.requestedGridId, "1119");
+  assert.equal(meta.extractedGridId, "1119");
+  assert.equal(meta.source, "rendered-html");
+  assert.equal(meta.strategy, "rendered-aside");
+  assert.deepEqual(meta.rows, ["White Sox", "Tigers", "Pirates"]);
+  assert.deepEqual(meta.cols, ["Guardians", "30+ HR", "6+ WAR"]);
+});
+
+test("extracts grid-cell aria-label candidates", () => {
+  const html = fixture("grid-1119-gridcell-aria.html");
+  const meta = extractGridIngestionFromHtml(html, "1119");
+
+  assert.equal(meta.requestedGridId, "1119");
+  assert.equal(meta.extractedGridId, "1119");
+  assert.equal(meta.source, "rendered-html");
+  assert.equal(meta.strategy, "grid-cell-aria");
+  assert.deepEqual(meta.rows, ["White Sox", "Tigers", "Pirates"]);
+  assert.deepEqual(meta.cols, ["Guardians", "30+ HR", "6+ WAR"]);
+});
+
+test("fails with a sanitized summary when all strategies fail", () => {
+  const html = fixture("grid-1119-stale-1116.html");
+  let error = null;
+  try {
+    extractGridIngestionFromHtml(html, "1119");
+  } catch (caught) {
+    error = caught;
+  }
+  assert.ok(error);
+  assert.equal(error.code, "GRID_EXTRACTION_FAILED");
+  assert.ok(error.summary);
 });
 
 test("falls back to rendered labels when payload data is unavailable", () => {

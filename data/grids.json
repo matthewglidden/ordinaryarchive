@@ -25734,5 +25734,143 @@
       "Phillies",
       "SS"
     ]
+  },
+  {
+    "gridNumber": 1117,
+    "id": "2026-04-23",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1117",
+    "rows": [
+      "White Sox",
+      "Tigers",
+      "Pirates"
+    ],
+    "cols": [
+      "Guardians",
+      "Batting",
+      "6+ WAR Season"
+    ],
+    "all": [
+      "White Sox",
+      "Tigers",
+      "Pirates",
+      "Guardians",
+      "Batting",
+      "6+ WAR Season"
+    ]
+  },
+  {
+    "gridNumber": 1118,
+    "id": "2026-04-24",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1118",
+    "rows": [
+      "Royals",
+      "Padres",
+      "Batting"
+    ],
+    "cols": [
+      "Mets",
+      "Twins",
+      "min. 1 game"
+    ],
+    "all": [
+      "Royals",
+      "Padres",
+      "Batting",
+      "Mets",
+      "Twins",
+      "min. 1 game"
+    ]
+  },
+  {
+    "gridNumber": 1119,
+    "id": "2026-04-25",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1119",
+    "rows": [
+      "200+ Hits Season Batting",
+      ".300+ AVG Season Batting",
+      "3000+ Hits Career Batting"
+    ],
+    "cols": [
+      "Only One Team",
+      "Hall of Fame",
+      "Played First Base min. 1 game"
+    ],
+    "all": [
+      "200+ Hits Season Batting",
+      ".300+ AVG Season Batting",
+      "3000+ Hits Career Batting",
+      "Only One Team",
+      "Hall of Fame",
+      "Played First Base min. 1 game"
+    ]
+  },
+  {
+    "gridNumber": 1120,
+    "id": "2026-04-26",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1120",
+    "rows": [
+      "Red Sox",
+      "Rays",
+      "Brewers"
+    ],
+    "cols": [
+      "Blue Jays",
+      "Rangers",
+      "Athletics"
+    ],
+    "all": [
+      "Red Sox",
+      "Rays",
+      "Brewers",
+      "Blue Jays",
+      "Rangers",
+      "Athletics"
+    ]
+  },
+  {
+    "gridNumber": 1121,
+    "id": "2026-04-27",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1121",
+    "rows": [
+      "Dodgers",
+      "Pirates",
+      "Batting"
+    ],
+    "cols": [
+      "Astros",
+      "Cardinals",
+      "min. 1 game"
+    ],
+    "all": [
+      "Dodgers",
+      "Pirates",
+      "Batting",
+      "Astros",
+      "Cardinals",
+      "min. 1 game"
+    ]
+  },
+  {
+    "gridNumber": 1122,
+    "id": "2026-04-28",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1122",
+    "rows": [
+      "Mariners",
+      "Padres",
+      "Born Outside US 50 States and&nbsp;DC"
+    ],
+    "cols": [
+      "Cubs",
+      "Nationals",
+      "Batting"
+    ],
+    "all": [
+      "Mariners",
+      "Padres",
+      "Born Outside US 50 States and&nbsp;DC",
+      "Cubs",
+      "Nationals",
+      "Batting"
+    ]
   }
 ]
