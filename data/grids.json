@@ -25746,16 +25746,16 @@
     ],
     "cols": [
       "Guardians",
-      "Batting",
-      "6+ WAR Season"
+      "30+ HR",
+      "6+ WAR"
     ],
     "all": [
       "White Sox",
       "Tigers",
       "Pirates",
       "Guardians",
-      "Batting",
-      "6+ WAR Season"
+      "30+ HR",
+      "6+ WAR"
     ]
   },
   {
@@ -25765,20 +25765,20 @@
     "rows": [
       "Royals",
       "Padres",
-      "Batting"
+      "100+ RBI"
     ],
     "cols": [
       "Mets",
       "Twins",
-      "min. 1 game"
+      "OF"
     ],
     "all": [
       "Royals",
       "Padres",
-      "Batting",
+      "100+ RBI",
       "Mets",
       "Twins",
-      "min. 1 game"
+      "OF"
     ]
   },
   {
@@ -25786,22 +25786,22 @@
     "id": "2026-04-25",
     "url": "https://www.sports-reference.com/immaculate-grid/grid-1119",
     "rows": [
-      "200+ Hits Season Batting",
-      ".300+ AVG Season Batting",
-      "3000+ Hits Career Batting"
+      "200+ H",
+      ".300+ Season",
+      "3K+ H"
     ],
     "cols": [
-      "Only One Team",
-      "Hall of Fame",
-      "Played First Base min. 1 game"
+      "One Team",
+      "HOF",
+      "1B"
     ],
     "all": [
-      "200+ Hits Season Batting",
-      ".300+ AVG Season Batting",
-      "3000+ Hits Career Batting",
-      "Only One Team",
-      "Hall of Fame",
-      "Played First Base min. 1 game"
+      "200+ H",
+      ".300+ Season",
+      "3K+ H",
+      "One Team",
+      "HOF",
+      "1B"
     ]
   },
   {
@@ -25834,20 +25834,20 @@
     "rows": [
       "Dodgers",
       "Pirates",
-      "Batting"
+      "100+ R"
     ],
     "cols": [
       "Astros",
       "Cardinals",
-      "min. 1 game"
+      "RF"
     ],
     "all": [
       "Dodgers",
       "Pirates",
-      "Batting",
+      "100+ R",
       "Astros",
       "Cardinals",
-      "min. 1 game"
+      "RF"
     ]
   },
   {
@@ -25857,20 +25857,20 @@
     "rows": [
       "Mariners",
       "Padres",
-      "Born Outside US 50 States and&nbsp;DC"
+      "Born 🌍 (Non-USA)"
     ],
     "cols": [
       "Cubs",
       "Nationals",
-      "Batting"
+      "300+ HR"
     ],
     "all": [
       "Mariners",
       "Padres",
-      "Born Outside US 50 States and&nbsp;DC",
+      "Born 🌍 (Non-USA)",
       "Cubs",
       "Nationals",
-      "Batting"
+      "300+ HR"
     ]
   }
 ]

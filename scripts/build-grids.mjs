@@ -3,7 +3,10 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import * as cheerio from "cheerio";
-import { extractGridIngestionFromHtml } from "../lib/gridIngestion.js";
+import {
+  canonicalGridLabel,
+  extractGridIngestionFromHtml,
+} from "../lib/gridIngestion.js";
 
 const DEFAULT_GRID_BASE =
   "https://www.sports-reference.com/immaculate-grid/grid-";
@@ -462,6 +465,11 @@ export const resolveGridDateId = ({
   );
 };
 
+export const canonicalizeGridLabelsForWrite = (meta) => ({
+  rows: meta.rows.map((label) => canonicalGridLabel(label)),
+  cols: meta.cols.map((label) => canonicalGridLabel(label)),
+});
+
 const buildGridUrl = (base, suffix, index) => `${base}${index}${suffix}`;
 
 const isUsThanksgiving = (id) => {
@@ -657,6 +665,14 @@ const main = async () => {
         existing,
         pending: results,
       });
+      const canonicalLabels = canonicalizeGridLabelsForWrite(meta);
+      if (
+        canonicalLabels.rows.some((label) => !label) ||
+        canonicalLabels.cols.some((label) => !label)
+      ) {
+        throw new Error(`Grid ${index} contains empty canonical labels.`);
+      }
+
       const hints = [];
       const searchTerms = [];
       if (/^\d{4}-02-06$/.test(id)) {
@@ -679,8 +695,12 @@ const main = async () => {
         searchTerms.push("Thanksgiving");
       }
 
-      const summaryRows = meta.rows.length ? meta.rows.join(", ") : "none";
-      const summaryCols = meta.cols.length ? meta.cols.join(", ") : "none";
+      const summaryRows = canonicalLabels.rows.length
+        ? canonicalLabels.rows.join(", ")
+        : "none";
+      const summaryCols = canonicalLabels.cols.length
+        ? canonicalLabels.cols.join(", ")
+        : "none";
       console.log(
         `Grid ${id} [${meta.source}]: rows [${summaryRows}] | cols [${summaryCols}]`
       );
@@ -699,9 +719,9 @@ const main = async () => {
         gridNumber: index,
         id,
         url: gridUrl,
-        rows: meta.rows,
-        cols: meta.cols,
-        all: [...meta.rows, ...meta.cols],
+        rows: canonicalLabels.rows,
+        cols: canonicalLabels.cols,
+        all: [...canonicalLabels.rows, ...canonicalLabels.cols],
         ...(hints.length ? { hints } : {}),
         ...(searchTerms.length ? { searchTerms } : {}),
       });
