@@ -25872,5 +25872,28 @@
       "Nationals",
       "300+ HR"
     ]
+  },
+  {
+    "gridNumber": 1123,
+    "id": "2026-04-29",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1123",
+    "rows": [
+      "Braves",
+      "Reds",
+      "10+ HR"
+    ],
+    "cols": [
+      "Phillies",
+      "Royals",
+      "LF"
+    ],
+    "all": [
+      "Braves",
+      "Reds",
+      "10+ HR",
+      "Phillies",
+      "Royals",
+      "LF"
+    ]
   }
 ]
