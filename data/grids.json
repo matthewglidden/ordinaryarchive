@@ -25895,5 +25895,28 @@
       "Royals",
       "LF"
     ]
+  },
+  {
+    "gridNumber": 1124,
+    "id": "2026-04-30",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1124",
+    "rows": [
+      "Orioles",
+      "Mets",
+      "White Sox"
+    ],
+    "cols": [
+      "Yankees",
+      "Giants",
+      "P"
+    ],
+    "all": [
+      "Orioles",
+      "Mets",
+      "White Sox",
+      "Yankees",
+      "Giants",
+      "P"
+    ]
   }
 ]
