@@ -25918,5 +25918,28 @@
       "Giants",
       "P"
     ]
+  },
+  {
+    "gridNumber": 1125,
+    "id": "2026-05-01",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1125",
+    "rows": [
+      "Angels",
+      "Twins",
+      "Marlins"
+    ],
+    "cols": [
+      "Tigers",
+      "30+ HR",
+      "OF"
+    ],
+    "all": [
+      "Angels",
+      "Twins",
+      "Marlins",
+      "Tigers",
+      "30+ HR",
+      "OF"
+    ]
   }
 ]
