@@ -25941,5 +25941,28 @@
       "30+ HR",
       "OF"
     ]
+  },
+  {
+    "gridNumber": 1126,
+    "id": "2026-05-02",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1126",
+    "rows": [
+      "MLB",
+      "All-Star",
+      "10+ W"
+    ],
+    "cols": [
+      "6+ WAR",
+      "ROY",
+      "Born 🇯🇵 (JPN)"
+    ],
+    "all": [
+      "MLB",
+      "All-Star",
+      "10+ W",
+      "6+ WAR",
+      "ROY",
+      "Born 🇯🇵 (JPN)"
+    ]
   }
 ]
