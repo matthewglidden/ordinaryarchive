@@ -21,6 +21,47 @@ const teamAliasMap = teamAliases as Record<string, string[]>;
 const TEAM_ALIAS_LABELS = new Set(
   Object.values(teamAliasMap).flat().map((label) => label.toLowerCase())
 );
+const MLB_TEAM_LABELS = new Set(
+  [
+    "Angels",
+    "Astros",
+    "Athletics",
+    "Blue Jays",
+    "Braves",
+    "Brewers",
+    "Cardinals",
+    "Cubs",
+    "D'backs",
+    "Dodgers",
+    "Giants",
+    "Guardians",
+    "Mariners",
+    "Marlins",
+    "Mets",
+    "Nationals",
+    "Orioles",
+    "Padres",
+    "Phillies",
+    "Pirates",
+    "Rangers",
+    "Rays",
+    "Red Sox",
+    "Reds",
+    "Rockies",
+    "Royals",
+    "Tigers",
+    "Twins",
+    "White Sox",
+    "Yankees",
+  ].map((label) => label.toLowerCase())
+);
+const TEAM_FILTER_ALL = "teams:all";
+const TEAM_FILTER_NONE = "teams:none";
+
+const countMlbTeamLabels = (grid: Grid) =>
+  [...grid.rows, ...grid.cols].filter((label) =>
+    MLB_TEAM_LABELS.has(label.toLowerCase())
+  ).length;
 
 export default function HomeClient() {
   const [query, setQuery] = useState("");
@@ -80,6 +121,14 @@ export default function HomeClient() {
     () => baseTokens.includes("has:hint"),
     [baseTokens]
   );
+  const isAllTeamsFilterActive = useMemo(
+    () => baseTokens.includes(TEAM_FILTER_ALL),
+    [baseTokens]
+  );
+  const isNoTeamsFilterActive = useMemo(
+    () => baseTokens.includes(TEAM_FILTER_NONE),
+    [baseTokens]
+  );
   const toggleFilterToken = (token: string) => {
     if (!baseTokens.length) {
       setQuery(token);
@@ -89,6 +138,18 @@ export default function HomeClient() {
     if (tokens.includes(token)) {
       const next = tokens.filter((value) => value !== token).join(" ");
       setQuery(next);
+      return;
+    }
+    setQuery([...tokens, token].join(" "));
+  };
+  const toggleTeamFilterToken = (token: typeof TEAM_FILTER_ALL | typeof TEAM_FILTER_NONE) => {
+    const other = token === TEAM_FILTER_ALL ? TEAM_FILTER_NONE : TEAM_FILTER_ALL;
+    const tokens = normalizedQuery
+      .split(/\s+/)
+      .filter(Boolean)
+      .filter((value) => value !== other);
+    if (tokens.includes(token)) {
+      setQuery(tokens.filter((value) => value !== token).join(" "));
       return;
     }
     setQuery([...tokens, token].join(" "));
@@ -392,7 +453,10 @@ export default function HomeClient() {
         .map((grid) => {
         const isDateToken = (value: string) => value.startsWith("date:");
         const isMetaToken = (value: string) =>
-          value.startsWith("date:") || value === "has:hint";
+          value.startsWith("date:") ||
+          value === "has:hint" ||
+          value === TEAM_FILTER_ALL ||
+          value === TEAM_FILTER_NONE;
           const rowTexts = grid.rows.map((label) => label.toLowerCase());
           const colTexts = grid.cols.map((label) => label.toLowerCase());
           const hintTexts = (grid.hints ?? []).map((hint) => hint.toLowerCase());
@@ -422,6 +486,12 @@ export default function HomeClient() {
           }
           if (needle === "has:hint") {
             return (grid.hints?.length ?? 0) > 0;
+          }
+          if (needle === TEAM_FILTER_ALL) {
+            return countMlbTeamLabels(grid) === 6;
+          }
+          if (needle === TEAM_FILTER_NONE) {
+            return countMlbTeamLabels(grid) === 0;
           }
             if (needle === "sux" || needle === "suck" || needle === "sucks") {
               return false;
@@ -530,6 +600,14 @@ export default function HomeClient() {
           }
           if (needle === "has:hint") {
             const hit = (grid.hints?.length ?? 0) > 0;
+            return hit ? { matched: true, score: 3 } : { matched: false, score: 0 };
+          }
+          if (needle === TEAM_FILTER_ALL) {
+            const hit = countMlbTeamLabels(grid) === 6;
+            return hit ? { matched: true, score: 3 } : { matched: false, score: 0 };
+          }
+          if (needle === TEAM_FILTER_NONE) {
+            const hit = countMlbTeamLabels(grid) === 0;
             return hit ? { matched: true, score: 3 } : { matched: false, score: 0 };
           }
             if (needle === "sux" || needle === "suck" || needle === "sucks") {
@@ -914,6 +992,7 @@ export default function HomeClient() {
         const needle = token.toLowerCase();
         if (!needle) continue;
         if (needle.startsWith("date:")) continue;
+        if (needle === TEAM_FILTER_ALL || needle === TEAM_FILTER_NONE) continue;
         const aliasLabels = teamAliasMap[needle];
         if (aliasLabels) {
           for (let i = 0; i < labelTexts.length; i += 1) {
@@ -1167,6 +1246,28 @@ export default function HomeClient() {
               </button>
               <button
                 type="button"
+                onClick={() => toggleTeamFilterToken(TEAM_FILTER_ALL)}
+                className={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] transition ${
+                  isAllTeamsFilterActive
+                    ? "border-blue-300 bg-blue-100 text-blue-800"
+                    : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900"
+                }`}
+              >
+                All Teams
+              </button>
+              <button
+                type="button"
+                onClick={() => toggleTeamFilterToken(TEAM_FILTER_NONE)}
+                className={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] transition ${
+                  isNoTeamsFilterActive
+                    ? "border-blue-300 bg-blue-100 text-blue-800"
+                    : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900"
+                }`}
+              >
+                No Teams
+              </button>
+              <button
+                type="button"
                 onClick={handleRandomPick}
                 className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition hover:border-slate-300 hover:text-slate-900"
               >
@@ -1244,6 +1345,28 @@ export default function HomeClient() {
                   }`}
                 >
                   Special day grids
+                </button>
+                <button
+                  type="button"
+                  onClick={() => toggleTeamFilterToken(TEAM_FILTER_ALL)}
+                  className={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] transition ${
+                    isAllTeamsFilterActive
+                      ? "border-blue-300 bg-blue-100 text-blue-800"
+                      : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900"
+                  }`}
+                >
+                  All Teams
+                </button>
+                <button
+                  type="button"
+                  onClick={() => toggleTeamFilterToken(TEAM_FILTER_NONE)}
+                  className={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] transition ${
+                    isNoTeamsFilterActive
+                      ? "border-blue-300 bg-blue-100 text-blue-800"
+                      : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900"
+                  }`}
+                >
+                  No Teams
                 </button>
                 <button
                   type="button"
