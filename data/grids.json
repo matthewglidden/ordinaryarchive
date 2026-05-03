@@ -25964,5 +25964,28 @@
       "ROY",
       "Born 🇯🇵 (JPN)"
     ]
+  },
+  {
+    "gridNumber": 1127,
+    "id": "2026-05-03",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1127",
+    "rows": [
+      "Guardians",
+      "Red Sox",
+      "40+ WAR"
+    ],
+    "cols": [
+      "Cubs",
+      "One Team",
+      "200+ W"
+    ],
+    "all": [
+      "Guardians",
+      "Red Sox",
+      "40+ WAR",
+      "Cubs",
+      "One Team",
+      "200+ W"
+    ]
   }
 ]
