@@ -25987,5 +25987,28 @@
       "One Team",
       "200+ W"
     ]
+  },
+  {
+    "gridNumber": 1128,
+    "id": "2026-05-04",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1128",
+    "rows": [
+      "Rangers",
+      "Yankees",
+      ".300+ Season"
+    ],
+    "cols": [
+      "Padres",
+      "Dodgers",
+      "3B"
+    ],
+    "all": [
+      "Rangers",
+      "Yankees",
+      ".300+ Season",
+      "Padres",
+      "Dodgers",
+      "3B"
+    ]
   }
 ]
