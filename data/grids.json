@@ -26010,5 +26010,28 @@
       "Dodgers",
       "3B"
     ]
+  },
+  {
+    "gridNumber": 1129,
+    "id": "2026-05-05",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1129",
+    "rows": [
+      "Blue Jays",
+      "D'backs",
+      "White Sox"
+    ],
+    "cols": [
+      "Royals",
+      "Astros",
+      "Silver Slugger"
+    ],
+    "all": [
+      "Blue Jays",
+      "D'backs",
+      "White Sox",
+      "Royals",
+      "Astros",
+      "Silver Slugger"
+    ]
   }
 ]
