@@ -26033,5 +26033,28 @@
       "Astros",
       "Silver Slugger"
     ]
+  },
+  {
+    "gridNumber": 1130,
+    "id": "2026-05-06",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1130",
+    "rows": [
+      "Athletics",
+      "Brewers",
+      "Tigers"
+    ],
+    "cols": [
+      "Mariners",
+      "Giants",
+      "300+ HR"
+    ],
+    "all": [
+      "Athletics",
+      "Brewers",
+      "Tigers",
+      "Mariners",
+      "Giants",
+      "300+ HR"
+    ]
   }
 ]
