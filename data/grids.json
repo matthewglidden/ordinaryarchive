@@ -26056,5 +26056,28 @@
       "Giants",
       "300+ HR"
     ]
+  },
+  {
+    "gridNumber": 1131,
+    "id": "2026-05-07",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1131",
+    "rows": [
+      "Pirates",
+      "Angels",
+      "100+ RBI"
+    ],
+    "cols": [
+      "Red Sox",
+      "Phillies",
+      "10+ HR"
+    ],
+    "all": [
+      "Pirates",
+      "Angels",
+      "100+ RBI",
+      "Red Sox",
+      "Phillies",
+      "10+ HR"
+    ]
   }
 ]
