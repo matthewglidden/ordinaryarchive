@@ -26079,5 +26079,28 @@
       "Phillies",
       "10+ HR"
     ]
+  },
+  {
+    "gridNumber": 1132,
+    "id": "2026-05-08",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1132",
+    "rows": [
+      "Braves",
+      "Mets",
+      "Guardians"
+    ],
+    "cols": [
+      "Cardinals",
+      "OF",
+      "≤3 ERA Season"
+    ],
+    "all": [
+      "Braves",
+      "Mets",
+      "Guardians",
+      "Cardinals",
+      "OF",
+      "≤3 ERA Season"
+    ]
   }
 ]
