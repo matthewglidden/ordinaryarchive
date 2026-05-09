@@ -26102,5 +26102,28 @@
       "OF",
       "≤3 ERA Season"
     ]
+  },
+  {
+    "gridNumber": 1133,
+    "id": "2026-05-09",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1133",
+    "rows": [
+      "2K+ H",
+      "C",
+      "20+ W"
+    ],
+    "cols": [
+      "HOF",
+      "Gold Glove",
+      "6+ WAR"
+    ],
+    "all": [
+      "2K+ H",
+      "C",
+      "20+ W",
+      "HOF",
+      "Gold Glove",
+      "6+ WAR"
+    ]
   }
 ]
