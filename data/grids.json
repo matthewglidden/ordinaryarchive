@@ -26171,5 +26171,28 @@
       "Rangers",
       "SS"
     ]
+  },
+  {
+    "gridNumber": 1136,
+    "id": "2026-05-12",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1136",
+    "rows": [
+      "Guardians",
+      "Phillies",
+      "1B"
+    ],
+    "cols": [
+      "Yankees",
+      "Rockies",
+      "40+ WAR"
+    ],
+    "all": [
+      "Guardians",
+      "Phillies",
+      "1B",
+      "Yankees",
+      "Rockies",
+      "40+ WAR"
+    ]
   }
 ]
