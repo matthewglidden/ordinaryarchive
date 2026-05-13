@@ -26194,5 +26194,28 @@
       "Rockies",
       "40+ WAR"
     ]
+  },
+  {
+    "gridNumber": 1137,
+    "id": "2026-05-13",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1137",
+    "rows": [
+      "Dodgers",
+      "Royals",
+      ".300+ Season"
+    ],
+    "cols": [
+      "Angels",
+      "Mariners",
+      "Born 🌍 (Non-USA)"
+    ],
+    "all": [
+      "Dodgers",
+      "Royals",
+      ".300+ Season",
+      "Angels",
+      "Mariners",
+      "Born 🌍 (Non-USA)"
+    ]
   }
 ]
