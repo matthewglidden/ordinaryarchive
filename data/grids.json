@@ -26217,5 +26217,28 @@
       "Mariners",
       "Born 🌍 (Non-USA)"
     ]
+  },
+  {
+    "gridNumber": 1138,
+    "id": "2026-05-14",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1138",
+    "rows": [
+      "Cubs",
+      "Reds",
+      "All-Star"
+    ],
+    "cols": [
+      "Astros",
+      "Pirates",
+      "40+ HR"
+    ],
+    "all": [
+      "Cubs",
+      "Reds",
+      "All-Star",
+      "Astros",
+      "Pirates",
+      "40+ HR"
+    ]
   }
 ]
