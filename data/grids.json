@@ -26240,5 +26240,28 @@
       "Pirates",
       "40+ HR"
     ]
+  },
+  {
+    "gridNumber": 1139,
+    "id": "2026-05-15",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1139",
+    "rows": [
+      "Tigers",
+      "Giants",
+      "Braves"
+    ],
+    "cols": [
+      "Red Sox",
+      "One Team",
+      "200+ K"
+    ],
+    "all": [
+      "Tigers",
+      "Giants",
+      "Braves",
+      "Red Sox",
+      "One Team",
+      "200+ K"
+    ]
   }
 ]
