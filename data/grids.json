@@ -26263,5 +26263,28 @@
       "One Team",
       "200+ K"
     ]
+  },
+  {
+    "gridNumber": 1140,
+    "id": "2026-05-16",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1140",
+    "rows": [
+      "MVP",
+      "Silver Slugger",
+      "Gold Glove"
+    ],
+    "cols": [
+      "LF",
+      "CF",
+      "RF"
+    ],
+    "all": [
+      "MVP",
+      "Silver Slugger",
+      "Gold Glove",
+      "LF",
+      "CF",
+      "RF"
+    ]
   }
 ]
