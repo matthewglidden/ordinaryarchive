@@ -26286,5 +26286,28 @@
       "CF",
       "RF"
     ]
+  },
+  {
+    "gridNumber": 1141,
+    "id": "2026-05-17",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1141",
+    "rows": [
+      "Brewers",
+      "3B",
+      "MLB"
+    ],
+    "cols": [
+      "Cardinals",
+      "HOF",
+      "10+ HR"
+    ],
+    "all": [
+      "Brewers",
+      "3B",
+      "MLB",
+      "Cardinals",
+      "HOF",
+      "10+ HR"
+    ]
   }
 ]
