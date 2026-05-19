@@ -26332,5 +26332,28 @@
       "Guardians",
       "300+ HR"
     ]
+  },
+  {
+    "gridNumber": 1143,
+    "id": "2026-05-19",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1143",
+    "rows": [
+      "Mets",
+      "Blue Jays",
+      "40+ WAR"
+    ],
+    "cols": [
+      "Twins",
+      "Mariners",
+      "1st round"
+    ],
+    "all": [
+      "Mets",
+      "Blue Jays",
+      "40+ WAR",
+      "Twins",
+      "Mariners",
+      "1st round"
+    ]
   }
 ]
