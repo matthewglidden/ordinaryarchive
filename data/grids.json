@@ -26355,5 +26355,28 @@
       "Mariners",
       "1st round"
     ]
+  },
+  {
+    "gridNumber": 1144,
+    "id": "2026-05-20",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1144",
+    "rows": [
+      "White Sox",
+      "Cubs",
+      "Braves"
+    ],
+    "cols": [
+      "Athletics",
+      "Dodgers",
+      "10+ W"
+    ],
+    "all": [
+      "White Sox",
+      "Cubs",
+      "Braves",
+      "Athletics",
+      "Dodgers",
+      "10+ W"
+    ]
   }
 ]
