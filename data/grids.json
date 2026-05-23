@@ -26424,5 +26424,28 @@
       "Red Sox",
       "Born 🌍 (Non-USA)"
     ]
+  },
+  {
+    "gridNumber": 1147,
+    "id": "2026-05-23",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1147",
+    "rows": [
+      "30/30",
+      "100+ RBI",
+      "100+ R"
+    ],
+    "cols": [
+      "All-Star",
+      "One Team",
+      "CF"
+    ],
+    "all": [
+      "30/30",
+      "100+ RBI",
+      "100+ R",
+      "All-Star",
+      "One Team",
+      "CF"
+    ]
   }
 ]
