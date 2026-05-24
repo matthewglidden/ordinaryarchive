@@ -26447,5 +26447,28 @@
       "One Team",
       "CF"
     ]
+  },
+  {
+    "gridNumber": 1148,
+    "id": "2026-05-24",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1148",
+    "rows": [
+      "Padres",
+      "Giants",
+      "C"
+    ],
+    "cols": [
+      "Reds",
+      "Dodgers",
+      "P"
+    ],
+    "all": [
+      "Padres",
+      "Giants",
+      "C",
+      "Reds",
+      "Dodgers",
+      "P"
+    ]
   }
 ]
