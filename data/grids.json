@@ -26516,5 +26516,28 @@
       "Orioles",
       "1B"
     ]
+  },
+  {
+    "gridNumber": 1151,
+    "id": "2026-05-27",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1151",
+    "rows": [
+      "Royals",
+      "White Sox",
+      "LF"
+    ],
+    "cols": [
+      "Brewers",
+      "Pirates",
+      "40+ WAR"
+    ],
+    "all": [
+      "Royals",
+      "White Sox",
+      "LF",
+      "Brewers",
+      "Pirates",
+      "40+ WAR"
+    ]
   }
 ]
