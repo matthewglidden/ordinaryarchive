@@ -26539,5 +26539,28 @@
       "Pirates",
       "40+ WAR"
     ]
+  },
+  {
+    "gridNumber": 1152,
+    "id": "2026-05-28",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1152",
+    "rows": [
+      "Twins",
+      "Red Sox",
+      "6+ WAR"
+    ],
+    "cols": [
+      "Yankees",
+      "Mariners",
+      "RF"
+    ],
+    "all": [
+      "Twins",
+      "Red Sox",
+      "6+ WAR",
+      "Yankees",
+      "Mariners",
+      "RF"
+    ]
   }
 ]
