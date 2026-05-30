@@ -26585,5 +26585,28 @@
       "Rangers",
       "200+ W"
     ]
+  },
+  {
+    "gridNumber": 1154,
+    "id": "2026-05-30",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1154",
+    "rows": [
+      "10+ W",
+      "All-Star",
+      "Born 🌍 (Non-USA)"
+    ],
+    "cols": [
+      "No-Hitter",
+      "2K+ K",
+      "300+ SV"
+    ],
+    "all": [
+      "10+ W",
+      "All-Star",
+      "Born 🌍 (Non-USA)",
+      "No-Hitter",
+      "2K+ K",
+      "300+ SV"
+    ]
   }
 ]
