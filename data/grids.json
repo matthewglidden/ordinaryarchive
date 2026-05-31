@@ -26608,5 +26608,28 @@
       "2K+ K",
       "300+ SV"
     ]
+  },
+  {
+    "gridNumber": 1155,
+    "id": "2026-05-31",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1155",
+    "rows": [
+      "Angels",
+      "Orioles",
+      "100+ RBI"
+    ],
+    "cols": [
+      "Guardians",
+      "Reds",
+      "2B"
+    ],
+    "all": [
+      "Angels",
+      "Orioles",
+      "100+ RBI",
+      "Guardians",
+      "Reds",
+      "2B"
+    ]
   }
 ]
