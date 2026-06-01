@@ -26631,5 +26631,28 @@
       "Reds",
       "2B"
     ]
+  },
+  {
+    "gridNumber": 1156,
+    "id": "2026-06-01",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1156",
+    "rows": [
+      "Phillies",
+      "Athletics",
+      "Gold Glove"
+    ],
+    "cols": [
+      "Dodgers",
+      "Royals",
+      ".300+ Season"
+    ],
+    "all": [
+      "Phillies",
+      "Athletics",
+      "Gold Glove",
+      "Dodgers",
+      "Royals",
+      ".300+ Season"
+    ]
   }
 ]
