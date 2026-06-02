@@ -26654,5 +26654,28 @@
       "Royals",
       ".300+ Season"
     ]
+  },
+  {
+    "gridNumber": 1157,
+    "id": "2026-06-02",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1157",
+    "rows": [
+      "Giants",
+      "Pirates",
+      "Astros"
+    ],
+    "cols": [
+      "Rockies",
+      "Twins",
+      "≤3 ERA Season"
+    ],
+    "all": [
+      "Giants",
+      "Pirates",
+      "Astros",
+      "Rockies",
+      "Twins",
+      "≤3 ERA Season"
+    ]
   }
 ]
