@@ -26677,5 +26677,28 @@
       "Twins",
       "≤3 ERA Season"
     ]
+  },
+  {
+    "gridNumber": 1158,
+    "id": "2026-06-03",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1158",
+    "rows": [
+      "Tigers",
+      "Red Sox",
+      "40+ WAR"
+    ],
+    "cols": [
+      "Padres",
+      "Brewers",
+      "P"
+    ],
+    "all": [
+      "Tigers",
+      "Red Sox",
+      "40+ WAR",
+      "Padres",
+      "Brewers",
+      "P"
+    ]
   }
 ]
