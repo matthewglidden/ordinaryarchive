@@ -26700,5 +26700,28 @@
       "Brewers",
       "P"
     ]
+  },
+  {
+    "gridNumber": 1159,
+    "id": "2026-06-04",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1159",
+    "rows": [
+      "Nationals",
+      "Braves",
+      "One Team"
+    ],
+    "cols": [
+      "Orioles",
+      "Reds",
+      "30+ HR"
+    ],
+    "all": [
+      "Nationals",
+      "Braves",
+      "One Team",
+      "Orioles",
+      "Reds",
+      "30+ HR"
+    ]
   }
 ]
