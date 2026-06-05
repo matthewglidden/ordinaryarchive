@@ -26723,5 +26723,28 @@
       "Reds",
       "30+ HR"
     ]
+  },
+  {
+    "gridNumber": 1160,
+    "id": "2026-06-05",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1160",
+    "rows": [
+      "Mets",
+      "Rays",
+      "Rangers"
+    ],
+    "cols": [
+      "Phillies",
+      "Cubs",
+      "White Sox"
+    ],
+    "all": [
+      "Mets",
+      "Rays",
+      "Rangers",
+      "Phillies",
+      "Cubs",
+      "White Sox"
+    ]
   }
 ]
