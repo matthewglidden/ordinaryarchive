@@ -26746,5 +26746,28 @@
       "Cubs",
       "White Sox"
     ]
+  },
+  {
+    "gridNumber": 1161,
+    "id": "2026-06-06",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1161",
+    "rows": [
+      "30+ SB",
+      "300+ HR",
+      "10+ HR"
+    ],
+    "cols": [
+      "200+ H",
+      "6+ WAR",
+      "OF"
+    ],
+    "all": [
+      "30+ SB",
+      "300+ HR",
+      "10+ HR",
+      "200+ H",
+      "6+ WAR",
+      "OF"
+    ]
   }
 ]
