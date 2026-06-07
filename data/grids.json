@@ -26769,5 +26769,28 @@
       "6+ WAR",
       "OF"
     ]
+  },
+  {
+    "gridNumber": 1162,
+    "id": "2026-06-07",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1162",
+    "rows": [
+      "Cardinals",
+      "Yankees",
+      "2K+ H"
+    ],
+    "cols": [
+      "Blue Jays",
+      "C",
+      "MVP"
+    ],
+    "all": [
+      "Cardinals",
+      "Yankees",
+      "2K+ H",
+      "Blue Jays",
+      "C",
+      "MVP"
+    ]
   }
 ]
