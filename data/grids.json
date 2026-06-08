@@ -26792,5 +26792,28 @@
       "C",
       "MVP"
     ]
+  },
+  {
+    "gridNumber": 1163,
+    "id": "2026-06-08",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1163",
+    "rows": [
+      "Mariners",
+      "Guardians",
+      "Silver Slugger"
+    ],
+    "cols": [
+      "Giants",
+      "Braves",
+      "3B"
+    ],
+    "all": [
+      "Mariners",
+      "Guardians",
+      "Silver Slugger",
+      "Giants",
+      "Braves",
+      "3B"
+    ]
   }
 ]
