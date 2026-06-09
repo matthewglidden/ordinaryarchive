@@ -26815,5 +26815,28 @@
       "Braves",
       "3B"
     ]
+  },
+  {
+    "gridNumber": 1164,
+    "id": "2026-06-09",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1164",
+    "rows": [
+      "Angels",
+      "Dodgers",
+      "All-Star"
+    ],
+    "cols": [
+      "Orioles",
+      "Nationals",
+      "HOF"
+    ],
+    "all": [
+      "Angels",
+      "Dodgers",
+      "All-Star",
+      "Orioles",
+      "Nationals",
+      "HOF"
+    ]
   }
 ]
