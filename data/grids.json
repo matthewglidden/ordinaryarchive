@@ -26838,5 +26838,28 @@
       "Nationals",
       "HOF"
     ]
+  },
+  {
+    "gridNumber": 1165,
+    "id": "2026-06-10",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1165",
+    "rows": [
+      "Athletics",
+      "Astros",
+      "Red Sox"
+    ],
+    "cols": [
+      "Mets",
+      "1B",
+      "1st round"
+    ],
+    "all": [
+      "Athletics",
+      "Astros",
+      "Red Sox",
+      "Mets",
+      "1B",
+      "1st round"
+    ]
   }
 ]
