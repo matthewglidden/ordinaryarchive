@@ -26861,5 +26861,28 @@
       "1B",
       "1st round"
     ]
+  },
+  {
+    "gridNumber": 1166,
+    "id": "2026-06-11",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1166",
+    "rows": [
+      "Cardinals",
+      "Royals",
+      "30+ HR"
+    ],
+    "cols": [
+      "Rangers",
+      "Yankees",
+      "100+ RBI"
+    ],
+    "all": [
+      "Cardinals",
+      "Royals",
+      "30+ HR",
+      "Rangers",
+      "Yankees",
+      "100+ RBI"
+    ]
   }
 ]
