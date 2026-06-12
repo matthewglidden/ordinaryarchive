@@ -26884,5 +26884,28 @@
       "Yankees",
       "100+ RBI"
     ]
+  },
+  {
+    "gridNumber": 1167,
+    "id": "2026-06-12",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1167",
+    "rows": [
+      "D'backs",
+      "Phillies",
+      "Pirates"
+    ],
+    "cols": [
+      "Brewers",
+      "Giants",
+      "Tigers"
+    ],
+    "all": [
+      "D'backs",
+      "Phillies",
+      "Pirates",
+      "Brewers",
+      "Giants",
+      "Tigers"
+    ]
   }
 ]
