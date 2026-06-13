@@ -26907,5 +26907,28 @@
       "Giants",
       "Tigers"
     ]
+  },
+  {
+    "gridNumber": 1168,
+    "id": "2026-06-13",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1168",
+    "rows": [
+      ".300+ Season",
+      "40+ WAR",
+      "ROY"
+    ],
+    "cols": [
+      "2B",
+      "SS",
+      "CF"
+    ],
+    "all": [
+      ".300+ Season",
+      "40+ WAR",
+      "ROY",
+      "2B",
+      "SS",
+      "CF"
+    ]
   }
 ]
