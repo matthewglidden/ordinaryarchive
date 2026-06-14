@@ -26930,5 +26930,28 @@
       "SS",
       "CF"
     ]
+  },
+  {
+    "gridNumber": 1169,
+    "id": "2026-06-14",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1169",
+    "rows": [
+      "Twins",
+      "Braves",
+      "Padres"
+    ],
+    "cols": [
+      "White Sox",
+      "10+ HR",
+      "2K+ K"
+    ],
+    "all": [
+      "Twins",
+      "Braves",
+      "Padres",
+      "White Sox",
+      "10+ HR",
+      "2K+ K"
+    ]
   }
 ]
