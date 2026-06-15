@@ -26953,5 +26953,28 @@
       "10+ HR",
       "2K+ K"
     ]
+  },
+  {
+    "gridNumber": 1170,
+    "id": "2026-06-15",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1170",
+    "rows": [
+      "Reds",
+      "Nationals",
+      "C"
+    ],
+    "cols": [
+      "Rangers",
+      "Cubs",
+      "100+ R"
+    ],
+    "all": [
+      "Reds",
+      "Nationals",
+      "C",
+      "Rangers",
+      "Cubs",
+      "100+ R"
+    ]
   }
 ]
