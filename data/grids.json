@@ -26976,5 +26976,28 @@
       "Cubs",
       "100+ R"
     ]
+  },
+  {
+    "gridNumber": 1171,
+    "id": "2026-06-16",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1171",
+    "rows": [
+      "Blue Jays",
+      "Royals",
+      "300+ HR"
+    ],
+    "cols": [
+      "Dodgers",
+      "Guardians",
+      "LF"
+    ],
+    "all": [
+      "Blue Jays",
+      "Royals",
+      "300+ HR",
+      "Dodgers",
+      "Guardians",
+      "LF"
+    ]
   }
 ]
