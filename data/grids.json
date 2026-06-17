@@ -26999,5 +26999,28 @@
       "Guardians",
       "LF"
     ]
+  },
+  {
+    "gridNumber": 1172,
+    "id": "2026-06-17",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1172",
+    "rows": [
+      "Red Sox",
+      "Orioles",
+      "One Team"
+    ],
+    "cols": [
+      "Marlins",
+      "Astros",
+      "≤3 ERA Season"
+    ],
+    "all": [
+      "Red Sox",
+      "Orioles",
+      "One Team",
+      "Marlins",
+      "Astros",
+      "≤3 ERA Season"
+    ]
   }
 ]
