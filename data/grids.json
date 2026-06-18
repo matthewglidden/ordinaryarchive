@@ -27022,5 +27022,28 @@
       "Astros",
       "≤3 ERA Season"
     ]
+  },
+  {
+    "gridNumber": 1173,
+    "id": "2026-06-18",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1173",
+    "rows": [
+      "Mariners",
+      "Giants",
+      "200+ H"
+    ],
+    "cols": [
+      "Cardinals",
+      "30+ HR",
+      "Born 🌍 (Non-USA)"
+    ],
+    "all": [
+      "Mariners",
+      "Giants",
+      "200+ H",
+      "Cardinals",
+      "30+ HR",
+      "Born 🌍 (Non-USA)"
+    ]
   }
 ]
