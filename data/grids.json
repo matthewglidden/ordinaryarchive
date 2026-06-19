@@ -27045,5 +27045,28 @@
       "30+ HR",
       "Born 🌍 (Non-USA)"
     ]
+  },
+  {
+    "gridNumber": 1174,
+    "id": "2026-06-19",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1174",
+    "rows": [
+      "Athletics",
+      "Mets",
+      "Braves"
+    ],
+    "cols": [
+      "Yankees",
+      "Pirates",
+      "Angels"
+    ],
+    "all": [
+      "Athletics",
+      "Mets",
+      "Braves",
+      "Yankees",
+      "Pirates",
+      "Angels"
+    ]
   }
 ]
