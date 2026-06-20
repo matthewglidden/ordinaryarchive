@@ -27068,5 +27068,28 @@
       "Pirates",
       "Angels"
     ]
+  },
+  {
+    "gridNumber": 1175,
+    "id": "2026-06-20",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1175",
+    "rows": [
+      "Cy Young",
+      "20+ W",
+      "200+ K"
+    ],
+    "cols": [
+      "All-Star",
+      "40+ WAR",
+      "200+ W"
+    ],
+    "all": [
+      "Cy Young",
+      "20+ W",
+      "200+ K",
+      "All-Star",
+      "40+ WAR",
+      "200+ W"
+    ]
   }
 ]
