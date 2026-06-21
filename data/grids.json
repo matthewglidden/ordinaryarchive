@@ -27091,5 +27091,28 @@
       "40+ WAR",
       "200+ W"
     ]
+  },
+  {
+    "gridNumber": 1176,
+    "id": "2026-06-21",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1176",
+    "rows": [
+      "Tigers",
+      "Phillies",
+      "100+ RBI"
+    ],
+    "cols": [
+      "Cubs",
+      "RF",
+      "2K+ H"
+    ],
+    "all": [
+      "Tigers",
+      "Phillies",
+      "100+ RBI",
+      "Cubs",
+      "RF",
+      "2K+ H"
+    ]
   }
 ]
