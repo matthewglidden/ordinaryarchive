@@ -27114,5 +27114,28 @@
       "RF",
       "2K+ H"
     ]
+  },
+  {
+    "gridNumber": 1177,
+    "id": "2026-06-22",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1177",
+    "rows": [
+      "Brewers",
+      "Guardians",
+      "6+ WAR"
+    ],
+    "cols": [
+      "Reds",
+      "Twins",
+      "Gold Glove"
+    ],
+    "all": [
+      "Brewers",
+      "Guardians",
+      "6+ WAR",
+      "Reds",
+      "Twins",
+      "Gold Glove"
+    ]
   }
 ]
