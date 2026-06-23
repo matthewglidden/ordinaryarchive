@@ -27137,5 +27137,28 @@
       "Twins",
       "Gold Glove"
     ]
+  },
+  {
+    "gridNumber": 1178,
+    "id": "2026-06-23",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1178",
+    "rows": [
+      "White Sox",
+      "Blue Jays",
+      "Mariners"
+    ],
+    "cols": [
+      "Orioles",
+      "Angels",
+      "2K+ K"
+    ],
+    "all": [
+      "White Sox",
+      "Blue Jays",
+      "Mariners",
+      "Orioles",
+      "Angels",
+      "2K+ K"
+    ]
   }
 ]
