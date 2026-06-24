@@ -27160,5 +27160,28 @@
       "Angels",
       "2K+ K"
     ]
+  },
+  {
+    "gridNumber": 1179,
+    "id": "2026-06-24",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1179",
+    "rows": [
+      "Padres",
+      "Cardinals",
+      "300+ HR"
+    ],
+    "cols": [
+      "Astros",
+      "Royals",
+      "Silver Slugger"
+    ],
+    "all": [
+      "Padres",
+      "Cardinals",
+      "300+ HR",
+      "Astros",
+      "Royals",
+      "Silver Slugger"
+    ]
   }
 ]
