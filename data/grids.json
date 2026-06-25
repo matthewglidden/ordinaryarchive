@@ -27183,5 +27183,28 @@
       "Royals",
       "Silver Slugger"
     ]
+  },
+  {
+    "gridNumber": 1180,
+    "id": "2026-06-25",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1180",
+    "rows": [
+      "Rangers",
+      "Yankees",
+      "HOF"
+    ],
+    "cols": [
+      "Giants",
+      "Tigers",
+      "2B"
+    ],
+    "all": [
+      "Rangers",
+      "Yankees",
+      "HOF",
+      "Giants",
+      "Tigers",
+      "2B"
+    ]
   }
 ]
