@@ -27206,5 +27206,28 @@
       "Tigers",
       "2B"
     ]
+  },
+  {
+    "gridNumber": 1181,
+    "id": "2026-06-26",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1181",
+    "rows": [
+      "Rays",
+      "Mets",
+      "Phillies"
+    ],
+    "cols": [
+      "Braves",
+      "Nationals",
+      "Reds"
+    ],
+    "all": [
+      "Rays",
+      "Mets",
+      "Phillies",
+      "Braves",
+      "Nationals",
+      "Reds"
+    ]
   }
 ]
