@@ -27229,5 +27229,28 @@
       "Nationals",
       "Reds"
     ]
+  },
+  {
+    "gridNumber": 1182,
+    "id": "2026-06-27",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1182",
+    "rows": [
+      "10+ W",
+      "≤3 ERA Season",
+      "Born 🌍 (Non-USA)"
+    ],
+    "cols": [
+      "30+ SV",
+      "All-Star",
+      "MVP"
+    ],
+    "all": [
+      "10+ W",
+      "≤3 ERA Season",
+      "Born 🌍 (Non-USA)",
+      "30+ SV",
+      "All-Star",
+      "MVP"
+    ]
   }
 ]
