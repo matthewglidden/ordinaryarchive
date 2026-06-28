@@ -27252,5 +27252,28 @@
       "All-Star",
       "MVP"
     ]
+  },
+  {
+    "gridNumber": 1183,
+    "id": "2026-06-28",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1183",
+    "rows": [
+      "Dodgers",
+      "Cardinals",
+      "10+ HR"
+    ],
+    "cols": [
+      "Red Sox",
+      "Pirates",
+      "CF"
+    ],
+    "all": [
+      "Dodgers",
+      "Cardinals",
+      "10+ HR",
+      "Red Sox",
+      "Pirates",
+      "CF"
+    ]
   }
 ]
