@@ -27275,5 +27275,28 @@
       "Pirates",
       "CF"
     ]
+  },
+  {
+    "gridNumber": 1184,
+    "id": "2026-06-29",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1184",
+    "rows": [
+      "Athletics",
+      "White Sox",
+      "Tigers"
+    ],
+    "cols": [
+      "Blue Jays",
+      "3B",
+      "30+ SB"
+    ],
+    "all": [
+      "Athletics",
+      "White Sox",
+      "Tigers",
+      "Blue Jays",
+      "3B",
+      "30+ SB"
+    ]
   }
 ]
