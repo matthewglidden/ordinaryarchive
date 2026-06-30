@@ -27298,5 +27298,28 @@
       "3B",
       "30+ SB"
     ]
+  },
+  {
+    "gridNumber": 1185,
+    "id": "2026-06-30",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1185",
+    "rows": [
+      "Angels",
+      "Rockies",
+      ".300+ Season"
+    ],
+    "cols": [
+      "Cubs",
+      "Twins",
+      "C"
+    ],
+    "all": [
+      "Angels",
+      "Rockies",
+      ".300+ Season",
+      "Cubs",
+      "Twins",
+      "C"
+    ]
   }
 ]
