@@ -27321,5 +27321,28 @@
       "Twins",
       "C"
     ]
+  },
+  {
+    "gridNumber": 1186,
+    "id": "2026-07-01",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1186",
+    "rows": [
+      "Guardians",
+      "Brewers",
+      "2K+ H"
+    ],
+    "cols": [
+      "Astros",
+      "Padres",
+      "30+ HR"
+    ],
+    "all": [
+      "Guardians",
+      "Brewers",
+      "2K+ H",
+      "Astros",
+      "Padres",
+      "30+ HR"
+    ]
   }
 ]
