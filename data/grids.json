@@ -27344,5 +27344,28 @@
       "Padres",
       "30+ HR"
     ]
+  },
+  {
+    "gridNumber": 1187,
+    "id": "2026-07-02",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1187",
+    "rows": [
+      "Mariners",
+      "Orioles",
+      "100+ RBI"
+    ],
+    "cols": [
+      "Rangers",
+      "Yankees",
+      "LF"
+    ],
+    "all": [
+      "Mariners",
+      "Orioles",
+      "100+ RBI",
+      "Rangers",
+      "Yankees",
+      "LF"
+    ]
   }
 ]
