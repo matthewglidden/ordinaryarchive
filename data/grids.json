@@ -27367,5 +27367,28 @@
       "Yankees",
       "LF"
     ]
+  },
+  {
+    "gridNumber": 1188,
+    "id": "2026-07-03",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1188",
+    "rows": [
+      "Cardinals",
+      "Red Sox",
+      "Nationals"
+    ],
+    "cols": [
+      "D'backs",
+      "Tigers",
+      "Braves"
+    ],
+    "all": [
+      "Cardinals",
+      "Red Sox",
+      "Nationals",
+      "D'backs",
+      "Tigers",
+      "Braves"
+    ]
   }
 ]
