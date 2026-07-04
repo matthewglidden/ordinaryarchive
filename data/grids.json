@@ -27390,5 +27390,28 @@
       "Tigers",
       "Braves"
     ]
+  },
+  {
+    "gridNumber": 1189,
+    "id": "2026-07-04",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1189",
+    "rows": [
+      "OF",
+      "1B",
+      "SS"
+    ],
+    "cols": [
+      "Gold Glove",
+      "HOF",
+      "All-Star"
+    ],
+    "all": [
+      "OF",
+      "1B",
+      "SS",
+      "Gold Glove",
+      "HOF",
+      "All-Star"
+    ]
   }
 ]
