@@ -27413,5 +27413,28 @@
       "HOF",
       "All-Star"
     ]
+  },
+  {
+    "gridNumber": 1190,
+    "id": "2026-07-05",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1190",
+    "rows": [
+      "Giants",
+      "Phillies",
+      "Royals"
+    ],
+    "cols": [
+      "White Sox",
+      "200+ H",
+      "100+ R"
+    ],
+    "all": [
+      "Giants",
+      "Phillies",
+      "Royals",
+      "White Sox",
+      "200+ H",
+      "100+ R"
+    ]
   }
 ]
