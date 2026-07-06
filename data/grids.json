@@ -27436,5 +27436,28 @@
       "200+ H",
       "100+ R"
     ]
+  },
+  {
+    "gridNumber": 1191,
+    "id": "2026-07-06",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1191",
+    "rows": [
+      "Mets",
+      "Twins",
+      "Brewers"
+    ],
+    "cols": [
+      "Dodgers",
+      "Orioles",
+      "10+ W"
+    ],
+    "all": [
+      "Mets",
+      "Twins",
+      "Brewers",
+      "Dodgers",
+      "Orioles",
+      "10+ W"
+    ]
   }
 ]
