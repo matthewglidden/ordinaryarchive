@@ -27459,5 +27459,28 @@
       "Orioles",
       "10+ W"
     ]
+  },
+  {
+    "gridNumber": 1192,
+    "id": "2026-07-07",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1192",
+    "rows": [
+      "Reds",
+      "Guardians",
+      "RF"
+    ],
+    "cols": [
+      "Mariners",
+      "Athletics",
+      "10+ HR"
+    ],
+    "all": [
+      "Reds",
+      "Guardians",
+      "RF",
+      "Mariners",
+      "Athletics",
+      "10+ HR"
+    ]
   }
 ]
