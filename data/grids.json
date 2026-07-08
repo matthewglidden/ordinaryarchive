@@ -27482,5 +27482,28 @@
       "Athletics",
       "10+ HR"
     ]
+  },
+  {
+    "gridNumber": 1193,
+    "id": "2026-07-08",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1193",
+    "rows": [
+      "Pirates",
+      "Astros",
+      ".300+ Season"
+    ],
+    "cols": [
+      "Rangers",
+      "Blue Jays",
+      "40+ WAR"
+    ],
+    "all": [
+      "Pirates",
+      "Astros",
+      ".300+ Season",
+      "Rangers",
+      "Blue Jays",
+      "40+ WAR"
+    ]
   }
 ]
