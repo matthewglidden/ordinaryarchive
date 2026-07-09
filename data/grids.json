@@ -27505,5 +27505,28 @@
       "Blue Jays",
       "40+ WAR"
     ]
+  },
+  {
+    "gridNumber": 1194,
+    "id": "2026-07-09",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1194",
+    "rows": [
+      "Nationals",
+      "Phillies",
+      "Braves"
+    ],
+    "cols": [
+      "Padres",
+      "Marlins",
+      "100+ RBI"
+    ],
+    "all": [
+      "Nationals",
+      "Phillies",
+      "Braves",
+      "Padres",
+      "Marlins",
+      "100+ RBI"
+    ]
   }
 ]
