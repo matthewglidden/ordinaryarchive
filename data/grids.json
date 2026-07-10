@@ -27528,5 +27528,28 @@
       "Marlins",
       "100+ RBI"
     ]
+  },
+  {
+    "gridNumber": 1195,
+    "id": "2026-07-10",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1195",
+    "rows": [
+      "Cubs",
+      "Angels",
+      "Dodgers"
+    ],
+    "cols": [
+      "Yankees",
+      "Giants",
+      "200+ W"
+    ],
+    "all": [
+      "Cubs",
+      "Angels",
+      "Dodgers",
+      "Yankees",
+      "Giants",
+      "200+ W"
+    ]
   }
 ]
