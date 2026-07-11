@@ -27551,5 +27551,28 @@
       "Giants",
       "200+ W"
     ]
+  },
+  {
+    "gridNumber": 1196,
+    "id": "2026-07-11",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1196",
+    "rows": [
+      ".300+ Career",
+      "6+ WAR",
+      "P"
+    ],
+    "cols": [
+      "DH",
+      "One Team",
+      "MLB"
+    ],
+    "all": [
+      ".300+ Career",
+      "6+ WAR",
+      "P",
+      "DH",
+      "One Team",
+      "MLB"
+    ]
   }
 ]
