@@ -27574,5 +27574,28 @@
       "One Team",
       "MLB"
     ]
+  },
+  {
+    "gridNumber": 1197,
+    "id": "2026-07-12",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1197",
+    "rows": [
+      "Red Sox",
+      "Cardinals",
+      "2K+ H"
+    ],
+    "cols": [
+      "Twins",
+      "Reds",
+      "Born 🌍 (Non-USA)"
+    ],
+    "all": [
+      "Red Sox",
+      "Cardinals",
+      "2K+ H",
+      "Twins",
+      "Reds",
+      "Born 🌍 (Non-USA)"
+    ]
   }
 ]
