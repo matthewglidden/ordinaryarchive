@@ -27597,5 +27597,28 @@
       "Reds",
       "Born 🌍 (Non-USA)"
     ]
+  },
+  {
+    "gridNumber": 1198,
+    "id": "2026-07-13",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1198",
+    "rows": [
+      "Tigers",
+      "Mariners",
+      "2B"
+    ],
+    "cols": [
+      "White Sox",
+      "Astros",
+      "All-Star"
+    ],
+    "all": [
+      "Tigers",
+      "Mariners",
+      "2B",
+      "White Sox",
+      "Astros",
+      "All-Star"
+    ]
   }
 ]
