@@ -27620,5 +27620,28 @@
       "Astros",
       "All-Star"
     ]
+  },
+  {
+    "gridNumber": 1199,
+    "id": "2026-07-14",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1199",
+    "rows": [
+      "Mets",
+      "Guardians",
+      "Nationals"
+    ],
+    "cols": [
+      "Brewers",
+      "C",
+      "HOF"
+    ],
+    "all": [
+      "Mets",
+      "Guardians",
+      "Nationals",
+      "Brewers",
+      "C",
+      "HOF"
+    ]
   }
 ]
