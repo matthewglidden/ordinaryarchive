@@ -27643,5 +27643,28 @@
       "C",
       "HOF"
     ]
+  },
+  {
+    "gridNumber": 1200,
+    "id": "2026-07-15",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1200",
+    "rows": [
+      "Orioles",
+      "Phillies",
+      "CF"
+    ],
+    "cols": [
+      "Athletics",
+      "Pirates",
+      "30+ HR"
+    ],
+    "all": [
+      "Orioles",
+      "Phillies",
+      "CF",
+      "Athletics",
+      "Pirates",
+      "30+ HR"
+    ]
   }
 ]
