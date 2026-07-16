@@ -27666,5 +27666,28 @@
       "Pirates",
       "30+ HR"
     ]
+  },
+  {
+    "gridNumber": 1201,
+    "id": "2026-07-16",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1201",
+    "rows": [
+      "Braves",
+      "Royals",
+      "300+ HR"
+    ],
+    "cols": [
+      "Cubs",
+      "Twins",
+      ".300+ Season"
+    ],
+    "all": [
+      "Braves",
+      "Royals",
+      "300+ HR",
+      "Cubs",
+      "Twins",
+      ".300+ Season"
+    ]
   }
 ]
