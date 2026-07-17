@@ -27689,5 +27689,28 @@
       "Twins",
       ".300+ Season"
     ]
+  },
+  {
+    "gridNumber": 1202,
+    "id": "2026-07-17",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1202",
+    "rows": [
+      "Giants",
+      "Red Sox",
+      "Padres"
+    ],
+    "cols": [
+      "Blue Jays",
+      "Rays",
+      "Gold Glove"
+    ],
+    "all": [
+      "Giants",
+      "Red Sox",
+      "Padres",
+      "Blue Jays",
+      "Rays",
+      "Gold Glove"
+    ]
   }
 ]
