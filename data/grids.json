@@ -27712,5 +27712,28 @@
       "Rays",
       "Gold Glove"
     ]
+  },
+  {
+    "gridNumber": 1203,
+    "id": "2026-07-18",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1203",
+    "rows": [
+      "40+ WAR",
+      "10+ HR",
+      "100+ RBI"
+    ],
+    "cols": [
+      "100+ R",
+      "30+ SB",
+      "Silver Slugger"
+    ],
+    "all": [
+      "40+ WAR",
+      "10+ HR",
+      "100+ RBI",
+      "100+ R",
+      "30+ SB",
+      "Silver Slugger"
+    ]
   }
 ]
