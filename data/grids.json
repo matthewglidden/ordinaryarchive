@@ -27735,5 +27735,28 @@
       "30+ SB",
       "Silver Slugger"
     ]
+  },
+  {
+    "gridNumber": 1204,
+    "id": "2026-07-19",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1204",
+    "rows": [
+      "Yankees",
+      "Dodgers",
+      "10+ W"
+    ],
+    "cols": [
+      "Reds",
+      "Astros",
+      "≤3 ERA Season"
+    ],
+    "all": [
+      "Yankees",
+      "Dodgers",
+      "10+ W",
+      "Reds",
+      "Astros",
+      "≤3 ERA Season"
+    ]
   }
 ]
