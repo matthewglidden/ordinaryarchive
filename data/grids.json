@@ -27758,5 +27758,28 @@
       "Astros",
       "≤3 ERA Season"
     ]
+  },
+  {
+    "gridNumber": 1205,
+    "id": "2026-07-20",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1205",
+    "rows": [
+      "Rangers",
+      "Mets",
+      "Cubs"
+    ],
+    "cols": [
+      "Guardians",
+      "Twins",
+      "All-Star"
+    ],
+    "all": [
+      "Rangers",
+      "Mets",
+      "Cubs",
+      "Guardians",
+      "Twins",
+      "All-Star"
+    ]
   }
 ]
