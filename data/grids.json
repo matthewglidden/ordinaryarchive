@@ -27781,5 +27781,28 @@
       "Twins",
       "All-Star"
     ]
+  },
+  {
+    "gridNumber": 1206,
+    "id": "2026-07-21",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1206",
+    "rows": [
+      "Angels",
+      "Padres",
+      "1st round"
+    ],
+    "cols": [
+      "Cardinals",
+      "Pirates",
+      "30+ SV"
+    ],
+    "all": [
+      "Angels",
+      "Padres",
+      "1st round",
+      "Cardinals",
+      "Pirates",
+      "30+ SV"
+    ]
   }
 ]
