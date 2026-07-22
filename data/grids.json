@@ -27804,5 +27804,28 @@
       "Pirates",
       "30+ SV"
     ]
+  },
+  {
+    "gridNumber": 1207,
+    "id": "2026-07-22",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1207",
+    "rows": [
+      "Tigers",
+      "Giants",
+      "1B"
+    ],
+    "cols": [
+      "Braves",
+      "6+ WAR",
+      "OF"
+    ],
+    "all": [
+      "Tigers",
+      "Giants",
+      "1B",
+      "Braves",
+      "6+ WAR",
+      "OF"
+    ]
   }
 ]
