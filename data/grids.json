@@ -27827,5 +27827,28 @@
       "6+ WAR",
       "OF"
     ]
+  },
+  {
+    "gridNumber": 1208,
+    "id": "2026-07-23",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1208",
+    "rows": [
+      "White Sox",
+      "Rockies",
+      "40+ HR"
+    ],
+    "cols": [
+      "Red Sox",
+      "Yankees",
+      "CF"
+    ],
+    "all": [
+      "White Sox",
+      "Rockies",
+      "40+ HR",
+      "Red Sox",
+      "Yankees",
+      "CF"
+    ]
   }
 ]
