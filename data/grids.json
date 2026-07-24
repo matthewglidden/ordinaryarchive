@@ -27850,5 +27850,28 @@
       "Yankees",
       "CF"
     ]
+  },
+  {
+    "gridNumber": 1209,
+    "id": "2026-07-24",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1209",
+    "rows": [
+      "Mariners",
+      "Blue Jays",
+      "Athletics"
+    ],
+    "cols": [
+      "Brewers",
+      "Nationals",
+      "Cubs"
+    ],
+    "all": [
+      "Mariners",
+      "Blue Jays",
+      "Athletics",
+      "Brewers",
+      "Nationals",
+      "Cubs"
+    ]
   }
 ]
