@@ -27873,5 +27873,28 @@
       "Nationals",
       "Cubs"
     ]
+  },
+  {
+    "gridNumber": 1210,
+    "id": "2026-07-25",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1210",
+    "rows": [
+      "2B",
+      "SS",
+      "3B"
+    ],
+    "cols": [
+      "200+ H",
+      "2K+ H",
+      "Born 🌍 (Non-USA)"
+    ],
+    "all": [
+      "2B",
+      "SS",
+      "3B",
+      "200+ H",
+      "2K+ H",
+      "Born 🌍 (Non-USA)"
+    ]
   }
 ]
