@@ -27896,5 +27896,28 @@
       "2K+ H",
       "Born 🌍 (Non-USA)"
     ]
+  },
+  {
+    "gridNumber": 1211,
+    "id": "2026-07-26",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1211",
+    "rows": [
+      "Phillies",
+      "Tigers",
+      "HOF"
+    ],
+    "cols": [
+      "Orioles",
+      "Twins",
+      "20+ W"
+    ],
+    "all": [
+      "Phillies",
+      "Tigers",
+      "HOF",
+      "Orioles",
+      "Twins",
+      "20+ W"
+    ]
   }
 ]
