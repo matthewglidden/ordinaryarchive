@@ -27919,5 +27919,28 @@
       "Twins",
       "20+ W"
     ]
+  },
+  {
+    "gridNumber": 1212,
+    "id": "2026-07-27",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1212",
+    "rows": [
+      "Padres",
+      "D'backs",
+      "All-Star"
+    ],
+    "cols": [
+      "Angels",
+      "Yankees",
+      "One Team"
+    ],
+    "all": [
+      "Padres",
+      "D'backs",
+      "All-Star",
+      "Angels",
+      "Yankees",
+      "One Team"
+    ]
   }
 ]
