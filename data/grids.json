@@ -27942,5 +27942,28 @@
       "Yankees",
       "One Team"
     ]
+  },
+  {
+    "gridNumber": 1213,
+    "id": "2026-07-28",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1213",
+    "rows": [
+      "Royals",
+      "Braves",
+      "Giants"
+    ],
+    "cols": [
+      "Astros",
+      "Brewers",
+      "C"
+    ],
+    "all": [
+      "Royals",
+      "Braves",
+      "Giants",
+      "Astros",
+      "Brewers",
+      "C"
+    ]
   }
 ]
