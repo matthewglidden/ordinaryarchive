@@ -27965,5 +27965,28 @@
       "Brewers",
       "C"
     ]
+  },
+  {
+    "gridNumber": 1214,
+    "id": "2026-07-29",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1214",
+    "rows": [
+      "Dodgers",
+      "Pirates",
+      "White Sox"
+    ],
+    "cols": [
+      "Guardians",
+      "100+ RBI",
+      ".300+ Season"
+    ],
+    "all": [
+      "Dodgers",
+      "Pirates",
+      "White Sox",
+      "Guardians",
+      "100+ RBI",
+      ".300+ Season"
+    ]
   }
 ]
