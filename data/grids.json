@@ -27988,5 +27988,28 @@
       "100+ RBI",
       ".300+ Season"
     ]
+  },
+  {
+    "gridNumber": 1215,
+    "id": "2026-07-30",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1215",
+    "rows": [
+      "Tigers",
+      "Blue Jays",
+      "Marlins"
+    ],
+    "cols": [
+      "Reds",
+      "Mets",
+      "≤3 ERA Season"
+    ],
+    "all": [
+      "Tigers",
+      "Blue Jays",
+      "Marlins",
+      "Reds",
+      "Mets",
+      "≤3 ERA Season"
+    ]
   }
 ]
