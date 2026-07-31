@@ -28011,5 +28011,28 @@
       "Mets",
       "≤3 ERA Season"
     ]
+  },
+  {
+    "gridNumber": 1216,
+    "id": "2026-07-31",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1216",
+    "rows": [
+      "Rangers",
+      "Phillies",
+      "Nationals"
+    ],
+    "cols": [
+      "Red Sox",
+      "Cardinals",
+      "Yankees"
+    ],
+    "all": [
+      "Rangers",
+      "Phillies",
+      "Nationals",
+      "Red Sox",
+      "Cardinals",
+      "Yankees"
+    ]
   }
 ]
