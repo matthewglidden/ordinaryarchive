@@ -28034,5 +28034,28 @@
       "Cardinals",
       "Yankees"
     ]
+  },
+  {
+    "gridNumber": 1217,
+    "id": "2026-08-01",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1217",
+    "rows": [
+      "LF",
+      "RF",
+      "Gold Glove"
+    ],
+    "cols": [
+      "30/30",
+      "30+ HR",
+      "30+ SB"
+    ],
+    "all": [
+      "LF",
+      "RF",
+      "Gold Glove",
+      "30/30",
+      "30+ HR",
+      "30+ SB"
+    ]
   }
 ]
