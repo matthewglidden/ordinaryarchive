@@ -28057,5 +28057,28 @@
       "30+ HR",
       "30+ SB"
     ]
+  },
+  {
+    "gridNumber": 1218,
+    "id": "2026-08-02",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1218",
+    "rows": [
+      "Athletics",
+      "Cubs",
+      "HOF"
+    ],
+    "cols": [
+      "Padres",
+      "White Sox",
+      "10+ HR"
+    ],
+    "all": [
+      "Athletics",
+      "Cubs",
+      "HOF",
+      "Padres",
+      "White Sox",
+      "10+ HR"
+    ]
   }
 ]
