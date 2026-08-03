@@ -28080,5 +28080,28 @@
       "White Sox",
       "10+ HR"
     ]
+  },
+  {
+    "gridNumber": 1219,
+    "id": "2026-08-03",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1219",
+    "rows": [
+      "Mariners",
+      "Tigers",
+      "One Team"
+    ],
+    "cols": [
+      "Dodgers",
+      "Royals",
+      "10+ W"
+    ],
+    "all": [
+      "Mariners",
+      "Tigers",
+      "One Team",
+      "Dodgers",
+      "Royals",
+      "10+ W"
+    ]
   }
 ]
