@@ -28103,5 +28103,28 @@
       "Royals",
       "10+ W"
     ]
+  },
+  {
+    "gridNumber": 1220,
+    "id": "2026-08-04",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1220",
+    "rows": [
+      "Orioles",
+      "Guardians",
+      "All-Star"
+    ],
+    "cols": [
+      "Cardinals",
+      "Giants",
+      "200+ W"
+    ],
+    "all": [
+      "Orioles",
+      "Guardians",
+      "All-Star",
+      "Cardinals",
+      "Giants",
+      "200+ W"
+    ]
   }
 ]
