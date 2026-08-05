@@ -28126,5 +28126,28 @@
       "Giants",
       "200+ W"
     ]
+  },
+  {
+    "gridNumber": 1221,
+    "id": "2026-08-05",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1221",
+    "rows": [
+      "Angels",
+      "Nationals",
+      "Pirates"
+    ],
+    "cols": [
+      "Astros",
+      "Born 🌍 (Non-USA)",
+      "Silver Slugger"
+    ],
+    "all": [
+      "Angels",
+      "Nationals",
+      "Pirates",
+      "Astros",
+      "Born 🌍 (Non-USA)",
+      "Silver Slugger"
+    ]
   }
 ]
