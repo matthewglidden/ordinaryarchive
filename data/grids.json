@@ -28149,5 +28149,28 @@
       "Born 🌍 (Non-USA)",
       "Silver Slugger"
     ]
+  },
+  {
+    "gridNumber": 1222,
+    "id": "2026-08-06",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1222",
+    "rows": [
+      "Twins",
+      "Braves",
+      "6+ WAR"
+    ],
+    "cols": [
+      "Athletics",
+      "Blue Jays",
+      "200+ H"
+    ],
+    "all": [
+      "Twins",
+      "Braves",
+      "6+ WAR",
+      "Athletics",
+      "Blue Jays",
+      "200+ H"
+    ]
   }
 ]
