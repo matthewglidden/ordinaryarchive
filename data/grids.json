@@ -28172,5 +28172,28 @@
       "Blue Jays",
       "200+ H"
     ]
+  },
+  {
+    "gridNumber": 1223,
+    "id": "2026-08-07",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1223",
+    "rows": [
+      "Brewers",
+      "Rays",
+      "2K+ K"
+    ],
+    "cols": [
+      "Tigers",
+      "Yankees",
+      "≤3 ERA Season"
+    ],
+    "all": [
+      "Brewers",
+      "Rays",
+      "2K+ K",
+      "Tigers",
+      "Yankees",
+      "≤3 ERA Season"
+    ]
   }
 ]
