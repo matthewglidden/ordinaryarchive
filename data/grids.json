@@ -28195,5 +28195,28 @@
       "Yankees",
       "≤3 ERA Season"
     ]
+  },
+  {
+    "gridNumber": 1224,
+    "id": "2026-08-08",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1224",
+    "rows": [
+      ".300+ Season",
+      "300+ HR",
+      "1st round"
+    ],
+    "cols": [
+      "OF",
+      "All-Star",
+      "HOF"
+    ],
+    "all": [
+      ".300+ Season",
+      "300+ HR",
+      "1st round",
+      "OF",
+      "All-Star",
+      "HOF"
+    ]
   }
 ]
