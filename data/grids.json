@@ -28218,5 +28218,28 @@
       "All-Star",
       "HOF"
     ]
+  },
+  {
+    "gridNumber": 1225,
+    "id": "2026-08-09",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1225",
+    "rows": [
+      "Mets",
+      "Mariners",
+      "200+ K"
+    ],
+    "cols": [
+      "Padres",
+      "Phillies",
+      "Gold Glove"
+    ],
+    "all": [
+      "Mets",
+      "Mariners",
+      "200+ K",
+      "Padres",
+      "Phillies",
+      "Gold Glove"
+    ]
   }
 ]
