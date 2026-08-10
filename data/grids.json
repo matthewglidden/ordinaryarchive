@@ -28241,5 +28241,28 @@
       "Phillies",
       "Gold Glove"
     ]
+  },
+  {
+    "gridNumber": 1226,
+    "id": "2026-08-10",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1226",
+    "rows": [
+      "Reds",
+      "Orioles",
+      "Red Sox"
+    ],
+    "cols": [
+      "Royals",
+      "Cubs",
+      "40+ WAR"
+    ],
+    "all": [
+      "Reds",
+      "Orioles",
+      "Red Sox",
+      "Royals",
+      "Cubs",
+      "40+ WAR"
+    ]
   }
 ]
