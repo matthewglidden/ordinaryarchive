@@ -28264,5 +28264,28 @@
       "Cubs",
       "40+ WAR"
     ]
+  },
+  {
+    "gridNumber": 1227,
+    "id": "2026-08-11",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1227",
+    "rows": [
+      "Rangers",
+      "Cardinals",
+      "1B"
+    ],
+    "cols": [
+      "Brewers",
+      "Athletics",
+      "10+ HR"
+    ],
+    "all": [
+      "Rangers",
+      "Cardinals",
+      "1B",
+      "Brewers",
+      "Athletics",
+      "10+ HR"
+    ]
   }
 ]
