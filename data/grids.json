@@ -28287,5 +28287,28 @@
       "Athletics",
       "10+ HR"
     ]
+  },
+  {
+    "gridNumber": 1228,
+    "id": "2026-08-12",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1228",
+    "rows": [
+      "White Sox",
+      "Twins",
+      "Born 🌍 (Non-USA)"
+    ],
+    "cols": [
+      "Astros",
+      "One Team",
+      "100+ R"
+    ],
+    "all": [
+      "White Sox",
+      "Twins",
+      "Born 🌍 (Non-USA)",
+      "Astros",
+      "One Team",
+      "100+ R"
+    ]
   }
 ]
