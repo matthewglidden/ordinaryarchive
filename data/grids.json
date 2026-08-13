@@ -28310,5 +28310,28 @@
       "One Team",
       "100+ R"
     ]
+  },
+  {
+    "gridNumber": 1229,
+    "id": "2026-08-13",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1229",
+    "rows": [
+      "Dodgers",
+      "Giants",
+      "C"
+    ],
+    "cols": [
+      "Padres",
+      "Phillies",
+      "3B"
+    ],
+    "all": [
+      "Dodgers",
+      "Giants",
+      "C",
+      "Padres",
+      "Phillies",
+      "3B"
+    ]
   }
 ]
