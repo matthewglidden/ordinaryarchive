@@ -28333,5 +28333,28 @@
       "Phillies",
       "3B"
     ]
+  },
+  {
+    "gridNumber": 1230,
+    "id": "2026-08-14",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1230",
+    "rows": [
+      "Guardians",
+      "Pirates",
+      "200+ W"
+    ],
+    "cols": [
+      "Tigers",
+      "Yankees",
+      "20+ W"
+    ],
+    "all": [
+      "Guardians",
+      "Pirates",
+      "200+ W",
+      "Tigers",
+      "Yankees",
+      "20+ W"
+    ]
   }
 ]
