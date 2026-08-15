@@ -28356,5 +28356,28 @@
       "Yankees",
       "20+ W"
     ]
+  },
+  {
+    "gridNumber": 1231,
+    "id": "2026-08-15",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1231",
+    "rows": [
+      "Cy Young",
+      "No-Hitter",
+      "All-Star"
+    ],
+    "cols": [
+      "2K+ K",
+      "6+ WAR",
+      "MLB"
+    ],
+    "all": [
+      "Cy Young",
+      "No-Hitter",
+      "All-Star",
+      "2K+ K",
+      "6+ WAR",
+      "MLB"
+    ]
   }
 ]
