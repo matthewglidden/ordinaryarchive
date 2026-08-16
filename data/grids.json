@@ -28379,5 +28379,28 @@
       "6+ WAR",
       "MLB"
     ]
+  },
+  {
+    "gridNumber": 1232,
+    "id": "2026-08-16",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1232",
+    "rows": [
+      "Rockies",
+      "Rangers",
+      "30+ SV"
+    ],
+    "cols": [
+      "Mets",
+      "Blue Jays",
+      "≤3 ERA Season"
+    ],
+    "all": [
+      "Rockies",
+      "Rangers",
+      "30+ SV",
+      "Mets",
+      "Blue Jays",
+      "≤3 ERA Season"
+    ]
   }
 ]
