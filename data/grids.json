@@ -28402,5 +28402,28 @@
       "Blue Jays",
       "≤3 ERA Season"
     ]
+  },
+  {
+    "gridNumber": 1233,
+    "id": "2026-08-17",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1233",
+    "rows": [
+      "Braves",
+      "Angels",
+      "CF"
+    ],
+    "cols": [
+      "Royals",
+      "Reds",
+      "300+ HR"
+    ],
+    "all": [
+      "Braves",
+      "Angels",
+      "CF",
+      "Royals",
+      "Reds",
+      "300+ HR"
+    ]
   }
 ]
