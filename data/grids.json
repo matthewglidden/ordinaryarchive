@@ -28425,5 +28425,28 @@
       "Reds",
       "300+ HR"
     ]
+  },
+  {
+    "gridNumber": 1234,
+    "id": "2026-08-18",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1234",
+    "rows": [
+      "Nationals",
+      "Athletics",
+      "Tigers"
+    ],
+    "cols": [
+      "Giants",
+      "2B",
+      "SS"
+    ],
+    "all": [
+      "Nationals",
+      "Athletics",
+      "Tigers",
+      "Giants",
+      "2B",
+      "SS"
+    ]
   }
 ]
