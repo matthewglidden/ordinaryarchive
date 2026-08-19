@@ -28448,5 +28448,28 @@
       "2B",
       "SS"
     ]
+  },
+  {
+    "gridNumber": 1235,
+    "id": "2026-08-19",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1235",
+    "rows": [
+      "Red Sox",
+      "Mariners",
+      "2K+ H"
+    ],
+    "cols": [
+      "Pirates",
+      "Orioles",
+      "30+ SB"
+    ],
+    "all": [
+      "Red Sox",
+      "Mariners",
+      "2K+ H",
+      "Pirates",
+      "Orioles",
+      "30+ SB"
+    ]
   }
 ]
