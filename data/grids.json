@@ -28471,5 +28471,28 @@
       "Orioles",
       "30+ SB"
     ]
+  },
+  {
+    "gridNumber": 1236,
+    "id": "2026-08-20",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1236",
+    "rows": [
+      "Cubs",
+      "Cardinals",
+      "40+ WAR"
+    ],
+    "cols": [
+      "Mets",
+      "Dodgers",
+      "30+ HR"
+    ],
+    "all": [
+      "Cubs",
+      "Cardinals",
+      "40+ WAR",
+      "Mets",
+      "Dodgers",
+      "30+ HR"
+    ]
   }
 ]
