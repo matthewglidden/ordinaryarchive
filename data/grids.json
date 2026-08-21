@@ -28494,5 +28494,28 @@
       "Dodgers",
       "30+ HR"
     ]
+  },
+  {
+    "gridNumber": 1237,
+    "id": "2026-08-21",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1237",
+    "rows": [
+      "Brewers",
+      "White Sox",
+      "Twins"
+    ],
+    "cols": [
+      "Reds",
+      "OF",
+      "Born 🌍 (Non-USA)"
+    ],
+    "all": [
+      "Brewers",
+      "White Sox",
+      "Twins",
+      "Reds",
+      "OF",
+      "Born 🌍 (Non-USA)"
+    ]
   }
 ]
