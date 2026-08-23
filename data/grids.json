@@ -28540,5 +28540,28 @@
       "All-Star",
       "MVP"
     ]
+  },
+  {
+    "gridNumber": 1239,
+    "id": "2026-08-23",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1239",
+    "rows": [
+      "Astros",
+      "Blue Jays",
+      "Guardians"
+    ],
+    "cols": [
+      "Phillies",
+      "D'backs",
+      "Orioles"
+    ],
+    "all": [
+      "Astros",
+      "Blue Jays",
+      "Guardians",
+      "Phillies",
+      "D'backs",
+      "Orioles"
+    ]
   }
 ]
