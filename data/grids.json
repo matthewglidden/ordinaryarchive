@@ -28563,5 +28563,28 @@
       "D'backs",
       "Orioles"
     ]
+  },
+  {
+    "gridNumber": 1240,
+    "id": "2026-08-24",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1240",
+    "rows": [
+      "Yankees",
+      "Padres",
+      "HOF"
+    ],
+    "cols": [
+      "Red Sox",
+      "10+ W",
+      "100+ R"
+    ],
+    "all": [
+      "Yankees",
+      "Padres",
+      "HOF",
+      "Red Sox",
+      "10+ W",
+      "100+ R"
+    ]
   }
 ]
