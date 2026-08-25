@@ -28586,5 +28586,28 @@
       "10+ W",
       "100+ R"
     ]
+  },
+  {
+    "gridNumber": 1241,
+    "id": "2026-08-25",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1241",
+    "rows": [
+      "Rangers",
+      "Braves",
+      "6+ WAR"
+    ],
+    "cols": [
+      "Angels",
+      "Dodgers",
+      "CF"
+    ],
+    "all": [
+      "Rangers",
+      "Braves",
+      "6+ WAR",
+      "Angels",
+      "Dodgers",
+      "CF"
+    ]
   }
 ]
