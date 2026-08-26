@@ -28609,5 +28609,28 @@
       "Dodgers",
       "CF"
     ]
+  },
+  {
+    "gridNumber": 1242,
+    "id": "2026-08-26",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1242",
+    "rows": [
+      "Royals",
+      "Mets",
+      ".300+ Season"
+    ],
+    "cols": [
+      "Giants",
+      "Athletics",
+      "10+ HR"
+    ],
+    "all": [
+      "Royals",
+      "Mets",
+      ".300+ Season",
+      "Giants",
+      "Athletics",
+      "10+ HR"
+    ]
   }
 ]
