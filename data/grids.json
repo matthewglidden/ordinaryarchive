@@ -28632,5 +28632,28 @@
       "Athletics",
       "10+ HR"
     ]
+  },
+  {
+    "gridNumber": 1243,
+    "id": "2026-08-27",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1243",
+    "rows": [
+      "Tigers",
+      "Brewers",
+      "Silver Slugger"
+    ],
+    "cols": [
+      "Phillies",
+      "Cubs",
+      "C"
+    ],
+    "all": [
+      "Tigers",
+      "Brewers",
+      "Silver Slugger",
+      "Phillies",
+      "Cubs",
+      "C"
+    ]
   }
 ]
