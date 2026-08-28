@@ -28655,5 +28655,28 @@
       "Cubs",
       "C"
     ]
+  },
+  {
+    "gridNumber": 1244,
+    "id": "2026-08-28",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1244",
+    "rows": [
+      "Reds",
+      "Nationals",
+      "RF"
+    ],
+    "cols": [
+      "Pirates",
+      "Orioles",
+      "1B"
+    ],
+    "all": [
+      "Reds",
+      "Nationals",
+      "RF",
+      "Pirates",
+      "Orioles",
+      "1B"
+    ]
   }
 ]
