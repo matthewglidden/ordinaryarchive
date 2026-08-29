@@ -28678,5 +28678,28 @@
       "Orioles",
       "1B"
     ]
+  },
+  {
+    "gridNumber": 1245,
+    "id": "2026-08-29",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1245",
+    "rows": [
+      "OF",
+      "All-Star",
+      "MLB"
+    ],
+    "cols": [
+      "100+ RBI",
+      "DH",
+      "NGL"
+    ],
+    "all": [
+      "OF",
+      "All-Star",
+      "MLB",
+      "100+ RBI",
+      "DH",
+      "NGL"
+    ]
   }
 ]
