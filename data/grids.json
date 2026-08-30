@@ -28701,5 +28701,28 @@
       "DH",
       "NGL"
     ]
+  },
+  {
+    "gridNumber": 1246,
+    "id": "2026-08-30",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1246",
+    "rows": [
+      "Yankees",
+      "Marlins",
+      "Dodgers"
+    ],
+    "cols": [
+      "Twins",
+      "Royals",
+      "Athletics"
+    ],
+    "all": [
+      "Yankees",
+      "Marlins",
+      "Dodgers",
+      "Twins",
+      "Royals",
+      "Athletics"
+    ]
   }
 ]
