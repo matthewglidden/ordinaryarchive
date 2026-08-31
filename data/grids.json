@@ -28724,5 +28724,28 @@
       "Royals",
       "Athletics"
     ]
+  },
+  {
+    "gridNumber": 1247,
+    "id": "2026-08-31",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1247",
+    "rows": [
+      "Mariners",
+      "White Sox",
+      "2B"
+    ],
+    "cols": [
+      "Cardinals",
+      "Mets",
+      "1st round"
+    ],
+    "all": [
+      "Mariners",
+      "White Sox",
+      "2B",
+      "Cardinals",
+      "Mets",
+      "1st round"
+    ]
   }
 ]
