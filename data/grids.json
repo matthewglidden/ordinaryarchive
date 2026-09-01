@@ -28747,5 +28747,28 @@
       "Mets",
       "1st round"
     ]
+  },
+  {
+    "gridNumber": 1248,
+    "id": "2026-09-01",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1248",
+    "rows": [
+      "Guardians",
+      "Giants",
+      "Astros"
+    ],
+    "cols": [
+      "Red Sox",
+      "Reds",
+      "2K+ K"
+    ],
+    "all": [
+      "Guardians",
+      "Giants",
+      "Astros",
+      "Red Sox",
+      "Reds",
+      "2K+ K"
+    ]
   }
 ]
