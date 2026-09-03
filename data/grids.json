@@ -28793,5 +28793,28 @@
       "Orioles",
       "6+ WAR"
     ]
+  },
+  {
+    "gridNumber": 1250,
+    "id": "2026-09-03",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1250",
+    "rows": [
+      "Blue Jays",
+      "Angels",
+      "LF"
+    ],
+    "cols": [
+      "Dodgers",
+      "Tigers",
+      "40+ WAR"
+    ],
+    "all": [
+      "Blue Jays",
+      "Angels",
+      "LF",
+      "Dodgers",
+      "Tigers",
+      "40+ WAR"
+    ]
   }
 ]
