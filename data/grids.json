@@ -28816,5 +28816,28 @@
       "Tigers",
       "40+ WAR"
     ]
+  },
+  {
+    "gridNumber": 1251,
+    "id": "2026-09-04",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1251",
+    "rows": [
+      "Mets",
+      "Pirates",
+      "Mariners"
+    ],
+    "cols": [
+      "Rays",
+      "One Team",
+      "SS"
+    ],
+    "all": [
+      "Mets",
+      "Pirates",
+      "Mariners",
+      "Rays",
+      "One Team",
+      "SS"
+    ]
   }
 ]
