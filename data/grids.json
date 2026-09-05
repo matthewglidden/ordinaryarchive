@@ -28839,5 +28839,28 @@
       "One Team",
       "SS"
     ]
+  },
+  {
+    "gridNumber": 1252,
+    "id": "2026-09-05",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1252",
+    "rows": [
+      "3B",
+      "CF",
+      "40+ HR"
+    ],
+    "cols": [
+      "30+ SB",
+      ".300+ Season",
+      "Gold Glove"
+    ],
+    "all": [
+      "3B",
+      "CF",
+      "40+ HR",
+      "30+ SB",
+      ".300+ Season",
+      "Gold Glove"
+    ]
   }
 ]
