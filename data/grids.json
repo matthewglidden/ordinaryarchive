@@ -28862,5 +28862,28 @@
       ".300+ Season",
       "Gold Glove"
     ]
+  },
+  {
+    "gridNumber": 1253,
+    "id": "2026-09-06",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1253",
+    "rows": [
+      "Rockies",
+      "Phillies",
+      "Cubs"
+    ],
+    "cols": [
+      "Nationals",
+      "Braves",
+      "Royals"
+    ],
+    "all": [
+      "Rockies",
+      "Phillies",
+      "Cubs",
+      "Nationals",
+      "Braves",
+      "Royals"
+    ]
   }
 ]
