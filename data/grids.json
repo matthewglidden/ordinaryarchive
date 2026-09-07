@@ -28885,5 +28885,28 @@
       "Braves",
       "Royals"
     ]
+  },
+  {
+    "gridNumber": 1254,
+    "id": "2026-09-07",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1254",
+    "rows": [
+      "Brewers",
+      "Athletics",
+      "100+ R"
+    ],
+    "cols": [
+      "Red Sox",
+      "Angels",
+      "100+ RBI"
+    ],
+    "all": [
+      "Brewers",
+      "Athletics",
+      "100+ R",
+      "Red Sox",
+      "Angels",
+      "100+ RBI"
+    ]
   }
 ]
