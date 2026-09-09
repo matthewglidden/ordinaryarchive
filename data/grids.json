@@ -28931,5 +28931,28 @@
       "Dodgers",
       "2K+ H"
     ]
+  },
+  {
+    "gridNumber": 1256,
+    "id": "2026-09-09",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1256",
+    "rows": [
+      "Twins",
+      "Reds",
+      "Astros"
+    ],
+    "cols": [
+      "Padres",
+      "≤3 ERA Season",
+      "200+ K"
+    ],
+    "all": [
+      "Twins",
+      "Reds",
+      "Astros",
+      "Padres",
+      "≤3 ERA Season",
+      "200+ K"
+    ]
   }
 ]
