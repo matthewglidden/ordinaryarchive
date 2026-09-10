@@ -28954,5 +28954,28 @@
       "≤3 ERA Season",
       "200+ K"
     ]
+  },
+  {
+    "gridNumber": 1257,
+    "id": "2026-09-10",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1257",
+    "rows": [
+      "White Sox",
+      "Cubs",
+      "300+ HR"
+    ],
+    "cols": [
+      "Rangers",
+      "Pirates",
+      "1B"
+    ],
+    "all": [
+      "White Sox",
+      "Cubs",
+      "300+ HR",
+      "Rangers",
+      "Pirates",
+      "1B"
+    ]
   }
 ]
