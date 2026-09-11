@@ -28977,5 +28977,28 @@
       "Pirates",
       "1B"
     ]
+  },
+  {
+    "gridNumber": 1258,
+    "id": "2026-09-11",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1258",
+    "rows": [
+      "Guardians",
+      "Phillies",
+      "2K+ K"
+    ],
+    "cols": [
+      "Angels",
+      "Athletics",
+      "10+ W"
+    ],
+    "all": [
+      "Guardians",
+      "Phillies",
+      "2K+ K",
+      "Angels",
+      "Athletics",
+      "10+ W"
+    ]
   }
 ]
