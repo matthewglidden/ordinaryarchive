@@ -29000,5 +29000,28 @@
       "Athletics",
       "10+ W"
     ]
+  },
+  {
+    "gridNumber": 1259,
+    "id": "2026-09-12",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1259",
+    "rows": [
+      "30+ HR",
+      "200+ H",
+      "6+ WAR"
+    ],
+    "cols": [
+      ".300+ Season",
+      "Silver Slugger",
+      "OF"
+    ],
+    "all": [
+      "30+ HR",
+      "200+ H",
+      "6+ WAR",
+      ".300+ Season",
+      "Silver Slugger",
+      "OF"
+    ]
   }
 ]
