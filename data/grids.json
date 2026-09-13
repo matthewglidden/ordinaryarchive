@@ -29023,5 +29023,28 @@
       "Silver Slugger",
       "OF"
     ]
+  },
+  {
+    "gridNumber": 1260,
+    "id": "2026-09-13",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1260",
+    "rows": [
+      "Red Sox",
+      "D'backs",
+      "10+ HR"
+    ],
+    "cols": [
+      "Mariners",
+      "Dodgers",
+      "All-Star"
+    ],
+    "all": [
+      "Red Sox",
+      "D'backs",
+      "10+ HR",
+      "Mariners",
+      "Dodgers",
+      "All-Star"
+    ]
   }
 ]
