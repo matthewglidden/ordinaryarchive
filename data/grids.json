@@ -29046,5 +29046,28 @@
       "Dodgers",
       "All-Star"
     ]
+  },
+  {
+    "gridNumber": 1261,
+    "id": "2026-09-14",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1261",
+    "rows": [
+      "Orioles",
+      "Nationals",
+      "SS"
+    ],
+    "cols": [
+      "White Sox",
+      "Twins",
+      "3B"
+    ],
+    "all": [
+      "Orioles",
+      "Nationals",
+      "SS",
+      "White Sox",
+      "Twins",
+      "3B"
+    ]
   }
 ]
