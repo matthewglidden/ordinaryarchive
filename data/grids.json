@@ -29069,5 +29069,28 @@
       "Twins",
       "3B"
     ]
+  },
+  {
+    "gridNumber": 1262,
+    "id": "2026-09-15",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1262",
+    "rows": [
+      "Blue Jays",
+      "Mets",
+      "1st round"
+    ],
+    "cols": [
+      "Royals",
+      "Yankees",
+      "RF"
+    ],
+    "all": [
+      "Blue Jays",
+      "Mets",
+      "1st round",
+      "Royals",
+      "Yankees",
+      "RF"
+    ]
   }
 ]
