@@ -29092,5 +29092,28 @@
       "Yankees",
       "RF"
     ]
+  },
+  {
+    "gridNumber": 1263,
+    "id": "2026-09-16",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1263",
+    "rows": [
+      "Tigers",
+      "Braves",
+      "40+ WAR"
+    ],
+    "cols": [
+      "Cardinals",
+      "Born 🌍 (Non-USA)",
+      "P"
+    ],
+    "all": [
+      "Tigers",
+      "Braves",
+      "40+ WAR",
+      "Cardinals",
+      "Born 🌍 (Non-USA)",
+      "P"
+    ]
   }
 ]
