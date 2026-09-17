@@ -29115,5 +29115,28 @@
       "Born 🌍 (Non-USA)",
       "P"
     ]
+  },
+  {
+    "gridNumber": 1264,
+    "id": "2026-09-17",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1264",
+    "rows": [
+      "Brewers",
+      "Giants",
+      "HOF"
+    ],
+    "cols": [
+      "Pirates",
+      "Astros",
+      "30+ SB"
+    ],
+    "all": [
+      "Brewers",
+      "Giants",
+      "HOF",
+      "Pirates",
+      "Astros",
+      "30+ SB"
+    ]
   }
 ]
