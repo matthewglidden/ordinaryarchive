@@ -29138,5 +29138,28 @@
       "Astros",
       "30+ SB"
     ]
+  },
+  {
+    "gridNumber": 1265,
+    "id": "2026-09-18",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1265",
+    "rows": [
+      "Padres",
+      "Dodgers",
+      "Marlins"
+    ],
+    "cols": [
+      "White Sox",
+      "Guardians",
+      "2B"
+    ],
+    "all": [
+      "Padres",
+      "Dodgers",
+      "Marlins",
+      "White Sox",
+      "Guardians",
+      "2B"
+    ]
   }
 ]
