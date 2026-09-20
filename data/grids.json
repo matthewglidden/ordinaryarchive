@@ -29184,5 +29184,28 @@
       "Born 🇨🇺 (CUB)",
       "Born 🇻🇪 (VEN)"
     ]
+  },
+  {
+    "gridNumber": 1267,
+    "id": "2026-09-20",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1267",
+    "rows": [
+      "Cubs",
+      "Orioles",
+      "Twins"
+    ],
+    "cols": [
+      "Rays",
+      "Angels",
+      "Cardinals"
+    ],
+    "all": [
+      "Cubs",
+      "Orioles",
+      "Twins",
+      "Rays",
+      "Angels",
+      "Cardinals"
+    ]
   }
 ]
