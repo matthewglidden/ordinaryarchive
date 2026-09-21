@@ -29207,5 +29207,28 @@
       "Angels",
       "Cardinals"
     ]
+  },
+  {
+    "gridNumber": 1268,
+    "id": "2026-09-21",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1268",
+    "rows": [
+      "Reds",
+      "Pirates",
+      "Red Sox"
+    ],
+    "cols": [
+      "Rangers",
+      "Phillies",
+      "30+ HR"
+    ],
+    "all": [
+      "Reds",
+      "Pirates",
+      "Red Sox",
+      "Rangers",
+      "Phillies",
+      "30+ HR"
+    ]
   }
 ]
