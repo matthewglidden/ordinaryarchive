@@ -29276,5 +29276,28 @@
       "Guardians",
       ".300+ Season"
     ]
+  },
+  {
+    "gridNumber": 1271,
+    "id": "2026-09-24",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1271",
+    "rows": [
+      "Braves",
+      "Brewers",
+      "Blue Jays"
+    ],
+    "cols": [
+      "White Sox",
+      "SS",
+      "All-Star"
+    ],
+    "all": [
+      "Braves",
+      "Brewers",
+      "Blue Jays",
+      "White Sox",
+      "SS",
+      "All-Star"
+    ]
   }
 ]
