@@ -29299,5 +29299,28 @@
       "SS",
       "All-Star"
     ]
+  },
+  {
+    "gridNumber": 1272,
+    "id": "2026-09-25",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1272",
+    "rows": [
+      "Giants",
+      "Rockies",
+      "HOF"
+    ],
+    "cols": [
+      "Rangers",
+      "Angels",
+      "40+ WAR"
+    ],
+    "all": [
+      "Giants",
+      "Rockies",
+      "HOF",
+      "Rangers",
+      "Angels",
+      "40+ WAR"
+    ]
   }
 ]
