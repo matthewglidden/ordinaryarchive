@@ -29322,5 +29322,28 @@
       "Angels",
       "40+ WAR"
     ]
+  },
+  {
+    "gridNumber": 1273,
+    "id": "2026-09-26",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1273",
+    "rows": [
+      "10+ HR",
+      "P",
+      "All-Star"
+    ],
+    "cols": [
+      "Born 🌍 (Non-USA)",
+      "Born 🇵🇷 (PRI)",
+      "Born 🇲🇽 (MEX)"
+    ],
+    "all": [
+      "10+ HR",
+      "P",
+      "All-Star",
+      "Born 🌍 (Non-USA)",
+      "Born 🇵🇷 (PRI)",
+      "Born 🇲🇽 (MEX)"
+    ]
   }
 ]
