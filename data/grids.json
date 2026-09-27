@@ -29345,5 +29345,28 @@
       "Born 🇵🇷 (PRI)",
       "Born 🇲🇽 (MEX)"
     ]
+  },
+  {
+    "gridNumber": 1274,
+    "id": "2026-09-27",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1274",
+    "rows": [
+      "Royals",
+      "Twins",
+      "Mets"
+    ],
+    "cols": [
+      "Pirates",
+      "Guardians",
+      "Red Sox"
+    ],
+    "all": [
+      "Royals",
+      "Twins",
+      "Mets",
+      "Pirates",
+      "Guardians",
+      "Red Sox"
+    ]
   }
 ]
