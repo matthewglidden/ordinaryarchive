@@ -29368,5 +29368,28 @@
       "Guardians",
       "Red Sox"
     ]
+  },
+  {
+    "gridNumber": 1275,
+    "id": "2026-09-28",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1275",
+    "rows": [
+      "Dodgers",
+      "Yankees",
+      "Gold Glove"
+    ],
+    "cols": [
+      "Orioles",
+      "Reds",
+      "200+ H"
+    ],
+    "all": [
+      "Dodgers",
+      "Yankees",
+      "Gold Glove",
+      "Orioles",
+      "Reds",
+      "200+ H"
+    ]
   }
 ]
