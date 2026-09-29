@@ -29391,5 +29391,28 @@
       "Reds",
       "200+ H"
     ]
+  },
+  {
+    "gridNumber": 1276,
+    "id": "2026-09-29",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1276",
+    "rows": [
+      "Padres",
+      "Blue Jays",
+      "100+ R"
+    ],
+    "cols": [
+      "Cardinals",
+      "30+ SB",
+      "CF"
+    ],
+    "all": [
+      "Padres",
+      "Blue Jays",
+      "100+ R",
+      "Cardinals",
+      "30+ SB",
+      "CF"
+    ]
   }
 ]
