@@ -29414,5 +29414,28 @@
       "30+ SB",
       "CF"
     ]
+  },
+  {
+    "gridNumber": 1277,
+    "id": "2026-09-30",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1277",
+    "rows": [
+      "Phillies",
+      "Astros",
+      "6+ WAR"
+    ],
+    "cols": [
+      "Cubs",
+      "Rangers",
+      "3B"
+    ],
+    "all": [
+      "Phillies",
+      "Astros",
+      "6+ WAR",
+      "Cubs",
+      "Rangers",
+      "3B"
+    ]
   }
 ]
