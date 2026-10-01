@@ -29437,5 +29437,28 @@
       "Rangers",
       "3B"
     ]
+  },
+  {
+    "gridNumber": 1278,
+    "id": "2026-10-01",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1278",
+    "rows": [
+      "Tigers",
+      "Athletics",
+      "Twins"
+    ],
+    "cols": [
+      "White Sox",
+      "Braves",
+      "30+ HR"
+    ],
+    "all": [
+      "Tigers",
+      "Athletics",
+      "Twins",
+      "White Sox",
+      "Braves",
+      "30+ HR"
+    ]
   }
 ]
