@@ -29460,5 +29460,28 @@
       "Braves",
       "30+ HR"
     ]
+  },
+  {
+    "gridNumber": 1279,
+    "id": "2026-10-02",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1279",
+    "rows": [
+      "Yankees",
+      "Mariners",
+      "1st round"
+    ],
+    "cols": [
+      "Giants",
+      "Angels",
+      "C"
+    ],
+    "all": [
+      "Yankees",
+      "Mariners",
+      "1st round",
+      "Giants",
+      "Angels",
+      "C"
+    ]
   }
 ]
