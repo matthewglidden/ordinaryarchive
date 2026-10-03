@@ -29483,5 +29483,28 @@
       "Angels",
       "C"
     ]
+  },
+  {
+    "gridNumber": 1280,
+    "id": "2026-10-03",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1280",
+    "rows": [
+      ".300+ Season",
+      "≤3 ERA Season",
+      "OF"
+    ],
+    "cols": [
+      "MLB",
+      "Born 🇻🇪 (VEN)",
+      "Born 🇩🇴 (DOM)"
+    ],
+    "all": [
+      ".300+ Season",
+      "≤3 ERA Season",
+      "OF",
+      "MLB",
+      "Born 🇻🇪 (VEN)",
+      "Born 🇩🇴 (DOM)"
+    ]
   }
 ]
