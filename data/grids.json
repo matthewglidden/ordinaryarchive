@@ -29506,5 +29506,28 @@
       "Born 🇻🇪 (VEN)",
       "Born 🇩🇴 (DOM)"
     ]
+  },
+  {
+    "gridNumber": 1281,
+    "id": "2026-10-04",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1281",
+    "rows": [
+      "Brewers",
+      "Nationals",
+      "All-Star"
+    ],
+    "cols": [
+      "Dodgers",
+      "Padres",
+      "2K+ H"
+    ],
+    "all": [
+      "Brewers",
+      "Nationals",
+      "All-Star",
+      "Dodgers",
+      "Padres",
+      "2K+ H"
+    ]
   }
 ]
