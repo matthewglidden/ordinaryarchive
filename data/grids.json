@@ -29529,5 +29529,28 @@
       "Padres",
       "2K+ H"
     ]
+  },
+  {
+    "gridNumber": 1282,
+    "id": "2026-10-05",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1282",
+    "rows": [
+      "Cardinals",
+      "D'backs",
+      "Gold Glove"
+    ],
+    "cols": [
+      "Phillies",
+      "Pirates",
+      "Born 🌍 (Non-USA)"
+    ],
+    "all": [
+      "Cardinals",
+      "D'backs",
+      "Gold Glove",
+      "Phillies",
+      "Pirates",
+      "Born 🌍 (Non-USA)"
+    ]
   }
 ]
