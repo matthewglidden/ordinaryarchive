@@ -29552,5 +29552,28 @@
       "Pirates",
       "Born 🌍 (Non-USA)"
     ]
+  },
+  {
+    "gridNumber": 1283,
+    "id": "2026-10-06",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1283",
+    "rows": [
+      "Red Sox",
+      "Guardians",
+      "HOF"
+    ],
+    "cols": [
+      "Braves",
+      "Tigers",
+      "200+ K"
+    ],
+    "all": [
+      "Red Sox",
+      "Guardians",
+      "HOF",
+      "Braves",
+      "Tigers",
+      "200+ K"
+    ]
   }
 ]
