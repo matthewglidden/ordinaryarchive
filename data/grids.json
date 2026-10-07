@@ -29575,5 +29575,28 @@
       "Tigers",
       "200+ K"
     ]
+  },
+  {
+    "gridNumber": 1284,
+    "id": "2026-10-07",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1284",
+    "rows": [
+      "Mets",
+      "Athletics",
+      "Cubs"
+    ],
+    "cols": [
+      "Reds",
+      "Orioles",
+      "Blue Jays"
+    ],
+    "all": [
+      "Mets",
+      "Athletics",
+      "Cubs",
+      "Reds",
+      "Orioles",
+      "Blue Jays"
+    ]
   }
 ]
