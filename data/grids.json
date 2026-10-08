@@ -29598,5 +29598,28 @@
       "Orioles",
       "Blue Jays"
     ]
+  },
+  {
+    "gridNumber": 1285,
+    "id": "2026-10-08",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1285",
+    "rows": [
+      "Yankees",
+      "Royals",
+      "Silver Slugger"
+    ],
+    "cols": [
+      "Rangers",
+      "White Sox",
+      "SS"
+    ],
+    "all": [
+      "Yankees",
+      "Royals",
+      "Silver Slugger",
+      "Rangers",
+      "White Sox",
+      "SS"
+    ]
   }
 ]
