@@ -29621,5 +29621,28 @@
       "White Sox",
       "SS"
     ]
+  },
+  {
+    "gridNumber": 1286,
+    "id": "2026-10-09",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1286",
+    "rows": [
+      "Astros",
+      "Marlins",
+      "LF"
+    ],
+    "cols": [
+      "Cardinals",
+      "Mariners",
+      "10+ HR"
+    ],
+    "all": [
+      "Astros",
+      "Marlins",
+      "LF",
+      "Cardinals",
+      "Mariners",
+      "10+ HR"
+    ]
   }
 ]
