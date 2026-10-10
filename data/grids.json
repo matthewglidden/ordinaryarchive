@@ -29644,5 +29644,28 @@
       "Mariners",
       "10+ HR"
     ]
+  },
+  {
+    "gridNumber": 1287,
+    "id": "2026-10-10",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1287",
+    "rows": [
+      "40+ WAR",
+      "1B",
+      "RF"
+    ],
+    "cols": [
+      "100+ RBI",
+      "Born 🇵🇷 (PRI)",
+      "Born 🇩🇴 (DOM)"
+    ],
+    "all": [
+      "40+ WAR",
+      "1B",
+      "RF",
+      "100+ RBI",
+      "Born 🇵🇷 (PRI)",
+      "Born 🇩🇴 (DOM)"
+    ]
   }
 ]
