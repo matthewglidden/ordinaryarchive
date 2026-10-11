@@ -29667,5 +29667,28 @@
       "Born 🇵🇷 (PRI)",
       "Born 🇩🇴 (DOM)"
     ]
+  },
+  {
+    "gridNumber": 1288,
+    "id": "2026-10-11",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1288",
+    "rows": [
+      "Twins",
+      "Cubs",
+      "MVP"
+    ],
+    "cols": [
+      "Giants",
+      "Athletics",
+      "20+ W"
+    ],
+    "all": [
+      "Twins",
+      "Cubs",
+      "MVP",
+      "Giants",
+      "Athletics",
+      "20+ W"
+    ]
   }
 ]
