@@ -29690,5 +29690,28 @@
       "Athletics",
       "20+ W"
     ]
+  },
+  {
+    "gridNumber": 1289,
+    "id": "2026-10-12",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1289",
+    "rows": [
+      "Dodgers",
+      "Phillies",
+      "Angels"
+    ],
+    "cols": [
+      "Mets",
+      "2K+ H",
+      "P"
+    ],
+    "all": [
+      "Dodgers",
+      "Phillies",
+      "Angels",
+      "Mets",
+      "2K+ H",
+      "P"
+    ]
   }
 ]
