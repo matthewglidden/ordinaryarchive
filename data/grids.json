@@ -29713,5 +29713,28 @@
       "2K+ H",
       "P"
     ]
+  },
+  {
+    "gridNumber": 1290,
+    "id": "2026-10-13",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1290",
+    "rows": [
+      "Brewers",
+      "Padres",
+      "30+ SB"
+    ],
+    "cols": [
+      "Royals",
+      "Braves",
+      "30+ HR"
+    ],
+    "all": [
+      "Brewers",
+      "Padres",
+      "30+ SB",
+      "Royals",
+      "Braves",
+      "30+ HR"
+    ]
   }
 ]
