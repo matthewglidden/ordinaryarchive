@@ -29736,5 +29736,28 @@
       "Braves",
       "30+ HR"
     ]
+  },
+  {
+    "gridNumber": 1291,
+    "id": "2026-10-14",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1291",
+    "rows": [
+      "Red Sox",
+      "Nationals",
+      "Tigers"
+    ],
+    "cols": [
+      "Reds",
+      "6+ WAR",
+      "CF"
+    ],
+    "all": [
+      "Red Sox",
+      "Nationals",
+      "Tigers",
+      "Reds",
+      "6+ WAR",
+      "CF"
+    ]
   }
 ]
