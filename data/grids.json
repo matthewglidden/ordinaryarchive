@@ -29759,5 +29759,28 @@
       "6+ WAR",
       "CF"
     ]
+  },
+  {
+    "gridNumber": 1292,
+    "id": "2026-10-15",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1292",
+    "rows": [
+      "Pirates",
+      "Rangers",
+      "C"
+    ],
+    "cols": [
+      "Athletics",
+      "Orioles",
+      "OF"
+    ],
+    "all": [
+      "Pirates",
+      "Rangers",
+      "C",
+      "Athletics",
+      "Orioles",
+      "OF"
+    ]
   }
 ]
