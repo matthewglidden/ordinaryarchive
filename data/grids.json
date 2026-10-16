@@ -29782,5 +29782,28 @@
       "Orioles",
       "OF"
     ]
+  },
+  {
+    "gridNumber": 1293,
+    "id": "2026-10-16",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1293",
+    "rows": [
+      "Astros",
+      "Giants",
+      "Guardians"
+    ],
+    "cols": [
+      "Rockies",
+      "Blue Jays",
+      "White Sox"
+    ],
+    "all": [
+      "Astros",
+      "Giants",
+      "Guardians",
+      "Rockies",
+      "Blue Jays",
+      "White Sox"
+    ]
   }
 ]
