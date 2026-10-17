@@ -29805,5 +29805,28 @@
       "Blue Jays",
       "White Sox"
     ]
+  },
+  {
+    "gridNumber": 1294,
+    "id": "2026-10-17",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1294",
+    "rows": [
+      "ROY",
+      ".300+ Career",
+      "No-Hitter"
+    ],
+    "cols": [
+      "40+ WAR",
+      "HOF",
+      "All-Star"
+    ],
+    "all": [
+      "ROY",
+      ".300+ Career",
+      "No-Hitter",
+      "40+ WAR",
+      "HOF",
+      "All-Star"
+    ]
   }
 ]
