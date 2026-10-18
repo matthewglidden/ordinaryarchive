@@ -29828,5 +29828,28 @@
       "HOF",
       "All-Star"
     ]
+  },
+  {
+    "gridNumber": 1295,
+    "id": "2026-10-18",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1295",
+    "rows": [
+      "Dodgers",
+      "Reds",
+      "3B"
+    ],
+    "cols": [
+      "Braves",
+      "Rays",
+      "300+ HR"
+    ],
+    "all": [
+      "Dodgers",
+      "Reds",
+      "3B",
+      "Braves",
+      "Rays",
+      "300+ HR"
+    ]
   }
 ]
