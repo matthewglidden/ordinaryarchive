@@ -29851,5 +29851,28 @@
       "Rays",
       "300+ HR"
     ]
+  },
+  {
+    "gridNumber": 1296,
+    "id": "2026-10-19",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1296",
+    "rows": [
+      "Yankees",
+      "Cardinals",
+      "Angels"
+    ],
+    "cols": [
+      "Red Sox",
+      ".300+ Season",
+      "≤3 ERA Season"
+    ],
+    "all": [
+      "Yankees",
+      "Cardinals",
+      "Angels",
+      "Red Sox",
+      ".300+ Season",
+      "≤3 ERA Season"
+    ]
   }
 ]
