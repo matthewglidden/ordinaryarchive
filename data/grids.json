@@ -29874,5 +29874,28 @@
       ".300+ Season",
       "≤3 ERA Season"
     ]
+  },
+  {
+    "gridNumber": 1297,
+    "id": "2026-10-20",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1297",
+    "rows": [
+      "Mariners",
+      "Twins",
+      "1st round"
+    ],
+    "cols": [
+      "Cubs",
+      "Tigers",
+      "1B"
+    ],
+    "all": [
+      "Mariners",
+      "Twins",
+      "1st round",
+      "Cubs",
+      "Tigers",
+      "1B"
+    ]
   }
 ]
