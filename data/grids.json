@@ -29897,5 +29897,28 @@
       "Tigers",
       "1B"
     ]
+  },
+  {
+    "gridNumber": 1298,
+    "id": "2026-10-21",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1298",
+    "rows": [
+      "Brewers",
+      "Padres",
+      "100+ R"
+    ],
+    "cols": [
+      "Mets",
+      "Blue Jays",
+      "RF"
+    ],
+    "all": [
+      "Brewers",
+      "Padres",
+      "100+ R",
+      "Mets",
+      "Blue Jays",
+      "RF"
+    ]
   }
 ]
