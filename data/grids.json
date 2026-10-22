@@ -29920,5 +29920,28 @@
       "Blue Jays",
       "RF"
     ]
+  },
+  {
+    "gridNumber": 1299,
+    "id": "2026-10-22",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1299",
+    "rows": [
+      "Phillies",
+      "LF",
+      "10+ W"
+    ],
+    "cols": [
+      "White Sox",
+      "Orioles",
+      "Born 🌍 (Non-USA)"
+    ],
+    "all": [
+      "Phillies",
+      "LF",
+      "10+ W",
+      "White Sox",
+      "Orioles",
+      "Born 🌍 (Non-USA)"
+    ]
   }
 ]
