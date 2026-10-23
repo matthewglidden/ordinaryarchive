@@ -29943,5 +29943,28 @@
       "Orioles",
       "Born 🌍 (Non-USA)"
     ]
+  },
+  {
+    "gridNumber": 1300,
+    "id": "2026-10-23",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1300",
+    "rows": [
+      "Athletics",
+      "Royals",
+      "30+ SB"
+    ],
+    "cols": [
+      "Astros",
+      "Cardinals",
+      "2B"
+    ],
+    "all": [
+      "Athletics",
+      "Royals",
+      "30+ SB",
+      "Astros",
+      "Cardinals",
+      "2B"
+    ]
   }
 ]
