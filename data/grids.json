@@ -29966,5 +29966,28 @@
       "Cardinals",
       "2B"
     ]
+  },
+  {
+    "gridNumber": 1301,
+    "id": "2026-10-24",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1301",
+    "rows": [
+      "40+ HR",
+      "One Team",
+      "Gold Glove"
+    ],
+    "cols": [
+      "MVP",
+      "2K+ H",
+      "OF"
+    ],
+    "all": [
+      "40+ HR",
+      "One Team",
+      "Gold Glove",
+      "MVP",
+      "2K+ H",
+      "OF"
+    ]
   }
 ]
