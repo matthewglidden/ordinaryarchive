@@ -29989,5 +29989,28 @@
       "2K+ H",
       "OF"
     ]
+  },
+  {
+    "gridNumber": 1302,
+    "id": "2026-10-25",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1302",
+    "rows": [
+      "Guardians",
+      "Nationals",
+      "Braves"
+    ],
+    "cols": [
+      "Rangers",
+      "Yankees",
+      "Mariners"
+    ],
+    "all": [
+      "Guardians",
+      "Nationals",
+      "Braves",
+      "Rangers",
+      "Yankees",
+      "Mariners"
+    ]
   }
 ]
