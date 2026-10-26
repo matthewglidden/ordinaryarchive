@@ -30012,5 +30012,28 @@
       "Yankees",
       "Mariners"
     ]
+  },
+  {
+    "gridNumber": 1303,
+    "id": "2026-10-26",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1303",
+    "rows": [
+      "Pirates",
+      "Giants",
+      "40+ WAR"
+    ],
+    "cols": [
+      "Padres",
+      "Dodgers",
+      "200+ H"
+    ],
+    "all": [
+      "Pirates",
+      "Giants",
+      "40+ WAR",
+      "Padres",
+      "Dodgers",
+      "200+ H"
+    ]
   }
 ]
