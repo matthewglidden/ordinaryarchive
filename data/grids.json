@@ -30035,5 +30035,28 @@
       "Dodgers",
       "200+ H"
     ]
+  },
+  {
+    "gridNumber": 1304,
+    "id": "2026-10-27",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1304",
+    "rows": [
+      "Reds",
+      "Red Sox",
+      "D'backs"
+    ],
+    "cols": [
+      "White Sox",
+      ".300+ Season",
+      "SS"
+    ],
+    "all": [
+      "Reds",
+      "Red Sox",
+      "D'backs",
+      "White Sox",
+      ".300+ Season",
+      "SS"
+    ]
   }
 ]
