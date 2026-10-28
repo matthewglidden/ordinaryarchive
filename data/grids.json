@@ -30058,5 +30058,28 @@
       ".300+ Season",
       "SS"
     ]
+  },
+  {
+    "gridNumber": 1305,
+    "id": "2026-10-28",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1305",
+    "rows": [
+      "Angels",
+      "Twins",
+      "HOF"
+    ],
+    "cols": [
+      "Blue Jays",
+      "100+ RBI",
+      "3B"
+    ],
+    "all": [
+      "Angels",
+      "Twins",
+      "HOF",
+      "Blue Jays",
+      "100+ RBI",
+      "3B"
+    ]
   }
 ]
