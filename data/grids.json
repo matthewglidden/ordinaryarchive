@@ -30081,5 +30081,28 @@
       "100+ RBI",
       "3B"
     ]
+  },
+  {
+    "gridNumber": 1306,
+    "id": "2026-10-29",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1306",
+    "rows": [
+      "Cubs",
+      "Astros",
+      "Phillies"
+    ],
+    "cols": [
+      "Yankees",
+      "Tigers",
+      "30+ SV"
+    ],
+    "all": [
+      "Cubs",
+      "Astros",
+      "Phillies",
+      "Yankees",
+      "Tigers",
+      "30+ SV"
+    ]
   }
 ]
