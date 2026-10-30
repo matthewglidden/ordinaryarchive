@@ -30104,5 +30104,28 @@
       "Tigers",
       "30+ SV"
     ]
+  },
+  {
+    "gridNumber": 1307,
+    "id": "2026-10-30",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1307",
+    "rows": [
+      "Mets",
+      "Mariners",
+      "All-Star"
+    ],
+    "cols": [
+      "Rangers",
+      "Cardinals",
+      "CF"
+    ],
+    "all": [
+      "Mets",
+      "Mariners",
+      "All-Star",
+      "Rangers",
+      "Cardinals",
+      "CF"
+    ]
   }
 ]
