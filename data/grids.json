@@ -30150,5 +30150,51 @@
       "6+ WAR",
       "Born 🌍 (Non-USA)"
     ]
+  },
+  {
+    "gridNumber": 1309,
+    "id": "2026-11-01",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1309",
+    "rows": [
+      "Brewers",
+      "Red Sox",
+      "Guardians"
+    ],
+    "cols": [
+      "Orioles",
+      "Giants",
+      "LF"
+    ],
+    "all": [
+      "Brewers",
+      "Red Sox",
+      "Guardians",
+      "Orioles",
+      "Giants",
+      "LF"
+    ]
+  },
+  {
+    "gridNumber": 1310,
+    "id": "2026-11-02",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1310",
+    "rows": [
+      "Athletics",
+      "Marlins",
+      "OF"
+    ],
+    "cols": [
+      "Dodgers",
+      "Yankees",
+      "2K+ H"
+    ],
+    "all": [
+      "Athletics",
+      "Marlins",
+      "OF",
+      "Dodgers",
+      "Yankees",
+      "2K+ H"
+    ]
   }
 ]
