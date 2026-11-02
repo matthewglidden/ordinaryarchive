@@ -9,9 +9,14 @@ permissions:
   contents: write
   issues: write
 
+concurrency:
+  group: rebuild-grids
+  cancel-in-progress: false
+
 jobs:
   rebuild:
     runs-on: ubuntu-24.04
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -53,7 +58,8 @@ jobs:
         with:
           script: |
             const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
-            const title = `Ordinary Archive daily grid build failed (${context.runNumber})`;
+            const titlePrefix = `Ordinary Archive daily grid build failed`;
+            const title = `${titlePrefix} (${context.runNumber})`;
             const body = [
               `The scheduled grid rebuild failed.`,
               ``,
@@ -63,9 +69,71 @@ jobs:
               `- SHA: ${context.sha}`,
             ].join('\n');
 
-            await github.rest.issues.create({
+            const openIssues = await github.paginate(github.rest.issues.listForRepo, {
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title,
-              body,
+              state: 'open',
+              per_page: 100,
             });
+
+            const existing = openIssues
+              .filter((issue) => !issue.pull_request && issue.title.startsWith(titlePrefix))
+              .sort((a, b) => a.number - b.number);
+
+            if (existing.length) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing[0].number,
+                body: `Another grid rebuild failed.\n\n${body}`,
+              });
+              for (const duplicate of existing.slice(1)) {
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: duplicate.number,
+                  state: 'closed',
+                  state_reason: 'completed',
+                });
+              }
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+              });
+            }
+      - name: Close resolved rebuild issues
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const titlePrefix = `Ordinary Archive daily grid build failed`;
+            const openIssues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            });
+
+            const rebuildIssues = openIssues.filter(
+              (issue) => !issue.pull_request && issue.title.startsWith(titlePrefix)
+            );
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+
+            for (const issue of rebuildIssues) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: `Resolved by successful grid rebuild: ${runUrl}`,
+              });
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                state: 'closed',
+                state_reason: 'completed',
+              });
+            }

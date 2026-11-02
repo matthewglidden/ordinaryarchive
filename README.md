@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ordinary Archive
 
-## Getting Started
+Ordinary Archive is a searchable archive of past Baseball Immaculate Grid puzzles. It is an unofficial fan project; each result links to the corresponding puzzle on Sports Reference.
 
-First, run the development server:
+## Run locally
+
+Requirements: Node.js 20.19+, 22.13+, or 24+.
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open <http://localhost:3000>. The production build can be started with `npm run build` followed by `npm start`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Search and data
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The search page loads `data/grids.json` and the team alias JSON files into the client. It supports label searches, team aliases, row/column filters, position and birthplace filters, date shortcuts, and “possible” fuzzy matches. The grid data contains each puzzle's date, source URL, row and column labels, and optional search hints.
 
-## Learn More
+`.github/workflows/rebuild-grids.yml` runs daily at 11:05 UTC and can also be started manually from GitHub Actions. It incrementally fetches new grids from Sports Reference, validates the extraction, checks for repeated labels, and commits dataset changes. The extraction code supports both the site's embedded data and rendered-page fallbacks; Playwright Chromium is needed only when the static extraction cannot identify a grid.
 
-To learn more about Next.js, take a look at the following resources:
+The team alias generator is `npm run build:team-aliases`. It downloads the official [Baseball Reference team-ID table](https://www.baseball-reference.com/about/team_IDs.shtml) and writes `data/team-aliases.json`. Hand-curated place and nickname aliases live in `data/team-aliases-extra.json` so regenerating the upstream aliases does not erase them. Run the generator when refreshing the source data, then review and commit the generated changes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Checks
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm test
+npm run lint
+npm run build
+npm audit --audit-level=high
+```
 
-## Deploy on Vercel
+Grid ingestion fixtures and numbering/date behavior are covered under `tests/`. GitHub Actions runs these checks and fails on high or critical dependency advisories for pushes and pull requests.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project layout
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/` — Next.js pages, metadata, and the grid-extraction API route.
+- `lib/gridIngestion.js` — parsing and validating Sports Reference grid HTML.
+- `lib/playwrightGridFallback.mjs` — browser-based extraction fallback and sanitized debug output.
+- `scripts/build-grids.mjs` — incremental dataset builder.
+- `scripts/check-suspicious-duplications.mjs` — detects repeated row or column labels.
+- `data/` — checked-in grid and team-alias datasets.

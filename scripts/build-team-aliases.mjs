@@ -3,8 +3,10 @@ import path from "node:path";
 import { load } from "cheerio";
 
 const ROOT = process.cwd();
-const SOURCE = path.join(ROOT, "Team-IDs-Baseball-Reference.com.html");
 const OUTPUT = path.join(ROOT, "data", "team-aliases.json");
+const SOURCE_URL = "https://www.baseball-reference.com/about/team_IDs.shtml";
+const USER_AGENT =
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36";
 
 const normalizeWhitespace = (value) => value.replace(/\s+/g, " ").trim();
 
@@ -28,7 +30,19 @@ const shortTeamLabel = (fullName) => {
   return parts[parts.length - 1] || cleaned;
 };
 
-const html = fs.readFileSync(SOURCE, "utf8");
+const response = await fetch(SOURCE_URL, {
+  headers: {
+    "User-Agent": USER_AGENT,
+    Accept: "text/html",
+  },
+  signal: AbortSignal.timeout(15_000),
+});
+
+if (!response.ok) {
+  throw new Error(`Failed to fetch team IDs (${response.status}).`);
+}
+
+const html = await response.text();
 const $ = load(html);
 
 const table = $("table")
@@ -44,8 +58,7 @@ const table = $("table")
   .first();
 
 if (!table.length) {
-  console.error("Could not find team ID table in source HTML.");
-  process.exit(1);
+  throw new Error("Could not find the team ID table in the upstream HTML.");
 }
 
 const rows = table.find("tr").slice(1);

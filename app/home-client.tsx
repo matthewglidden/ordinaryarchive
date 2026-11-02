@@ -4,6 +4,7 @@ import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import gridsData from "@/data/grids.json";
 import teamAliases from "@/data/team-aliases.json";
+import extraTeamAliases from "@/data/team-aliases-extra.json";
 
 type Grid = {
   gridNumber?: number;
@@ -17,7 +18,10 @@ type Grid = {
 };
 
 const grids = gridsData as Grid[];
-const teamAliasMap = teamAliases as Record<string, string[]>;
+const teamAliasMap = {
+  ...(teamAliases as Record<string, string[]>),
+  ...(extraTeamAliases as Record<string, string[]>),
+};
 const TEAM_ALIAS_LABELS = new Set(
   Object.values(teamAliasMap).flat().map((label) => label.toLowerCase())
 );
@@ -158,7 +162,7 @@ export default function HomeClient() {
     if (!normalizedQuery) return [];
     const groups: string[][] = [];
     const aliasMap: Record<string, string[]> = {
-      ...(teamAliases as Record<string, string[]>),
+      ...teamAliasMap,
       can: ["canada"],
       boston: ["red sox"],
       canada: ["can"],
