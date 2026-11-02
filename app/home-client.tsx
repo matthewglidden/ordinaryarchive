@@ -73,13 +73,24 @@ export default function HomeClient() {
   const [scope, setScope] = useState<"all" | "rows" | "cols">("all");
   const [intersectOnly, setIntersectOnly] = useState(false);
   const [sortOrder, setSortOrder] = useState<"newest" | "oldest">("newest");
-  const [visibleCount, setVisibleCount] = useState(50);
+  const [pagination, setPagination] = useState({ key: "", count: 50 });
   const [selectedPositions, setSelectedPositions] = useState<string[]>([]);
   const [selectedBorn, setSelectedBorn] = useState<string[]>([]);
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
   const didInitFromUrl = useRef(false);
+  const paginationKey = JSON.stringify([
+    query,
+    intersectOnly,
+    sortOrder,
+    selectedPositions,
+    selectedBorn,
+    scope,
+    exactOnly,
+  ]);
+  const visibleCount =
+    pagination.key === paginationKey ? pagination.count : 50;
   const today = new Date();
   const monthDay = `${String(today.getMonth() + 1).padStart(2, "0")}-${String(
     today.getDate()
@@ -864,6 +875,7 @@ export default function HomeClient() {
     scope,
     intersectOnly,
     prefersYankees,
+    sortOrder,
   ]);
 
   const hasQuery = allTokenGroups.length > 0;
@@ -915,19 +927,6 @@ export default function HomeClient() {
     return () => clearTimeout(handle);
   }, [query, pathname, router]);
 
-  useEffect(() => {
-    setVisibleCount(50);
-  }, [
-    query,
-    intersectOnly,
-    selectedPositions,
-    selectedBorn,
-    sortOrder,
-    scope,
-    exactOnly,
-  ]);
-
-
   const positions = [
     "P",
     "C",
@@ -973,6 +972,9 @@ export default function HomeClient() {
     setSelectedPositions([]);
     setSelectedBorn([]);
     setIntersectOnly(false);
+    setExactOnly(false);
+    setScope("all");
+    setSortOrder("newest");
   };
 
   const handleRandomPick = () => {
@@ -1147,6 +1149,23 @@ export default function HomeClient() {
                     ×
                   </button>
                 )}
+              </div>
+              <div className="relative inline-flex min-w-[150px] items-center">
+                <select
+                  aria-label="Search scope"
+                  value={scope}
+                  onChange={(event) =>
+                    setScope(event.target.value as "all" | "rows" | "cols")
+                  }
+                  className="w-full appearance-none rounded-full border border-slate-200 bg-white px-4 py-2 pr-7 text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-700"
+                >
+                  <option value="all">All labels</option>
+                  <option value="rows">Rows only</option>
+                  <option value="cols">Columns only</option>
+                </select>
+                <span className="pointer-events-none absolute right-3 text-[10px] text-slate-400">
+                  ▾
+                </span>
               </div>
               <div className="relative inline-flex min-w-[200px] items-center">
                 <select
@@ -1447,9 +1466,14 @@ export default function HomeClient() {
               <button
                 type="button"
                 onClick={() =>
-                  setVisibleCount((count) =>
-                    Math.min(count + 50, combinedGrids.length)
-                  )
+                  setPagination((current) => {
+                    const currentCount =
+                      current.key === paginationKey ? current.count : 50;
+                    return {
+                      key: paginationKey,
+                      count: Math.min(currentCount + 50, combinedGrids.length),
+                    };
+                  })
                 }
                 className="rounded-full border border-slate-300 bg-white px-6 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600 transition hover:border-slate-400 hover:text-slate-900"
               >

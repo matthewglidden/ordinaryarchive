@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#f3f6fb] px-6 py-16 text-slate-900">
@@ -6,12 +8,12 @@ export default function AboutPage() {
           <div className="text-xs uppercase tracking-[0.26em] text-slate-500">
             About Ordinary Archive
           </div>
-          <a
+          <Link
             href="/"
             className="inline-flex items-center rounded-full border border-slate-300 bg-slate-50 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-700 transition hover:border-slate-500 hover:bg-white hover:text-slate-900"
           >
             Back to search
-          </a>
+          </Link>
         </div>
         <div className="grid gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-5 text-sm text-slate-600 sm:grid-cols-3">
           <div>
