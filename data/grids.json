@@ -30196,5 +30196,28 @@
       "Yankees",
       "2K+ H"
     ]
+  },
+  {
+    "gridNumber": 1311,
+    "id": "2026-11-03",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1311",
+    "rows": [
+      "Royals",
+      "Pirates",
+      "Blue Jays"
+    ],
+    "cols": [
+      "Reds",
+      "Braves",
+      "10+ W"
+    ],
+    "all": [
+      "Royals",
+      "Pirates",
+      "Blue Jays",
+      "Reds",
+      "Braves",
+      "10+ W"
+    ]
   }
 ]
