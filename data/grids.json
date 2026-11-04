@@ -30219,5 +30219,28 @@
       "Braves",
       "10+ W"
     ]
+  },
+  {
+    "gridNumber": 1312,
+    "id": "2026-11-04",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1312",
+    "rows": [
+      "White Sox",
+      "Padres",
+      "Nationals"
+    ],
+    "cols": [
+      "Angels",
+      "Cubs",
+      "10+ HR"
+    ],
+    "all": [
+      "White Sox",
+      "Padres",
+      "Nationals",
+      "Angels",
+      "Cubs",
+      "10+ HR"
+    ]
   }
 ]
