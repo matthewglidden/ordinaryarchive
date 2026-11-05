@@ -30242,5 +30242,28 @@
       "Cubs",
       "10+ HR"
     ]
+  },
+  {
+    "gridNumber": 1313,
+    "id": "2026-11-05",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1313",
+    "rows": [
+      "Twins",
+      "Red Sox",
+      "40+ WAR"
+    ],
+    "cols": [
+      "Mariners",
+      "2B",
+      "C"
+    ],
+    "all": [
+      "Twins",
+      "Red Sox",
+      "40+ WAR",
+      "Mariners",
+      "2B",
+      "C"
+    ]
   }
 ]
