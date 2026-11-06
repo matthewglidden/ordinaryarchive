@@ -30265,5 +30265,28 @@
       "2B",
       "C"
     ]
+  },
+  {
+    "gridNumber": 1314,
+    "id": "2026-11-06",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1314",
+    "rows": [
+      "Tigers",
+      "Phillies",
+      ".300+ Season"
+    ],
+    "cols": [
+      "Dodgers",
+      "Brewers",
+      "One Team"
+    ],
+    "all": [
+      "Tigers",
+      "Phillies",
+      ".300+ Season",
+      "Dodgers",
+      "Brewers",
+      "One Team"
+    ]
   }
 ]
