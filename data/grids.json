@@ -30288,5 +30288,28 @@
       "Brewers",
       "One Team"
     ]
+  },
+  {
+    "gridNumber": 1315,
+    "id": "2026-11-07",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1315",
+    "rows": [
+      "300+ W",
+      "500+ HR",
+      "2K+ K"
+    ],
+    "cols": [
+      "6+ WAR",
+      "All-Star",
+      "HOF"
+    ],
+    "all": [
+      "300+ W",
+      "500+ HR",
+      "2K+ K",
+      "6+ WAR",
+      "All-Star",
+      "HOF"
+    ]
   }
 ]
