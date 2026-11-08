@@ -30311,5 +30311,28 @@
       "All-Star",
       "HOF"
     ]
+  },
+  {
+    "gridNumber": 1316,
+    "id": "2026-11-08",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1316",
+    "rows": [
+      "Braves",
+      "Giants",
+      "Rockies"
+    ],
+    "cols": [
+      "Mets",
+      "Orioles",
+      "Cardinals"
+    ],
+    "all": [
+      "Braves",
+      "Giants",
+      "Rockies",
+      "Mets",
+      "Orioles",
+      "Cardinals"
+    ]
   }
 ]
