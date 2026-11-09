@@ -30334,5 +30334,28 @@
       "Orioles",
       "Cardinals"
     ]
+  },
+  {
+    "gridNumber": 1317,
+    "id": "2026-11-09",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1317",
+    "rows": [
+      "Astros",
+      "Blue Jays",
+      "P"
+    ],
+    "cols": [
+      "Pirates",
+      "Red Sox",
+      "30+ HR"
+    ],
+    "all": [
+      "Astros",
+      "Blue Jays",
+      "P",
+      "Pirates",
+      "Red Sox",
+      "30+ HR"
+    ]
   }
 ]
