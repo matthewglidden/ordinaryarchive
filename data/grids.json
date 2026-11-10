@@ -30357,5 +30357,28 @@
       "Red Sox",
       "30+ HR"
     ]
+  },
+  {
+    "gridNumber": 1318,
+    "id": "2026-11-10",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1318",
+    "rows": [
+      "Rangers",
+      "Brewers",
+      "Athletics"
+    ],
+    "cols": [
+      "Rays",
+      "100+ R",
+      "200+ K"
+    ],
+    "all": [
+      "Rangers",
+      "Brewers",
+      "Athletics",
+      "Rays",
+      "100+ R",
+      "200+ K"
+    ]
   }
 ]
