@@ -30380,5 +30380,28 @@
       "100+ R",
       "200+ K"
     ]
+  },
+  {
+    "gridNumber": 1319,
+    "id": "2026-11-11",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1319",
+    "rows": [
+      "Padres",
+      "Dodgers",
+      "CF"
+    ],
+    "cols": [
+      "Guardians",
+      "Yankees",
+      "Born 🌍 (Non-USA)"
+    ],
+    "all": [
+      "Padres",
+      "Dodgers",
+      "CF",
+      "Guardians",
+      "Yankees",
+      "Born 🌍 (Non-USA)"
+    ]
   }
 ]
