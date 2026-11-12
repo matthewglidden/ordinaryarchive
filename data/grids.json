@@ -30403,5 +30403,28 @@
       "Yankees",
       "Born 🌍 (Non-USA)"
     ]
+  },
+  {
+    "gridNumber": 1320,
+    "id": "2026-11-12",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1320",
+    "rows": [
+      "Cubs",
+      "Phillies",
+      "Gold Glove"
+    ],
+    "cols": [
+      "Royals",
+      "Angels",
+      "≤3 ERA Season"
+    ],
+    "all": [
+      "Cubs",
+      "Phillies",
+      "Gold Glove",
+      "Royals",
+      "Angels",
+      "≤3 ERA Season"
+    ]
   }
 ]
