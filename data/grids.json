@@ -30426,5 +30426,28 @@
       "Angels",
       "≤3 ERA Season"
     ]
+  },
+  {
+    "gridNumber": 1321,
+    "id": "2026-11-13",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1321",
+    "rows": [
+      "White Sox",
+      "Reds",
+      "Orioles"
+    ],
+    "cols": [
+      "Mariners",
+      "Cardinals",
+      "20+ W"
+    ],
+    "all": [
+      "White Sox",
+      "Reds",
+      "Orioles",
+      "Mariners",
+      "Cardinals",
+      "20+ W"
+    ]
   }
 ]
