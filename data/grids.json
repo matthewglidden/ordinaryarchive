@@ -30472,5 +30472,28 @@
       "30+ SB",
       "100+ RBI"
     ]
+  },
+  {
+    "gridNumber": 1323,
+    "id": "2026-11-15",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1323",
+    "rows": [
+      "Tigers",
+      "Twins",
+      "1B"
+    ],
+    "cols": [
+      "Rangers",
+      "Mets",
+      "40+ WAR"
+    ],
+    "all": [
+      "Tigers",
+      "Twins",
+      "1B",
+      "Rangers",
+      "Mets",
+      "40+ WAR"
+    ]
   }
 ]
