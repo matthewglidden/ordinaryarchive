@@ -30495,5 +30495,28 @@
       "Mets",
       "40+ WAR"
     ]
+  },
+  {
+    "gridNumber": 1324,
+    "id": "2026-11-16",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1324",
+    "rows": [
+      "Giants",
+      "Nationals",
+      "All-Star"
+    ],
+    "cols": [
+      "Braves",
+      "Athletics",
+      "RF"
+    ],
+    "all": [
+      "Giants",
+      "Nationals",
+      "All-Star",
+      "Braves",
+      "Athletics",
+      "RF"
+    ]
   }
 ]
