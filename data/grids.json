@@ -30518,5 +30518,28 @@
       "Athletics",
       "RF"
     ]
+  },
+  {
+    "gridNumber": 1325,
+    "id": "2026-11-17",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1325",
+    "rows": [
+      "Red Sox",
+      "Guardians",
+      "3B"
+    ],
+    "cols": [
+      "Pirates",
+      "Cubs",
+      "OF"
+    ],
+    "all": [
+      "Red Sox",
+      "Guardians",
+      "3B",
+      "Pirates",
+      "Cubs",
+      "OF"
+    ]
   }
 ]
