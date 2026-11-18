@@ -30541,5 +30541,28 @@
       "Cubs",
       "OF"
     ]
+  },
+  {
+    "gridNumber": 1326,
+    "id": "2026-11-18",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1326",
+    "rows": [
+      "Blue Jays",
+      "Padres",
+      "HOF"
+    ],
+    "cols": [
+      "Phillies",
+      "Mariners",
+      "P"
+    ],
+    "all": [
+      "Blue Jays",
+      "Padres",
+      "HOF",
+      "Phillies",
+      "Mariners",
+      "P"
+    ]
   }
 ]
