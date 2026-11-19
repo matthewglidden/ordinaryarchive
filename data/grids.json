@@ -30564,5 +30564,28 @@
       "Mariners",
       "P"
     ]
+  },
+  {
+    "gridNumber": 1327,
+    "id": "2026-11-19",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1327",
+    "rows": [
+      "Astros",
+      "Cardinals",
+      "30+ HR"
+    ],
+    "cols": [
+      "Dodgers",
+      "Angels",
+      "SS"
+    ],
+    "all": [
+      "Astros",
+      "Cardinals",
+      "30+ HR",
+      "Dodgers",
+      "Angels",
+      "SS"
+    ]
   }
 ]
