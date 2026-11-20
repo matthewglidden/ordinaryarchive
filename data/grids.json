@@ -30587,5 +30587,28 @@
       "Angels",
       "SS"
     ]
+  },
+  {
+    "gridNumber": 1328,
+    "id": "2026-11-20",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1328",
+    "rows": [
+      "Brewers",
+      "Reds",
+      "6+ WAR"
+    ],
+    "cols": [
+      "D'backs",
+      "Yankees",
+      "2B"
+    ],
+    "all": [
+      "Brewers",
+      "Reds",
+      "6+ WAR",
+      "D'backs",
+      "Yankees",
+      "2B"
+    ]
   }
 ]
