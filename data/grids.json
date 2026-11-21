@@ -30610,5 +30610,28 @@
       "Yankees",
       "2B"
     ]
+  },
+  {
+    "gridNumber": 1329,
+    "id": "2026-11-21",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1329",
+    "rows": [
+      "≤3 ERA Season",
+      "200+ K",
+      "Cy Young"
+    ],
+    "cols": [
+      "Born 🌍 (Non-USA)",
+      "20+ W",
+      "200+ W"
+    ],
+    "all": [
+      "≤3 ERA Season",
+      "200+ K",
+      "Cy Young",
+      "Born 🌍 (Non-USA)",
+      "20+ W",
+      "200+ W"
+    ]
   }
 ]
