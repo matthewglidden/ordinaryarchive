@@ -30656,5 +30656,28 @@
       "Rangers",
       "ROY"
     ]
+  },
+  {
+    "gridNumber": 1331,
+    "id": "2026-11-23",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1331",
+    "rows": [
+      "Orioles",
+      "Athletics",
+      "One Team"
+    ],
+    "cols": [
+      "Royals",
+      "Padres",
+      "CF"
+    ],
+    "all": [
+      "Orioles",
+      "Athletics",
+      "One Team",
+      "Royals",
+      "Padres",
+      "CF"
+    ]
   }
 ]
