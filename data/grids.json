@@ -30679,5 +30679,28 @@
       "Padres",
       "CF"
     ]
+  },
+  {
+    "gridNumber": 1332,
+    "id": "2026-11-24",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1332",
+    "rows": [
+      "Twins",
+      "Tigers",
+      "Gold Glove"
+    ],
+    "cols": [
+      "Nationals",
+      "Yankees",
+      "Silver Slugger"
+    ],
+    "all": [
+      "Twins",
+      "Tigers",
+      "Gold Glove",
+      "Nationals",
+      "Yankees",
+      "Silver Slugger"
+    ]
   }
 ]
