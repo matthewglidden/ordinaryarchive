@@ -30702,5 +30702,28 @@
       "Yankees",
       "Silver Slugger"
     ]
+  },
+  {
+    "gridNumber": 1333,
+    "id": "2026-11-25",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1333",
+    "rows": [
+      "Braves",
+      "Giants",
+      "Red Sox"
+    ],
+    "cols": [
+      "Phillies",
+      "300+ HR",
+      "30+ SV"
+    ],
+    "all": [
+      "Braves",
+      "Giants",
+      "Red Sox",
+      "Phillies",
+      "300+ HR",
+      "30+ SV"
+    ]
   }
 ]
