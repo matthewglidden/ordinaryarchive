@@ -30725,5 +30725,34 @@
       "300+ HR",
       "30+ SV"
     ]
+  },
+  {
+    "gridNumber": 1334,
+    "id": "2026-11-26",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1334",
+    "rows": [
+      "Dodgers",
+      "Reds",
+      "Marlins"
+    ],
+    "cols": [
+      "Angels",
+      "Brewers",
+      "Cubs"
+    ],
+    "all": [
+      "Dodgers",
+      "Reds",
+      "Marlins",
+      "Angels",
+      "Brewers",
+      "Cubs"
+    ],
+    "hints": [
+      "🦃 Day - try Turkey Stearnes"
+    ],
+    "searchTerms": [
+      "Thanksgiving"
+    ]
   }
 ]
