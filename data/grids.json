@@ -30754,5 +30754,28 @@
     "searchTerms": [
       "Thanksgiving"
     ]
+  },
+  {
+    "gridNumber": 1335,
+    "id": "2026-11-27",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1335",
+    "rows": [
+      "Pirates",
+      "Guardians",
+      "P"
+    ],
+    "cols": [
+      "Cardinals",
+      "6+ WAR",
+      "1B"
+    ],
+    "all": [
+      "Pirates",
+      "Guardians",
+      "P",
+      "Cardinals",
+      "6+ WAR",
+      "1B"
+    ]
   }
 ]
