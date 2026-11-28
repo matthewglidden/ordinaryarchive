@@ -30777,5 +30777,28 @@
       "6+ WAR",
       "1B"
     ]
+  },
+  {
+    "gridNumber": 1336,
+    "id": "2026-11-28",
+    "url": "https://www.sports-reference.com/immaculate-grid/grid-1336",
+    "rows": [
+      "10+ W",
+      "10+ HR",
+      "OF"
+    ],
+    "cols": [
+      "40+ WAR",
+      "All-Star",
+      "HOF"
+    ],
+    "all": [
+      "10+ W",
+      "10+ HR",
+      "OF",
+      "40+ WAR",
+      "All-Star",
+      "HOF"
+    ]
   }
 ]
